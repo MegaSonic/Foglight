@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using XInputDotNetPure;
+using XInputDotNetPure; // imported dll for xbox controller
 
 [ExecuteInEditMode]
 [RequireComponent (typeof (SphereCollider))]
@@ -14,8 +14,14 @@ public class Discovery : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		collider = this.gameObject.GetComponent<SphereCollider>();
+		GamePad.SetVibration (0, 0, 0);
 	}
-	
+
+	void OnApplicationQuit() {
+		GamePad.SetVibration (0, 0, 0);
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 		if (Application.isPlaying) {
