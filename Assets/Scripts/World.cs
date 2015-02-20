@@ -11,8 +11,10 @@ public class World : MonoBehaviour {
 	[HideInInspector]
 	private float[] availableHope;
 
+	private bool ready;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		availableHope = new float[amtOfSquares];
 	}
 
