@@ -10,7 +10,7 @@ public class Interact_Fog : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		ps = GetComponent<PlayerStats> ();
+		ps = FindObjectOfType<PlayerStats> ();
 
 	}
 	
@@ -29,7 +29,6 @@ public class Interact_Fog : MonoBehaviour {
 			// deactivate particle system
 			col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
 		}
-			
 	}
 
 }
