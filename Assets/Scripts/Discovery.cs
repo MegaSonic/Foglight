@@ -6,14 +6,12 @@ using XInputDotNetPure; // imported dll for xbox controller
 [RequireComponent (typeof (SphereCollider))]
 public class Discovery : MonoBehaviour {
 
-	public string name;
-	public string description;
 	public float radius;
-	private SphereCollider collider;
+	private SphereCollider coll;
 
 	// Use this for initialization
 	void Start () {
-		collider = this.gameObject.GetComponent<SphereCollider>();
+		coll = this.gameObject.GetComponent<SphereCollider>();
 		GamePad.SetVibration (0, 0, 0);
 	}
 
@@ -28,7 +26,7 @@ public class Discovery : MonoBehaviour {
 
 		}
 		else {
-			collider.radius = radius;
+			coll.radius = radius;
 		}
 	}
 
