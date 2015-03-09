@@ -16,6 +16,7 @@ public class Statue : MonoBehaviour {
 	private PlayerStats ps;
 	private Canvas can;
 	private Text dialogDisplay;
+	private Discovery disc;
 
 	// Use this for initialization
 	void Start () {
@@ -23,10 +24,15 @@ public class Statue : MonoBehaviour {
 		ps = FindObjectOfType<PlayerStats> ();
 		can = FindObjectOfType<Canvas> ();
 		dialogDisplay = (Text) can.transform.Find ("DialogTest").GetComponent<Text>();
+		disc = GetComponentsInChildren<Discovery> ()[0];
 
 		// add this statue's hope to the hope counter
 		world.AddHope (level, hopeAmt);
 
+	}
+
+	public bool IsSpent(){
+		return spent;
 	}
 	
 	void OnTriggerStay(Collider other){
@@ -34,8 +40,10 @@ public class Statue : MonoBehaviour {
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
+				disc.KillVibration();
 			}
-		dialogDisplay.text = dialog [0];
+		if (dialog.Count > 0)
+			dialogDisplay.text = dialog [0];
 
 
 		//}

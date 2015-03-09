@@ -8,17 +8,18 @@ public class Discovery : MonoBehaviour {
 
 	public float radius;
 	private SphereCollider coll;
+	private Statue stat;
 
 	// Use this for initialization
 	void Start () {
 		coll = this.gameObject.GetComponent<SphereCollider>();
-		GamePad.SetVibration (0, 0, 0);
+		stat = GetComponentInParent<Statue> ();
+		KillVibration ();
 	}
 
 	void OnApplicationQuit() {
-		GamePad.SetVibration (0, 0, 0);
+		KillVibration ();
 	}
-
 
 	// Update is called once per frame
 	void Update () {
@@ -28,6 +29,10 @@ public class Discovery : MonoBehaviour {
 		else {
 			coll.radius = radius;
 		}
+	}
+
+	public void KillVibration() {
+		GamePad.SetVibration (0, 0, 0);
 	}
 
 	void OnDrawGizmos() {
@@ -49,7 +54,7 @@ public class Discovery : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other) {
-		GamePad.SetVibration (0, 0, 0);
+		KillVibration ();
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -60,6 +65,7 @@ public class Discovery : MonoBehaviour {
 	{
 		float dist = Dist(other.transform.position.x, other.transform.position.z);
 		float vibAmt = (radius - dist) / radius;
-		GamePad.SetVibration (0, vibAmt, vibAmt);
+		if (!stat.IsSpent ())
+				GamePad.SetVibration (0, vibAmt, vibAmt);
 	}
 }
