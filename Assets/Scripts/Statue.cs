@@ -7,14 +7,17 @@ public class Statue : MonoBehaviour {
 
 	public float hopeAmt;
 	public int level; // what square is this statue in?
+	public string statueName;
 	public List<string> dialog;
 
 
 	private bool spent = false;
+	private int page = 0;
 
 	private World world;
 	private PlayerStats ps;
 	private Canvas can;
+	private Text nameDisplay;
 	private Text dialogDisplay;
 	private Discovery disc;
 
@@ -22,11 +25,21 @@ public class Statue : MonoBehaviour {
 	void Start () {
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
-		can = FindObjectOfType<Canvas> ();
-		dialogDisplay = (Text) can.transform.Find ("DialogTest").GetComponent<Text>();
-		disc = GetComponentsInChildren<Discovery> ()[0];
+		disc = GetComponentInChildren<Discovery> ();
 
-		// add this statue's hope to the hope counter
+		can = FindObjectOfType<Canvas> ();
+		Text[] tmp = can.GetComponentsInChildren<Text> ();
+		for (int i = 0; i<tmp.Length; i++) {
+			if (tmp[i].name == "nameText")
+				nameDisplay = tmp[i];
+			if (tmp[i].name == "displayText")
+				dialogDisplay = tmp[i];
+		}
+
+		// I'm doing this here out of conveniance, but it's not necessarily the best place for it
+		clearDialog ();
+
+		// add this statue's hope to the global hope counter
 		world.AddHope (level, hopeAmt);
 
 	}
@@ -34,19 +47,43 @@ public class Statue : MonoBehaviour {
 	public bool IsSpent(){
 		return spent;
 	}
-	
+
+	void clearDialog(){
+		nameDisplay.text = "";
+		dialogDisplay.text = "";
+	}
+
+	void displayNextPage(){
+		if (dialog.Count == 0)
+			return;
+
+		page++;
+		if (page >= dialog.Count)
+			page = 0;
+
+		dialogDisplay.text = dialog [page];
+
+	}
+
+	void OnTriggerEnter(Collider other){
+		if (dialog.Count > 0)
+			dialogDisplay.text = dialog [0];
+		nameDisplay.text = statueName;
+	}
+
+	void OnTriggerExit(Collider other){
+		clearDialog ();
+	}
+
 	void OnTriggerStay(Collider other){
-		//if (Input.GetKey ("Interact")){
+		if (Input.GetButtonDown ("Interact")){
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
 				disc.KillVibration();
 			}
-		if (dialog.Count > 0)
-			dialogDisplay.text = dialog [0];
-
-
-		//}
+			displayNextPage();
+		}
 	}
 
 	// Update is called once per frame

@@ -22,7 +22,7 @@ public class Interact_Fog : MonoBehaviour {
 	void OnTriggerStay(Collider col)
 	{
 		// if you're touching fog and you press the "interact" key
-		if(col.gameObject.tag=="fog" && Input.GetKeyDown("return") && ps.GetHope() > unlockHopeAmt)
+		if(col.gameObject.tag=="fog" && Input.GetButtonDown("Interact") && ps.GetHope() > unlockHopeAmt)
 		{
 			// make wall intangible
 			Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);

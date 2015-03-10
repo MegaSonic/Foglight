@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2014 Gold Experience Team
+// Copyright (c) 2014 Gold Experience Team
 //
 // Elementals version: 1.1.1
 // Author: Gold Experience TeamDev (http://www.ge-team.com/)
