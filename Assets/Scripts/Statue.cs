@@ -57,9 +57,25 @@ public class Statue : MonoBehaviour {
 
 	}
 
+	// clears the dialog box text
 	void clearDialog(){
 		nameDisplay.text = "";
 		dialogDisplay.text = "";
+	}
+
+	// looks for the newest unlocked book, and sets it as the default
+	void openNewestBook() {
+		// don't crash if there's no book
+		// and don't do any work if there's only one book
+		if (dialog.Count == 0 || dialog.Count < 2)
+			return;
+
+		for (int i = 0; i<dialog.Count; i++) {
+			if (string.IsNullOrEmpty(dialog[i].needsFlag))
+				bookNum = i;
+			else if(ps.flagUnlocked(dialog[i].needsFlag))
+				bookNum = i;
+		}
 	}
 
 	void displayNextPage(){
@@ -69,8 +85,15 @@ public class Statue : MonoBehaviour {
 
 		pageNum++;
 		if (pageNum >= dialog[bookNum].pages.Count) {
+			// we've finished the book
 			pageNum = 0;
 			looped = true;
+
+			// unlock the flag for the player (if there is one)
+			if (!string.IsNullOrEmpty(dialog[bookNum].givesFlag))
+			{
+				ps.unlockFlag(dialog[bookNum].givesFlag);
+			}
 		}
 
 		if (!looped)
@@ -87,6 +110,7 @@ public class Statue : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
+		openNewestBook ();
 	}
 
 	void OnTriggerExit(Collider other){
