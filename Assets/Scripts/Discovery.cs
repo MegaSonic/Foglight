@@ -7,6 +7,7 @@ using XInputDotNetPure; // imported dll for xbox controller
 public class Discovery : MonoBehaviour {
 
 	public float radius;
+
 	private SphereCollider coll;
 	private Statue stat;
 

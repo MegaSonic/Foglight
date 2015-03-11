@@ -3,16 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class Page{
+	public string pageText;
+	public bool loop;
+}
+
+
 public class Statue : MonoBehaviour {
 
 	public float hopeAmt;
 	public int level; // what square is this statue in?
 	public string statueName;
-	public List<string> dialog;
-
-
+	public string promptText;
+	public List<Page> dialog;
+	
 	private bool spent = false;
-	private int page = 0;
+	private bool looped = false;
+	private int page = -1;
 
 	private World world;
 	private PlayerStats ps;
@@ -36,7 +44,7 @@ public class Statue : MonoBehaviour {
 				dialogDisplay = tmp[i];
 		}
 
-		// I'm doing this here out of conveniance, but it's not necessarily the best place for it
+		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
 
 		// add this statue's hope to the global hope counter
@@ -54,25 +62,35 @@ public class Statue : MonoBehaviour {
 	}
 
 	void displayNextPage(){
+		// don't crash if there's no dialogue
 		if (dialog.Count == 0)
 			return;
 
 		page++;
-		if (page >= dialog.Count)
+		if (page >= dialog.Count) {
 			page = 0;
+			looped = true;
+		}
 
-		dialogDisplay.text = dialog [page];
+		if (!looped)
+			dialogDisplay.text = dialog [page].pageText;
+		else {
+			if (dialog [page].loop)
+				dialogDisplay.text = dialog [page].pageText;
+			else
+				displayNextPage();
+		}
 
 	}
 
 	void OnTriggerEnter(Collider other){
-		if (dialog.Count > 0)
-			dialogDisplay.text = dialog [0];
+		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
 	}
 
 	void OnTriggerExit(Collider other){
 		clearDialog ();
+		looped = false;
 	}
 
 	void OnTriggerStay(Collider other){
