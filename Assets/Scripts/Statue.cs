@@ -89,8 +89,7 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other){
-		clearDialog ();
-		looped = false;
+		clearDialog ();	
 	}
 
 	void OnTriggerStay(Collider other){

@@ -46,7 +46,6 @@ public class Interact_Fog : MonoBehaviour {
 		// if you're touching fog and you press the "interact" key
 		if(col.gameObject.tag=="fog")
 		{
-<<<<<<< HEAD
 			if (ps.GetHope () > unlockHopeAmt)
 			{
 				// display good prompt
@@ -67,12 +66,10 @@ public class Interact_Fog : MonoBehaviour {
 				promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
 
 			}
-=======
 			// make wall intangible
 			Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
 			// deactivate particle system
 			col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
->>>>>>> origin/master
 		}
 	}
 
