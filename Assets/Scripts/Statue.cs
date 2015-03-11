@@ -9,6 +9,12 @@ public class Page{
 	public bool loop;
 }
 
+[System.Serializable]
+public class Book{
+	public string needsFlag;
+	public string givesFlag;
+	public List<Page> pages;
+}
 
 public class Statue : MonoBehaviour {
 
@@ -16,24 +22,23 @@ public class Statue : MonoBehaviour {
 	public int level; // what square is this statue in?
 	public string statueName;
 	public string promptText;
-	public List<Page> dialog;
-	
+	public List<Book> dialog;
+
 	private bool spent = false;
 	private bool looped = false;
-	private int page = -1;
+	private int pageNum = -1;
+	private int bookNum = 0;
 
 	private World world;
 	private PlayerStats ps;
 	private Canvas can;
 	private Text nameDisplay;
 	private Text dialogDisplay;
-	private Discovery disc;
 
 	// Use this for initialization
 	void Start () {
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
-		disc = GetComponentInChildren<Discovery> ();
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -52,10 +57,6 @@ public class Statue : MonoBehaviour {
 
 	}
 
-	public bool IsSpent(){
-		return spent;
-	}
-
 	void clearDialog(){
 		nameDisplay.text = "";
 		dialogDisplay.text = "";
@@ -63,20 +64,20 @@ public class Statue : MonoBehaviour {
 
 	void displayNextPage(){
 		// don't crash if there's no dialogue
-		if (dialog.Count == 0)
+		if (dialog.Count == 0 || dialog[bookNum].pages.Count == 0)
 			return;
 
-		page++;
-		if (page >= dialog.Count) {
-			page = 0;
+		pageNum++;
+		if (pageNum >= dialog[bookNum].pages.Count) {
+			pageNum = 0;
 			looped = true;
 		}
 
 		if (!looped)
-			dialogDisplay.text = dialog [page].pageText;
+			dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
 		else {
-			if (dialog [page].loop)
-				dialogDisplay.text = dialog [page].pageText;
+			if (dialog[bookNum].pages[pageNum].loop)
+				dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
 			else
 				displayNextPage();
 		}
@@ -97,7 +98,6 @@ public class Statue : MonoBehaviour {
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
-				disc.KillVibration();
 			}
 			displayNextPage();
 		}
