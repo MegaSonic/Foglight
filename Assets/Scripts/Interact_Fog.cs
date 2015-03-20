@@ -57,7 +57,8 @@ public class Interact_Fog : MonoBehaviour {
 					// make wall intangible
 					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
 					// deactivate particle system
-					col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
+					//col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
+					col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
 				}
 			}
 			else
@@ -66,10 +67,6 @@ public class Interact_Fog : MonoBehaviour {
 				promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
 
 			}
-			// make wall intangible
-			Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
-			// deactivate particle system
-			col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
 		}
 	}
 
