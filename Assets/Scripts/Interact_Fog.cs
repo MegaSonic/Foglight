@@ -36,7 +36,7 @@ public class Interact_Fog : MonoBehaviour {
 	void OnTriggerExit(Collider col)
 	{
 		if (col.gameObject.tag == "fog") {
-			promptDisplay.text = "";
+			////promptDisplay.text = "";
 		}
 
 	}
@@ -49,22 +49,42 @@ public class Interact_Fog : MonoBehaviour {
 			if (ps.GetHope () > unlockHopeAmt)
 			{
 				// display good prompt
-				promptDisplay.text = promptTextGood;
+				//// promptDisplay.text = promptTextGood;
 
 				if (Input.GetButtonDown("Interact"))
 				{
-					promptDisplay.text = "";
+					////promptDisplay.text = "";
 					// make wall intangible
 					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
+
+					// deactivate all particle systems with the same tag
+					var emittersInSection = GameObject.FindGameObjectsWithTag(col.gameObject.transform.parent.gameObject.tag);
+					foreach (var emitter in emittersInSection)
+					{
+						var particleSystem = emitter.GetComponent<ParticleSystem>();
+						particleSystem.enableEmission = false;
+
+						ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
+						int count = particleSystem.GetParticles(particles);
+						for(int i = 0; i < count; i++)
+						{
+
+							particles[i].velocity = ((particles[i].position - gameObject.transform.position).normalized * 30);
+						}
+						particleSystem.SetParticles(particles, count);
+					}
+
 					// deactivate particle system
 					//col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
 					col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
+
+
 				}
 			}
 			else
 			{
 				// display bad prompt
-				promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
+				////promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
 
 			}
 		}
