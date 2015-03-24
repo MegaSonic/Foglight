@@ -36,7 +36,7 @@ public class Interact_Fog : MonoBehaviour {
 	void OnTriggerExit(Collider col)
 	{
 		if (col.gameObject.tag == "fog") {
-			////promptDisplay.text = "";
+			promptDisplay.text = "";
 		}
 
 	}
@@ -49,11 +49,11 @@ public class Interact_Fog : MonoBehaviour {
 			if (ps.GetHope () > unlockHopeAmt)
 			{
 				// display good prompt
-				//// promptDisplay.text = promptTextGood;
+				promptDisplay.text = promptTextGood;
 
 				if (Input.GetButtonDown("Interact"))
 				{
-					////promptDisplay.text = "";
+					promptDisplay.text = "";
 					// make wall intangible
 					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
 
@@ -84,7 +84,7 @@ public class Interact_Fog : MonoBehaviour {
 			else
 			{
 				// display bad prompt
-				////promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
+				promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
 
 			}
 		}
