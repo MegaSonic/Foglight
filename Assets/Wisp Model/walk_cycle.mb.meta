@@ -1,0 +1,625 @@
+fileFormatVersion: 2
+guid: 1107e8589e939cd4b89ec790d1445683
+timeCreated: 1427245662
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: char
+    100002: char1
+    100004: char10
+    100006: char11
+    100008: char12
+    100010: char13
+    100012: char14
+    100014: char2
+    100016: char3
+    100018: char4
+    100020: char5
+    100022: char6
+    100024: char7
+    100026: char8
+    100028: char9
+    100030: group
+    100032: pasted__group1
+    100034: pasted__group1 1
+    100036: pasted__group1 10
+    100038: pasted__group1 11
+    100040: pasted__group1 12
+    100042: pasted__group1 13
+    100044: pasted__group1 14
+    100046: pasted__group1 2
+    100048: pasted__group1 3
+    100050: pasted__group1 4
+    100052: pasted__group1 5
+    100054: pasted__group1 6
+    100056: pasted__group1 7
+    100058: pasted__group1 8
+    100060: pasted__group1 9
+    100062: pasted__group2
+    100064: pasted__group2 1
+    100066: pasted__group2 10
+    100068: pasted__group2 11
+    100070: pasted__group2 12
+    100072: pasted__group2 13
+    100074: pasted__group2 14
+    100076: pasted__group2 2
+    100078: pasted__group2 3
+    100080: pasted__group2 4
+    100082: pasted__group2 5
+    100084: pasted__group2 6
+    100086: pasted__group2 7
+    100088: pasted__group2 8
+    100090: pasted__group2 9
+    100092: pasted__pasted__pCube2
+    100094: pasted__pasted__pCube2 1
+    100096: pasted__pasted__pCube2 10
+    100098: pasted__pasted__pCube2 11
+    100100: pasted__pasted__pCube2 12
+    100102: pasted__pasted__pCube2 2
+    100104: pasted__pasted__pCube2 3
+    100106: pasted__pasted__pCube2 4
+    100108: pasted__pasted__pCube2 5
+    100110: pasted__pasted__pCube2 6
+    100112: pasted__pasted__pCube2 7
+    100114: pasted__pasted__pCube2 8
+    100116: pasted__pasted__pCube2 9
+    100118: spine:BB_cog_ctrl_const_grp
+    100120: spine:CIKSpineCl2_1
+    100122: spine:CIKSpineCl2_2
+    100124: spine:COG_gimbal_ctrl_const_grp
+    100126: spine:COGCtrl_grp
+    100128: spine:COGCtrl_scale_const_grp
+    100130: spine:Cspine_0_jnt
+    100132: spine:curvature_clusters_grp
+    100134: spine:free_spine_1_ctrl_grp
+    100136: spine:free_spine_2_ctrl_grp
+    100138: spine:free_spine_3_ctrl_grp
+    100140: spine:free_spine_4_ctrl_grp
+    100142: spine:free_spine_controls_grp
+    100144: spine:gIKSpine
+    100146: spine:gIKSpineXTR
+    100148: spine:hipCtrlOrientGrp
+    100150: spine:hipOriginalCtrl
+    100152: spine:IKSpine
+    100154: spine:IKSpine_0Handle
+    100156: spine:IKSpine_1_curvature_max_grp
+    100158: spine:IKSpine_1_curvature_min_grp
+    100160: spine:IKSpine_1_grp
+    100162: spine:IKSpine_1Handle
+    100164: spine:IKSpine_2_curvature_grp
+    100166: spine:IKSpine_2_fk_grp
+    100168: spine:IKSpine_2_ik_grp
+    100170: spine:IKSpine_2_orient_grp
+    100172: spine:IKSpine_2_rotation_grp
+    100174: spine:IKSpine_2Handle
+    100176: spine:IKSpine_3_curvature_grp
+    100178: spine:IKSpine_3_fk_grp
+    100180: spine:IKSpine_3_ik_grp
+    100182: spine:IKSpine_3_orient_grp
+    100184: spine:IKSpine_3_rotation_grp
+    100186: spine:IKSpine_3Handle
+    100188: spine:IKSpine_4_curvature_max_grp
+    100190: spine:IKSpine_4_curvature_min_grp
+    100192: spine:IKSpine_4_grp
+    100194: spine:IKSpine_4Handle
+    100196: spine:IKSpine_5Handle
+    100198: spine:IKSpineCurve
+    100200: spine:jHipOrient
+    100202: spine:jShoulderOrient
+    100204: spine:jShoulderOrientEnd
+    100206: spine:jTorso_1
+    100208: spine:jTorso_2
+    100210: spine:jTorso_3
+    100212: spine:jTorso_3End
+    100214: spine:orientIKHandle
+    100216: spine:phipCtrl
+    100218: spine:pshoulderCtrl
+    100220: spine:spine_0_jnt
+    100222: spine:spine_10_jnt
+    100224: spine:spine_11_jnt
+    100226: spine:spine_1_jnt
+    100228: spine:spine_2_jnt
+    100230: spine:spine_3_jnt
+    100232: spine:spine_4_jnt
+    100234: spine:spine_5_jnt
+    100236: spine:spine_6_jnt
+    100238: spine:spine_7_jnt
+    100240: spine:spine_8_jnt
+    100242: spine:spine_9_jnt
+    100244: spine:spine_curvature_ctrl_global_scale_grp
+    100246: spine:spine_curvature_ctrl_grp
+    100248: spine:spine_curvature_ctrl_scale_grp
+    100250: spine:spine_distance
+    100252: spine:spine_end_locator
+    100254: spine:spine_first_locator
+    100256: spine:spine_ik_hip_inv_scale_grp
+    100258: spine:spine_ik_shoulder_ctrl_corrective_grp
+    100260: spine:spine_ik_shoulder_inv_scale_grp
+    100262: spine:spine_joints_grp
+    100264: spine:spine_sdk
+    100266: spine:spine_weight_10_jnt_breath_grp
+    100268: spine:spine_weight_10_jnt_free_grp
+    100270: spine:spine_weight_10_jnt_grp
+    100272: spine:spine_weight_10_jnt_ik_crv_grp
+    100274: spine:spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    100276: spine:spine_weight_10_jnt_scale_grp
+    100278: spine:spine_weight_10_jnt_shoulder_grp
+    100280: spine:spine_weight_10_jnt_translate_by_free_spine_4_grp
+    100282: spine:spine_weight_11_jnt_breath_grp
+    100284: spine:spine_weight_11_jnt_curvature_offset_grp
+    100286: spine:spine_weight_11_jnt_free_grp
+    100288: spine:spine_weight_11_jnt_grp
+    100290: spine:spine_weight_11_jnt_ik_crv_grp
+    100292: spine:spine_weight_11_jnt_shoulder_grp
+    100294: spine:spine_weight_1_jnt_curvature_offset_grp
+    100296: spine:spine_weight_1_jnt_free_grp
+    100298: spine:spine_weight_1_jnt_grp
+    100300: spine:spine_weight_1_jnt_hip_grp
+    100302: spine:spine_weight_1_jnt_hip_local_grp
+    100304: spine:spine_weight_1_jnt_ik_crv_grp
+    100306: spine:spine_weight_2_jnt_breath_grp
+    100308: spine:spine_weight_2_jnt_free_grp
+    100310: spine:spine_weight_2_jnt_grp
+    100312: spine:spine_weight_2_jnt_hip_grp
+    100314: spine:spine_weight_2_jnt_hip_local_grp
+    100316: spine:spine_weight_2_jnt_ik_crv_grp
+    100318: spine:spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    100320: spine:spine_weight_2_jnt_scale_grp
+    100322: spine:spine_weight_2_jnt_translate_by_free_spine_1_grp
+    100324: spine:spine_weight_3_jnt_breath_grp
+    100326: spine:spine_weight_3_jnt_free_grp
+    100328: spine:spine_weight_3_jnt_grp
+    100330: spine:spine_weight_3_jnt_hip_grp
+    100332: spine:spine_weight_3_jnt_ik_crv_grp
+    100334: spine:spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    100336: spine:spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    100338: spine:spine_weight_3_jnt_scale_grp
+    100340: spine:spine_weight_3_jnt_translate_by_free_spine_1_grp
+    100342: spine:spine_weight_3_jnt_translate_by_free_spine_2_grp
+    100344: spine:spine_weight_4_jnt_breath_grp
+    100346: spine:spine_weight_4_jnt_free_grp
+    100348: spine:spine_weight_4_jnt_grp
+    100350: spine:spine_weight_4_jnt_hip_grp
+    100352: spine:spine_weight_4_jnt_ik_crv_grp
+    100354: spine:spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    100356: spine:spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    100358: spine:spine_weight_4_jnt_scale_grp
+    100360: spine:spine_weight_4_jnt_translate_by_free_spine_1_grp
+    100362: spine:spine_weight_4_jnt_translate_by_free_spine_2_grp
+    100364: spine:spine_weight_5_jnt_breath_grp
+    100366: spine:spine_weight_5_jnt_free_grp
+    100368: spine:spine_weight_5_jnt_grp
+    100370: spine:spine_weight_5_jnt_hip_grp
+    100372: spine:spine_weight_5_jnt_ik_crv_grp
+    100374: spine:spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    100376: spine:spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    100378: spine:spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    100380: spine:spine_weight_5_jnt_scale_grp
+    100382: spine:spine_weight_5_jnt_translate_by_free_spine_1_grp
+    100384: spine:spine_weight_5_jnt_translate_by_free_spine_2_grp
+    100386: spine:spine_weight_5_jnt_translate_by_free_spine_3_grp
+    100388: spine:spine_weight_6_jnt_breath_grp
+    100390: spine:spine_weight_6_jnt_free_grp
+    100392: spine:spine_weight_6_jnt_grp
+    100394: spine:spine_weight_6_jnt_ik_crv_grp
+    100396: spine:spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    100398: spine:spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    100400: spine:spine_weight_6_jnt_scale_grp
+    100402: spine:spine_weight_6_jnt_translate_by_free_spine_2_grp
+    100404: spine:spine_weight_6_jnt_translate_by_free_spine_3_grp
+    100406: spine:spine_weight_7_jnt_breath_grp
+    100408: spine:spine_weight_7_jnt_free_grp
+    100410: spine:spine_weight_7_jnt_grp
+    100412: spine:spine_weight_7_jnt_ik_crv_grp
+    100414: spine:spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    100416: spine:spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    100418: spine:spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    100420: spine:spine_weight_7_jnt_scale_grp
+    100422: spine:spine_weight_7_jnt_translate_by_free_spine_2_grp
+    100424: spine:spine_weight_7_jnt_translate_by_free_spine_3_grp
+    100426: spine:spine_weight_7_jnt_translate_by_free_spine_4_grp
+    100428: spine:spine_weight_8_jnt_breath_grp
+    100430: spine:spine_weight_8_jnt_free_grp
+    100432: spine:spine_weight_8_jnt_grp
+    100434: spine:spine_weight_8_jnt_ik_crv_grp
+    100436: spine:spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    100438: spine:spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    100440: spine:spine_weight_8_jnt_scale_grp
+    100442: spine:spine_weight_8_jnt_translate_by_free_spine_3_grp
+    100444: spine:spine_weight_8_jnt_translate_by_free_spine_4_grp
+    100446: spine:spine_weight_9_jnt_breath_grp
+    100448: spine:spine_weight_9_jnt_free_grp
+    100450: spine:spine_weight_9_jnt_grp
+    100452: spine:spine_weight_9_jnt_ik_crv_grp
+    100454: spine:spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    100456: spine:spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    100458: spine:spine_weight_9_jnt_scale_grp
+    100460: spine:spine_weight_9_jnt_shoulder_grp
+    100462: spine:spine_weight_9_jnt_translate_by_free_spine_3_grp
+    100464: spine:spine_weight_9_jnt_translate_by_free_spine_4_grp
+    100466: spine:spine_weight_joints_grp
+    100468: spine:sqr_bottom_ctrl
+    100470: spine:sqr_bottom_ctrl_grp
+    100472: spine:sqr_COG_ctrl
+    100474: spine:sqr_COG_gimbal_ctrl
+    100476: spine:sqr_free_spine_1_ctrl
+    100478: spine:sqr_free_spine_2_ctrl
+    100480: spine:sqr_free_spine_3_ctrl
+    100482: spine:sqr_free_spine_4_ctrl
+    100484: spine:sqr_proxy_limb_ctrl
+    100486: spine:sqr_root_ctrl
+    100488: spine:sqr_spine_curvature_ctrl
+    100490: spine:sqr_spine_ik_hip_ctrl
+    100492: spine:sqr_spine_ik_shoulder_ctrl
+    100494: spine:sqr_spine_weight_10_jnt
+    100496: spine:sqr_spine_weight_11_jnt
+    100498: spine:sqr_spine_weight_1_jnt
+    100500: spine:sqr_spine_weight_2_jnt
+    100502: spine:sqr_spine_weight_3_jnt
+    100504: spine:sqr_spine_weight_4_jnt
+    100506: spine:sqr_spine_weight_5_jnt
+    100508: spine:sqr_spine_weight_6_jnt
+    100510: spine:sqr_spine_weight_7_jnt
+    100512: spine:sqr_spine_weight_8_jnt
+    100514: spine:sqr_spine_weight_9_jnt
+    100516: spine:sqr_teeth_mid_pv_loc
+    100518: //RootNode
+    400000: char
+    400002: char1
+    400004: char10
+    400006: char11
+    400008: char12
+    400010: char13
+    400012: char14
+    400014: char2
+    400016: char3
+    400018: char4
+    400020: char5
+    400022: char6
+    400024: char7
+    400026: char8
+    400028: char9
+    400030: group
+    400032: pasted__group1
+    400034: pasted__group1 1
+    400036: pasted__group1 10
+    400038: pasted__group1 11
+    400040: pasted__group1 12
+    400042: pasted__group1 13
+    400044: pasted__group1 14
+    400046: pasted__group1 2
+    400048: pasted__group1 3
+    400050: pasted__group1 4
+    400052: pasted__group1 5
+    400054: pasted__group1 6
+    400056: pasted__group1 7
+    400058: pasted__group1 8
+    400060: pasted__group1 9
+    400062: pasted__group2
+    400064: pasted__group2 1
+    400066: pasted__group2 10
+    400068: pasted__group2 11
+    400070: pasted__group2 12
+    400072: pasted__group2 13
+    400074: pasted__group2 14
+    400076: pasted__group2 2
+    400078: pasted__group2 3
+    400080: pasted__group2 4
+    400082: pasted__group2 5
+    400084: pasted__group2 6
+    400086: pasted__group2 7
+    400088: pasted__group2 8
+    400090: pasted__group2 9
+    400092: pasted__pasted__pCube2
+    400094: pasted__pasted__pCube2 1
+    400096: pasted__pasted__pCube2 10
+    400098: pasted__pasted__pCube2 11
+    400100: pasted__pasted__pCube2 12
+    400102: pasted__pasted__pCube2 2
+    400104: pasted__pasted__pCube2 3
+    400106: pasted__pasted__pCube2 4
+    400108: pasted__pasted__pCube2 5
+    400110: pasted__pasted__pCube2 6
+    400112: pasted__pasted__pCube2 7
+    400114: pasted__pasted__pCube2 8
+    400116: pasted__pasted__pCube2 9
+    400118: spine:BB_cog_ctrl_const_grp
+    400120: spine:CIKSpineCl2_1
+    400122: spine:CIKSpineCl2_2
+    400124: spine:COG_gimbal_ctrl_const_grp
+    400126: spine:COGCtrl_grp
+    400128: spine:COGCtrl_scale_const_grp
+    400130: spine:Cspine_0_jnt
+    400132: spine:curvature_clusters_grp
+    400134: spine:free_spine_1_ctrl_grp
+    400136: spine:free_spine_2_ctrl_grp
+    400138: spine:free_spine_3_ctrl_grp
+    400140: spine:free_spine_4_ctrl_grp
+    400142: spine:free_spine_controls_grp
+    400144: spine:gIKSpine
+    400146: spine:gIKSpineXTR
+    400148: spine:hipCtrlOrientGrp
+    400150: spine:hipOriginalCtrl
+    400152: spine:IKSpine
+    400154: spine:IKSpine_0Handle
+    400156: spine:IKSpine_1_curvature_max_grp
+    400158: spine:IKSpine_1_curvature_min_grp
+    400160: spine:IKSpine_1_grp
+    400162: spine:IKSpine_1Handle
+    400164: spine:IKSpine_2_curvature_grp
+    400166: spine:IKSpine_2_fk_grp
+    400168: spine:IKSpine_2_ik_grp
+    400170: spine:IKSpine_2_orient_grp
+    400172: spine:IKSpine_2_rotation_grp
+    400174: spine:IKSpine_2Handle
+    400176: spine:IKSpine_3_curvature_grp
+    400178: spine:IKSpine_3_fk_grp
+    400180: spine:IKSpine_3_ik_grp
+    400182: spine:IKSpine_3_orient_grp
+    400184: spine:IKSpine_3_rotation_grp
+    400186: spine:IKSpine_3Handle
+    400188: spine:IKSpine_4_curvature_max_grp
+    400190: spine:IKSpine_4_curvature_min_grp
+    400192: spine:IKSpine_4_grp
+    400194: spine:IKSpine_4Handle
+    400196: spine:IKSpine_5Handle
+    400198: spine:IKSpineCurve
+    400200: spine:jHipOrient
+    400202: spine:jShoulderOrient
+    400204: spine:jShoulderOrientEnd
+    400206: spine:jTorso_1
+    400208: spine:jTorso_2
+    400210: spine:jTorso_3
+    400212: spine:jTorso_3End
+    400214: spine:orientIKHandle
+    400216: spine:phipCtrl
+    400218: spine:pshoulderCtrl
+    400220: spine:spine_0_jnt
+    400222: spine:spine_10_jnt
+    400224: spine:spine_11_jnt
+    400226: spine:spine_1_jnt
+    400228: spine:spine_2_jnt
+    400230: spine:spine_3_jnt
+    400232: spine:spine_4_jnt
+    400234: spine:spine_5_jnt
+    400236: spine:spine_6_jnt
+    400238: spine:spine_7_jnt
+    400240: spine:spine_8_jnt
+    400242: spine:spine_9_jnt
+    400244: spine:spine_curvature_ctrl_global_scale_grp
+    400246: spine:spine_curvature_ctrl_grp
+    400248: spine:spine_curvature_ctrl_scale_grp
+    400250: spine:spine_distance
+    400252: spine:spine_end_locator
+    400254: spine:spine_first_locator
+    400256: spine:spine_ik_hip_inv_scale_grp
+    400258: spine:spine_ik_shoulder_ctrl_corrective_grp
+    400260: spine:spine_ik_shoulder_inv_scale_grp
+    400262: spine:spine_joints_grp
+    400264: spine:spine_sdk
+    400266: spine:spine_weight_10_jnt_breath_grp
+    400268: spine:spine_weight_10_jnt_free_grp
+    400270: spine:spine_weight_10_jnt_grp
+    400272: spine:spine_weight_10_jnt_ik_crv_grp
+    400274: spine:spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    400276: spine:spine_weight_10_jnt_scale_grp
+    400278: spine:spine_weight_10_jnt_shoulder_grp
+    400280: spine:spine_weight_10_jnt_translate_by_free_spine_4_grp
+    400282: spine:spine_weight_11_jnt_breath_grp
+    400284: spine:spine_weight_11_jnt_curvature_offset_grp
+    400286: spine:spine_weight_11_jnt_free_grp
+    400288: spine:spine_weight_11_jnt_grp
+    400290: spine:spine_weight_11_jnt_ik_crv_grp
+    400292: spine:spine_weight_11_jnt_shoulder_grp
+    400294: spine:spine_weight_1_jnt_curvature_offset_grp
+    400296: spine:spine_weight_1_jnt_free_grp
+    400298: spine:spine_weight_1_jnt_grp
+    400300: spine:spine_weight_1_jnt_hip_grp
+    400302: spine:spine_weight_1_jnt_hip_local_grp
+    400304: spine:spine_weight_1_jnt_ik_crv_grp
+    400306: spine:spine_weight_2_jnt_breath_grp
+    400308: spine:spine_weight_2_jnt_free_grp
+    400310: spine:spine_weight_2_jnt_grp
+    400312: spine:spine_weight_2_jnt_hip_grp
+    400314: spine:spine_weight_2_jnt_hip_local_grp
+    400316: spine:spine_weight_2_jnt_ik_crv_grp
+    400318: spine:spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    400320: spine:spine_weight_2_jnt_scale_grp
+    400322: spine:spine_weight_2_jnt_translate_by_free_spine_1_grp
+    400324: spine:spine_weight_3_jnt_breath_grp
+    400326: spine:spine_weight_3_jnt_free_grp
+    400328: spine:spine_weight_3_jnt_grp
+    400330: spine:spine_weight_3_jnt_hip_grp
+    400332: spine:spine_weight_3_jnt_ik_crv_grp
+    400334: spine:spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    400336: spine:spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    400338: spine:spine_weight_3_jnt_scale_grp
+    400340: spine:spine_weight_3_jnt_translate_by_free_spine_1_grp
+    400342: spine:spine_weight_3_jnt_translate_by_free_spine_2_grp
+    400344: spine:spine_weight_4_jnt_breath_grp
+    400346: spine:spine_weight_4_jnt_free_grp
+    400348: spine:spine_weight_4_jnt_grp
+    400350: spine:spine_weight_4_jnt_hip_grp
+    400352: spine:spine_weight_4_jnt_ik_crv_grp
+    400354: spine:spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    400356: spine:spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    400358: spine:spine_weight_4_jnt_scale_grp
+    400360: spine:spine_weight_4_jnt_translate_by_free_spine_1_grp
+    400362: spine:spine_weight_4_jnt_translate_by_free_spine_2_grp
+    400364: spine:spine_weight_5_jnt_breath_grp
+    400366: spine:spine_weight_5_jnt_free_grp
+    400368: spine:spine_weight_5_jnt_grp
+    400370: spine:spine_weight_5_jnt_hip_grp
+    400372: spine:spine_weight_5_jnt_ik_crv_grp
+    400374: spine:spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    400376: spine:spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    400378: spine:spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    400380: spine:spine_weight_5_jnt_scale_grp
+    400382: spine:spine_weight_5_jnt_translate_by_free_spine_1_grp
+    400384: spine:spine_weight_5_jnt_translate_by_free_spine_2_grp
+    400386: spine:spine_weight_5_jnt_translate_by_free_spine_3_grp
+    400388: spine:spine_weight_6_jnt_breath_grp
+    400390: spine:spine_weight_6_jnt_free_grp
+    400392: spine:spine_weight_6_jnt_grp
+    400394: spine:spine_weight_6_jnt_ik_crv_grp
+    400396: spine:spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    400398: spine:spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    400400: spine:spine_weight_6_jnt_scale_grp
+    400402: spine:spine_weight_6_jnt_translate_by_free_spine_2_grp
+    400404: spine:spine_weight_6_jnt_translate_by_free_spine_3_grp
+    400406: spine:spine_weight_7_jnt_breath_grp
+    400408: spine:spine_weight_7_jnt_free_grp
+    400410: spine:spine_weight_7_jnt_grp
+    400412: spine:spine_weight_7_jnt_ik_crv_grp
+    400414: spine:spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    400416: spine:spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    400418: spine:spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    400420: spine:spine_weight_7_jnt_scale_grp
+    400422: spine:spine_weight_7_jnt_translate_by_free_spine_2_grp
+    400424: spine:spine_weight_7_jnt_translate_by_free_spine_3_grp
+    400426: spine:spine_weight_7_jnt_translate_by_free_spine_4_grp
+    400428: spine:spine_weight_8_jnt_breath_grp
+    400430: spine:spine_weight_8_jnt_free_grp
+    400432: spine:spine_weight_8_jnt_grp
+    400434: spine:spine_weight_8_jnt_ik_crv_grp
+    400436: spine:spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    400438: spine:spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    400440: spine:spine_weight_8_jnt_scale_grp
+    400442: spine:spine_weight_8_jnt_translate_by_free_spine_3_grp
+    400444: spine:spine_weight_8_jnt_translate_by_free_spine_4_grp
+    400446: spine:spine_weight_9_jnt_breath_grp
+    400448: spine:spine_weight_9_jnt_free_grp
+    400450: spine:spine_weight_9_jnt_grp
+    400452: spine:spine_weight_9_jnt_ik_crv_grp
+    400454: spine:spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    400456: spine:spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    400458: spine:spine_weight_9_jnt_scale_grp
+    400460: spine:spine_weight_9_jnt_shoulder_grp
+    400462: spine:spine_weight_9_jnt_translate_by_free_spine_3_grp
+    400464: spine:spine_weight_9_jnt_translate_by_free_spine_4_grp
+    400466: spine:spine_weight_joints_grp
+    400468: spine:sqr_bottom_ctrl
+    400470: spine:sqr_bottom_ctrl_grp
+    400472: spine:sqr_COG_ctrl
+    400474: spine:sqr_COG_gimbal_ctrl
+    400476: spine:sqr_free_spine_1_ctrl
+    400478: spine:sqr_free_spine_2_ctrl
+    400480: spine:sqr_free_spine_3_ctrl
+    400482: spine:sqr_free_spine_4_ctrl
+    400484: spine:sqr_proxy_limb_ctrl
+    400486: spine:sqr_root_ctrl
+    400488: spine:sqr_spine_curvature_ctrl
+    400490: spine:sqr_spine_ik_hip_ctrl
+    400492: spine:sqr_spine_ik_shoulder_ctrl
+    400494: spine:sqr_spine_weight_10_jnt
+    400496: spine:sqr_spine_weight_11_jnt
+    400498: spine:sqr_spine_weight_1_jnt
+    400500: spine:sqr_spine_weight_2_jnt
+    400502: spine:sqr_spine_weight_3_jnt
+    400504: spine:sqr_spine_weight_4_jnt
+    400506: spine:sqr_spine_weight_5_jnt
+    400508: spine:sqr_spine_weight_6_jnt
+    400510: spine:sqr_spine_weight_7_jnt
+    400512: spine:sqr_spine_weight_8_jnt
+    400514: spine:sqr_spine_weight_9_jnt
+    400516: spine:sqr_teeth_mid_pv_loc
+    400518: //RootNode
+    2300000: pasted__pasted__pCube2 1
+    2300002: pasted__pasted__pCube2 10
+    2300004: pasted__pasted__pCube2 11
+    2300006: pasted__pasted__pCube2 12
+    2300008: pasted__pasted__pCube2 2
+    2300010: pasted__pasted__pCube2 3
+    2300012: pasted__pasted__pCube2 4
+    2300014: pasted__pasted__pCube2 5
+    2300016: pasted__pasted__pCube2 6
+    2300018: pasted__pasted__pCube2 7
+    2300020: pasted__pasted__pCube2 8
+    2300022: pasted__pasted__pCube2 9
+    3300000: pasted__pasted__pCube2 1
+    3300002: pasted__pasted__pCube2 10
+    3300004: pasted__pasted__pCube2 11
+    3300006: pasted__pasted__pCube2 12
+    3300008: pasted__pasted__pCube2 2
+    3300010: pasted__pasted__pCube2 3
+    3300012: pasted__pasted__pCube2 4
+    3300014: pasted__pasted__pCube2 5
+    3300016: pasted__pasted__pCube2 6
+    3300018: pasted__pasted__pCube2 7
+    3300020: pasted__pasted__pCube2 8
+    3300022: pasted__pasted__pCube2 9
+    4300000: pasted__pasted__pCube2
+    4300002: pasted__pasted__pCube2
+    4300004: pasted__pasted__pCube2
+    4300006: pasted__pasted__pCube2
+    4300008: pasted__pasted__pCube2
+    4300010: pasted__pasted__pCube2
+    4300012: pasted__pasted__pCube2
+    4300014: pasted__pasted__pCube2
+    4300016: pasted__pasted__pCube2
+    4300018: pasted__pasted__pCube2
+    4300020: pasted__pasted__pCube2
+    4300022: pasted__pasted__pCube2
+    4300024: pasted__pasted__pCube2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: pasted__pasted__pCube2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

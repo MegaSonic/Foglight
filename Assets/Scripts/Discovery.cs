@@ -10,7 +10,7 @@ public class Discovery : MonoBehaviour {
 
 	public string name;
 	public string text;
-	public Animation animation;
+	public Sprite image;
 	public float hopeAmt;
 	public int level;
 
@@ -19,6 +19,7 @@ public class Discovery : MonoBehaviour {
 	private Canvas can;
 	private Text nameDisplay;
 	private Text dialogDisplay;
+	private Image imageDisplay;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class Discovery : MonoBehaviour {
 		
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
+		imageDisplay = can.GetComponentInChildren<Image>();
 		for (int i = 0; i<tmp.Length; i++) {
 			if (tmp[i].name == "nameText")
 				nameDisplay = tmp[i];
@@ -47,19 +49,15 @@ public class Discovery : MonoBehaviour {
 			vibe.KillVibration ();
 			ps.AddHope(hopeAmt);
 
-
 			nameDisplay.text = name;
 			dialogDisplay.text = text;
-
-			animation.Play();
+			imageDisplay.sprite = image;
+			imageDisplay.enabled = true;
 		}
 	}
 
-	void OnTriggerLeave(Collider coll) {
-		if (animation.isPlaying) {
-			animation.Stop();
-
-		}
+	void OnTriggerExit(Collider coll) {
+		imageDisplay.enabled = false;
 		clearDialog();
 	}
 
