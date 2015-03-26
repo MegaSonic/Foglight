@@ -35,10 +35,16 @@ public class Statue : MonoBehaviour {
 	private Text nameDisplay;
 	private Text dialogDisplay;
 
+	private ParticleSystem nameFog;
+	private ParticleSystem bodyFog;
+
 	// Use this for initialization
 	void Start () {
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
+		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
+		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
+
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -61,6 +67,12 @@ public class Statue : MonoBehaviour {
 	void clearDialog(){
 		nameDisplay.text = "";
 		dialogDisplay.text = "";
+		if (nameFog.isPlaying) {
+			nameFog.Stop();
+		}
+		if (bodyFog.isPlaying) {
+			bodyFog.Stop ();
+		}
 	}
 
 	// looks for the newest unlocked book, and sets it as the default
@@ -123,6 +135,10 @@ public class Statue : MonoBehaviour {
 				spent = true;
 				ps.AddHope(hopeAmt);
 			}
+			if (statueName != "") {
+				nameFog.Play();
+			}
+			bodyFog.Play ();
 			displayNextPage();
 		}
 	}
