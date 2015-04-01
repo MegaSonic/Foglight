@@ -8,7 +8,7 @@ public class Vibration : MonoBehaviour {
 
 	public float radius;
 
-	private bool spent = false;
+	public bool spent = false;
 
 	private SphereCollider coll;
 
@@ -76,10 +76,7 @@ public class Vibration : MonoBehaviour {
 			float vibAmt = (radius - dist) / radius;
 			GamePad.SetVibration (0, vibAmt, vibAmt);
 
-			if (Input.GetButtonDown ("Interact")){
-				spent = true;
-				KillVibration();
-			}
+
 		}
 	}
 }

@@ -21,6 +21,7 @@ public class Discovery : MonoBehaviour {
 	private Text dialogDisplay;
 	private Image imageDisplay;
 
+
 	// Use this for initialization
 	void Start () {
 		vibe = GetComponentInChildren<Vibration> ();
@@ -28,6 +29,7 @@ public class Discovery : MonoBehaviour {
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
 		
+
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
 		imageDisplay = can.GetComponentInChildren<Image>();
@@ -47,6 +49,7 @@ public class Discovery : MonoBehaviour {
 		if (Input.GetButtonDown ("Interact") && !spent) {
 			spent = true;
 			vibe.KillVibration ();
+			vibe.spent = true;
 			ps.AddHope(hopeAmt);
 
 			nameDisplay.text = name;
