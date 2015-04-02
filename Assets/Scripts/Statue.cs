@@ -35,6 +35,8 @@ public class Statue : MonoBehaviour {
 	private Text nameDisplay;
 	private Text dialogDisplay;
 
+	private ParticleSystem playerParticles;
+
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
 
@@ -44,6 +46,7 @@ public class Statue : MonoBehaviour {
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
+
 
 
 		can = FindObjectOfType<Canvas> ();
@@ -123,6 +126,12 @@ public class Statue : MonoBehaviour {
 		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
 		openNewestBook ();
+
+		/*
+		foreach (Particle p in playerParticles) {
+			p.color = Color.green;
+		}
+		*/
 	}
 
 	void OnTriggerExit(Collider other){

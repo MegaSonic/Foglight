@@ -1,0 +1,2455 @@
+fileFormatVersion: 2
+guid: d0c0a40f2736a3248b85b413517822d9
+timeCreated: 1427846667
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BB_cog_ctrl_const_grp
+    100002: //RootNode
+    100004: CIKSpineCl2_1
+    100006: CIKSpineCl2_2
+    100008: COG_gimbal_ctrl_const_grp
+    100010: COGCtrl_grp
+    100012: COGCtrl_scale_const_grp
+    100014: controllers_bs_grp
+    100016: Cspine_0_jnt
+    100018: curvature_clusters_grp
+    100020: distanceDimension1
+    100022: ffd1Base
+    100024: ffd1Lattice
+    100026: ffd1LatticeGroup
+    100028: free_spine_1_ctrl_grp
+    100030: free_spine_2_ctrl_grp
+    100032: free_spine_3_ctrl_grp
+    100034: free_spine_4_ctrl_grp
+    100036: free_spine_controls_grp
+    100038: gIKSpine
+    100040: gIKSpineXTR
+    100042: group
+    100044: group1
+    100046: group2
+    100048: group3
+    100050: hipCtrlOrientGrp
+    100052: hipOriginalCtrl
+    100054: IKSpine
+    100056: IKSpine_0Handle
+    100058: IKSpine_1_curvature_max_grp
+    100060: IKSpine_1_curvature_min_grp
+    100062: IKSpine_1_grp
+    100064: IKSpine_1Handle
+    100066: IKSpine_2_curvature_grp
+    100068: IKSpine_2_fk_grp
+    100070: IKSpine_2_ik_grp
+    100072: IKSpine_2_orient_grp
+    100074: IKSpine_2_rotation_grp
+    100076: IKSpine_2Handle
+    100078: IKSpine_3_curvature_grp
+    100080: IKSpine_3_fk_grp
+    100082: IKSpine_3_ik_grp
+    100084: IKSpine_3_orient_grp
+    100086: IKSpine_3_rotation_grp
+    100088: IKSpine_3Handle
+    100090: IKSpine_4_curvature_max_grp
+    100092: IKSpine_4_curvature_min_grp
+    100094: IKSpine_4_grp
+    100096: IKSpine_4Handle
+    100098: IKSpine_5Handle
+    100100: IKSpineCurve
+    100102: jHipOrient
+    100104: jShoulderOrient
+    100106: jShoulderOrientEnd
+    100108: jTorso_1
+    100110: jTorso_2
+    100112: jTorso_3
+    100114: jTorso_3End
+    100116: lower_jaw_dist_rivet
+    100118: orientIKHandle
+    100120: pasted__BB_cog_ctrl_const_grp
+    100122: pasted__BB_cog_ctrl_const_grp 1
+    100124: pasted__CIKSpineCl2_1
+    100126: pasted__CIKSpineCl2_2
+    100128: pasted__COG_gimbal_ctrl_const_grp
+    100130: pasted__COG_gimbal_ctrl_const_grp 1
+    100132: pasted__COGCtrl_grp
+    100134: pasted__COGCtrl_grp 1
+    100136: pasted__COGCtrl_scale_const_grp
+    100138: pasted__COGCtrl_scale_const_grp 1
+    100140: pasted__controllers_bs_grp
+    100142: pasted__controllers_bs_grp 1
+    100144: pasted__Cspine_0_jnt
+    100146: pasted__Cspine_0_jnt 1
+    100148: pasted__curvature_clusters_grp
+    100150: pasted__curvature_clusters_grp 1
+    100152: pasted__ffd1Base
+    100154: pasted__ffd1Base 1
+    100156: pasted__ffd1Lattice
+    100158: pasted__ffd1Lattice 1
+    100160: pasted__ffd1LatticeGroup
+    100162: pasted__ffd1LatticeGroup 1
+    100164: pasted__free_spine_1_ctrl_grp
+    100166: pasted__free_spine_1_ctrl_grp 1
+    100168: pasted__free_spine_2_ctrl_grp
+    100170: pasted__free_spine_2_ctrl_grp 1
+    100172: pasted__free_spine_3_ctrl_grp
+    100174: pasted__free_spine_3_ctrl_grp 1
+    100176: pasted__free_spine_4_ctrl_grp
+    100178: pasted__free_spine_4_ctrl_grp 1
+    100180: pasted__free_spine_controls_grp
+    100182: pasted__free_spine_controls_grp 1
+    100184: pasted__gIKSpine
+    100186: pasted__gIKSpine 1
+    100188: pasted__gIKSpineXTR
+    100190: pasted__gIKSpineXTR 1
+    100192: pasted__hipCtrlOrientGrp
+    100194: pasted__hipOriginalCtrl
+    100196: pasted__IKSpine_0Handle
+    100198: pasted__IKSpine_1_curvature_max_grp
+    100200: pasted__IKSpine_1_curvature_min_grp
+    100202: pasted__IKSpine_1_grp
+    100204: pasted__IKSpine_1Handle
+    100206: pasted__IKSpine_2_curvature_grp
+    100208: pasted__IKSpine_2_curvature_grp 1
+    100210: pasted__IKSpine_2_fk_grp
+    100212: pasted__IKSpine_2_fk_grp 1
+    100214: pasted__IKSpine_2_ik_grp
+    100216: pasted__IKSpine_2_ik_grp 1
+    100218: pasted__IKSpine_2_orient_grp
+    100220: pasted__IKSpine_2_orient_grp 1
+    100222: pasted__IKSpine_2_rotation_grp
+    100224: pasted__IKSpine_2_rotation_grp 1
+    100226: pasted__IKSpine_2Handle
+    100228: pasted__IKSpine_2Handle 1
+    100230: pasted__IKSpine_3_curvature_grp
+    100232: pasted__IKSpine_3_curvature_grp 1
+    100234: pasted__IKSpine_3_fk_grp
+    100236: pasted__IKSpine_3_fk_grp 1
+    100238: pasted__IKSpine_3_ik_grp
+    100240: pasted__IKSpine_3_ik_grp 1
+    100242: pasted__IKSpine_3_orient_grp
+    100244: pasted__IKSpine_3_orient_grp 1
+    100246: pasted__IKSpine_3_rotation_grp
+    100248: pasted__IKSpine_3_rotation_grp 1
+    100250: pasted__IKSpine_3Handle
+    100252: pasted__IKSpine_3Handle 1
+    100254: pasted__IKSpine_4_curvature_max_grp
+    100256: pasted__IKSpine_4_curvature_min_grp
+    100258: pasted__IKSpine_4_grp
+    100260: pasted__IKSpine_4Handle
+    100262: pasted__IKSpine_5Handle
+    100264: pasted__IKSpineCurve
+    100266: pasted__IKSpineCurve 1
+    100268: pasted__jTorso_1
+    100270: pasted__jTorso_1 1
+    100272: pasted__jTorso_2
+    100274: pasted__jTorso_2 1
+    100276: pasted__jTorso_3
+    100278: pasted__jTorso_3 1
+    100280: pasted__jTorso_3End
+    100282: pasted__jTorso_3End 1
+    100284: pasted__phipCtrl
+    100286: pasted__phipCtrl 1
+    100288: pasted__pshoulderCtrl
+    100290: pasted__pshoulderCtrl 1
+    100292: pasted__pSphere1
+    100294: pasted__spine_0_jnt
+    100296: pasted__spine_0_jnt 1
+    100298: pasted__spine_10_jnt
+    100300: pasted__spine_10_jnt 1
+    100302: pasted__spine_11_jnt
+    100304: pasted__spine_11_jnt 1
+    100306: pasted__spine_1_jnt
+    100308: pasted__spine_1_jnt 1
+    100310: pasted__spine_2_jnt
+    100312: pasted__spine_2_jnt 1
+    100314: pasted__spine_3_jnt
+    100316: pasted__spine_3_jnt 1
+    100318: pasted__spine_4_jnt
+    100320: pasted__spine_4_jnt 1
+    100322: pasted__spine_5_jnt
+    100324: pasted__spine_5_jnt 1
+    100326: pasted__spine_6_jnt
+    100328: pasted__spine_6_jnt 1
+    100330: pasted__spine_7_jnt
+    100332: pasted__spine_7_jnt 1
+    100334: pasted__spine_8_jnt
+    100336: pasted__spine_8_jnt 1
+    100338: pasted__spine_9_jnt
+    100340: pasted__spine_9_jnt 1
+    100342: pasted__spine_curvature_ctrl_global_scale_grp
+    100344: pasted__spine_curvature_ctrl_global_scale_grp 1
+    100346: pasted__spine_curvature_ctrl_grp
+    100348: pasted__spine_curvature_ctrl_grp 1
+    100350: pasted__spine_curvature_ctrl_scale_grp
+    100352: pasted__spine_curvature_ctrl_scale_grp 1
+    100354: pasted__spine_distance
+    100356: pasted__spine_end_locator
+    100358: pasted__spine_first_locator
+    100360: pasted__spine_ik_hip_inv_scale_grp
+    100362: pasted__spine_ik_shoulder_ctrl_corrective_grp
+    100364: pasted__spine_ik_shoulder_ctrl_corrective_grp 1
+    100366: pasted__spine_ik_shoulder_inv_scale_grp
+    100368: pasted__spine_joints_grp
+    100370: pasted__spine_joints_grp 1
+    100372: pasted__spine_sdk
+    100374: pasted__spine_sdk 1
+    100376: pasted__spine_weight_10_jnt_breath_grp
+    100378: pasted__spine_weight_10_jnt_breath_grp 1
+    100380: pasted__spine_weight_10_jnt_free_grp
+    100382: pasted__spine_weight_10_jnt_free_grp 1
+    100384: pasted__spine_weight_10_jnt_grp
+    100386: pasted__spine_weight_10_jnt_grp 1
+    100388: pasted__spine_weight_10_jnt_ik_crv_grp
+    100390: pasted__spine_weight_10_jnt_ik_crv_grp 1
+    100392: pasted__spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    100394: pasted__spine_weight_10_jnt_rotate_by_free_spine_4_grp 1
+    100396: pasted__spine_weight_10_jnt_scale_grp
+    100398: pasted__spine_weight_10_jnt_scale_grp 1
+    100400: pasted__spine_weight_10_jnt_shoulder_grp
+    100402: pasted__spine_weight_10_jnt_shoulder_grp 1
+    100404: pasted__spine_weight_10_jnt_translate_by_free_spine_4_grp
+    100406: pasted__spine_weight_10_jnt_translate_by_free_spine_4_grp 1
+    100408: pasted__spine_weight_11_jnt_breath_grp
+    100410: pasted__spine_weight_11_jnt_breath_grp 1
+    100412: pasted__spine_weight_11_jnt_curvature_offset_grp
+    100414: pasted__spine_weight_11_jnt_curvature_offset_grp 1
+    100416: pasted__spine_weight_11_jnt_free_grp
+    100418: pasted__spine_weight_11_jnt_free_grp 1
+    100420: pasted__spine_weight_11_jnt_grp
+    100422: pasted__spine_weight_11_jnt_grp 1
+    100424: pasted__spine_weight_11_jnt_ik_crv_grp
+    100426: pasted__spine_weight_11_jnt_ik_crv_grp 1
+    100428: pasted__spine_weight_11_jnt_shoulder_grp
+    100430: pasted__spine_weight_11_jnt_shoulder_grp 1
+    100432: pasted__spine_weight_1_jnt_curvature_offset_grp
+    100434: pasted__spine_weight_1_jnt_curvature_offset_grp 1
+    100436: pasted__spine_weight_1_jnt_free_grp
+    100438: pasted__spine_weight_1_jnt_free_grp 1
+    100440: pasted__spine_weight_1_jnt_grp
+    100442: pasted__spine_weight_1_jnt_grp 1
+    100444: pasted__spine_weight_1_jnt_hip_grp
+    100446: pasted__spine_weight_1_jnt_hip_grp 1
+    100448: pasted__spine_weight_1_jnt_hip_local_grp
+    100450: pasted__spine_weight_1_jnt_hip_local_grp 1
+    100452: pasted__spine_weight_1_jnt_ik_crv_grp
+    100454: pasted__spine_weight_1_jnt_ik_crv_grp 1
+    100456: pasted__spine_weight_2_jnt_breath_grp
+    100458: pasted__spine_weight_2_jnt_breath_grp 1
+    100460: pasted__spine_weight_2_jnt_free_grp
+    100462: pasted__spine_weight_2_jnt_free_grp 1
+    100464: pasted__spine_weight_2_jnt_grp
+    100466: pasted__spine_weight_2_jnt_grp 1
+    100468: pasted__spine_weight_2_jnt_hip_grp
+    100470: pasted__spine_weight_2_jnt_hip_grp 1
+    100472: pasted__spine_weight_2_jnt_hip_local_grp
+    100474: pasted__spine_weight_2_jnt_hip_local_grp 1
+    100476: pasted__spine_weight_2_jnt_ik_crv_grp
+    100478: pasted__spine_weight_2_jnt_ik_crv_grp 1
+    100480: pasted__spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    100482: pasted__spine_weight_2_jnt_rotate_by_free_spine_1_grp 1
+    100484: pasted__spine_weight_2_jnt_scale_grp
+    100486: pasted__spine_weight_2_jnt_scale_grp 1
+    100488: pasted__spine_weight_2_jnt_translate_by_free_spine_1_grp
+    100490: pasted__spine_weight_2_jnt_translate_by_free_spine_1_grp 1
+    100492: pasted__spine_weight_3_jnt_breath_grp
+    100494: pasted__spine_weight_3_jnt_breath_grp 1
+    100496: pasted__spine_weight_3_jnt_free_grp
+    100498: pasted__spine_weight_3_jnt_free_grp 1
+    100500: pasted__spine_weight_3_jnt_grp
+    100502: pasted__spine_weight_3_jnt_grp 1
+    100504: pasted__spine_weight_3_jnt_hip_grp
+    100506: pasted__spine_weight_3_jnt_hip_grp 1
+    100508: pasted__spine_weight_3_jnt_ik_crv_grp
+    100510: pasted__spine_weight_3_jnt_ik_crv_grp 1
+    100512: pasted__spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    100514: pasted__spine_weight_3_jnt_rotate_by_free_spine_1_grp 1
+    100516: pasted__spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    100518: pasted__spine_weight_3_jnt_rotate_by_free_spine_2_grp 1
+    100520: pasted__spine_weight_3_jnt_scale_grp
+    100522: pasted__spine_weight_3_jnt_scale_grp 1
+    100524: pasted__spine_weight_3_jnt_translate_by_free_spine_1_grp
+    100526: pasted__spine_weight_3_jnt_translate_by_free_spine_1_grp 1
+    100528: pasted__spine_weight_3_jnt_translate_by_free_spine_2_grp
+    100530: pasted__spine_weight_3_jnt_translate_by_free_spine_2_grp 1
+    100532: pasted__spine_weight_4_jnt_breath_grp
+    100534: pasted__spine_weight_4_jnt_breath_grp 1
+    100536: pasted__spine_weight_4_jnt_free_grp
+    100538: pasted__spine_weight_4_jnt_free_grp 1
+    100540: pasted__spine_weight_4_jnt_grp
+    100542: pasted__spine_weight_4_jnt_grp 1
+    100544: pasted__spine_weight_4_jnt_hip_grp
+    100546: pasted__spine_weight_4_jnt_hip_grp 1
+    100548: pasted__spine_weight_4_jnt_ik_crv_grp
+    100550: pasted__spine_weight_4_jnt_ik_crv_grp 1
+    100552: pasted__spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    100554: pasted__spine_weight_4_jnt_rotate_by_free_spine_1_grp 1
+    100556: pasted__spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    100558: pasted__spine_weight_4_jnt_rotate_by_free_spine_2_grp 1
+    100560: pasted__spine_weight_4_jnt_scale_grp
+    100562: pasted__spine_weight_4_jnt_scale_grp 1
+    100564: pasted__spine_weight_4_jnt_translate_by_free_spine_1_grp
+    100566: pasted__spine_weight_4_jnt_translate_by_free_spine_1_grp 1
+    100568: pasted__spine_weight_4_jnt_translate_by_free_spine_2_grp
+    100570: pasted__spine_weight_4_jnt_translate_by_free_spine_2_grp 1
+    100572: pasted__spine_weight_5_jnt_breath_grp
+    100574: pasted__spine_weight_5_jnt_breath_grp 1
+    100576: pasted__spine_weight_5_jnt_free_grp
+    100578: pasted__spine_weight_5_jnt_free_grp 1
+    100580: pasted__spine_weight_5_jnt_grp
+    100582: pasted__spine_weight_5_jnt_grp 1
+    100584: pasted__spine_weight_5_jnt_hip_grp
+    100586: pasted__spine_weight_5_jnt_hip_grp 1
+    100588: pasted__spine_weight_5_jnt_ik_crv_grp
+    100590: pasted__spine_weight_5_jnt_ik_crv_grp 1
+    100592: pasted__spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    100594: pasted__spine_weight_5_jnt_rotate_by_free_spine_1_grp 1
+    100596: pasted__spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    100598: pasted__spine_weight_5_jnt_rotate_by_free_spine_2_grp 1
+    100600: pasted__spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    100602: pasted__spine_weight_5_jnt_rotate_by_free_spine_3_grp 1
+    100604: pasted__spine_weight_5_jnt_scale_grp
+    100606: pasted__spine_weight_5_jnt_scale_grp 1
+    100608: pasted__spine_weight_5_jnt_translate_by_free_spine_1_grp
+    100610: pasted__spine_weight_5_jnt_translate_by_free_spine_1_grp 1
+    100612: pasted__spine_weight_5_jnt_translate_by_free_spine_2_grp
+    100614: pasted__spine_weight_5_jnt_translate_by_free_spine_2_grp 1
+    100616: pasted__spine_weight_5_jnt_translate_by_free_spine_3_grp
+    100618: pasted__spine_weight_5_jnt_translate_by_free_spine_3_grp 1
+    100620: pasted__spine_weight_6_jnt_breath_grp
+    100622: pasted__spine_weight_6_jnt_breath_grp 1
+    100624: pasted__spine_weight_6_jnt_free_grp
+    100626: pasted__spine_weight_6_jnt_free_grp 1
+    100628: pasted__spine_weight_6_jnt_grp
+    100630: pasted__spine_weight_6_jnt_grp 1
+    100632: pasted__spine_weight_6_jnt_ik_crv_grp
+    100634: pasted__spine_weight_6_jnt_ik_crv_grp 1
+    100636: pasted__spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    100638: pasted__spine_weight_6_jnt_rotate_by_free_spine_2_grp 1
+    100640: pasted__spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    100642: pasted__spine_weight_6_jnt_rotate_by_free_spine_3_grp 1
+    100644: pasted__spine_weight_6_jnt_scale_grp
+    100646: pasted__spine_weight_6_jnt_scale_grp 1
+    100648: pasted__spine_weight_6_jnt_translate_by_free_spine_2_grp
+    100650: pasted__spine_weight_6_jnt_translate_by_free_spine_2_grp 1
+    100652: pasted__spine_weight_6_jnt_translate_by_free_spine_3_grp
+    100654: pasted__spine_weight_6_jnt_translate_by_free_spine_3_grp 1
+    100656: pasted__spine_weight_7_jnt_breath_grp
+    100658: pasted__spine_weight_7_jnt_breath_grp 1
+    100660: pasted__spine_weight_7_jnt_free_grp
+    100662: pasted__spine_weight_7_jnt_free_grp 1
+    100664: pasted__spine_weight_7_jnt_grp
+    100666: pasted__spine_weight_7_jnt_grp 1
+    100668: pasted__spine_weight_7_jnt_ik_crv_grp
+    100670: pasted__spine_weight_7_jnt_ik_crv_grp 1
+    100672: pasted__spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    100674: pasted__spine_weight_7_jnt_rotate_by_free_spine_2_grp 1
+    100676: pasted__spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    100678: pasted__spine_weight_7_jnt_rotate_by_free_spine_3_grp 1
+    100680: pasted__spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    100682: pasted__spine_weight_7_jnt_rotate_by_free_spine_4_grp 1
+    100684: pasted__spine_weight_7_jnt_scale_grp
+    100686: pasted__spine_weight_7_jnt_scale_grp 1
+    100688: pasted__spine_weight_7_jnt_translate_by_free_spine_2_grp
+    100690: pasted__spine_weight_7_jnt_translate_by_free_spine_2_grp 1
+    100692: pasted__spine_weight_7_jnt_translate_by_free_spine_3_grp
+    100694: pasted__spine_weight_7_jnt_translate_by_free_spine_3_grp 1
+    100696: pasted__spine_weight_7_jnt_translate_by_free_spine_4_grp
+    100698: pasted__spine_weight_7_jnt_translate_by_free_spine_4_grp 1
+    100700: pasted__spine_weight_8_jnt_breath_grp
+    100702: pasted__spine_weight_8_jnt_breath_grp 1
+    100704: pasted__spine_weight_8_jnt_free_grp
+    100706: pasted__spine_weight_8_jnt_free_grp 1
+    100708: pasted__spine_weight_8_jnt_grp
+    100710: pasted__spine_weight_8_jnt_grp 1
+    100712: pasted__spine_weight_8_jnt_ik_crv_grp
+    100714: pasted__spine_weight_8_jnt_ik_crv_grp 1
+    100716: pasted__spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    100718: pasted__spine_weight_8_jnt_rotate_by_free_spine_3_grp 1
+    100720: pasted__spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    100722: pasted__spine_weight_8_jnt_rotate_by_free_spine_4_grp 1
+    100724: pasted__spine_weight_8_jnt_scale_grp
+    100726: pasted__spine_weight_8_jnt_scale_grp 1
+    100728: pasted__spine_weight_8_jnt_translate_by_free_spine_3_grp
+    100730: pasted__spine_weight_8_jnt_translate_by_free_spine_3_grp 1
+    100732: pasted__spine_weight_8_jnt_translate_by_free_spine_4_grp
+    100734: pasted__spine_weight_8_jnt_translate_by_free_spine_4_grp 1
+    100736: pasted__spine_weight_9_jnt_breath_grp
+    100738: pasted__spine_weight_9_jnt_breath_grp 1
+    100740: pasted__spine_weight_9_jnt_free_grp
+    100742: pasted__spine_weight_9_jnt_free_grp 1
+    100744: pasted__spine_weight_9_jnt_grp
+    100746: pasted__spine_weight_9_jnt_grp 1
+    100748: pasted__spine_weight_9_jnt_ik_crv_grp
+    100750: pasted__spine_weight_9_jnt_ik_crv_grp 1
+    100752: pasted__spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    100754: pasted__spine_weight_9_jnt_rotate_by_free_spine_3_grp 1
+    100756: pasted__spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    100758: pasted__spine_weight_9_jnt_rotate_by_free_spine_4_grp 1
+    100760: pasted__spine_weight_9_jnt_scale_grp
+    100762: pasted__spine_weight_9_jnt_scale_grp 1
+    100764: pasted__spine_weight_9_jnt_shoulder_grp
+    100766: pasted__spine_weight_9_jnt_shoulder_grp 1
+    100768: pasted__spine_weight_9_jnt_translate_by_free_spine_3_grp
+    100770: pasted__spine_weight_9_jnt_translate_by_free_spine_3_grp 1
+    100772: pasted__spine_weight_9_jnt_translate_by_free_spine_4_grp
+    100774: pasted__spine_weight_9_jnt_translate_by_free_spine_4_grp 1
+    100776: pasted__spine_weight_joints_grp
+    100778: pasted__spine_weight_joints_grp 1
+    100780: pasted__sqr__01b_ear__joints_grp
+    100782: pasted__sqr__01b_ear__joints_grp 1
+    100784: pasted__sqr__01b_ear__lf_ear_2_jnt
+    100786: pasted__sqr__01b_ear__lf_ear_2_jnt 1
+    100788: pasted__sqr__01b_ear__lf_ear_side_grp
+    100790: pasted__sqr__01b_ear__lf_ear_side_grp 1
+    100792: pasted__sqr__01b_ear__rt_ear_2_jnt
+    100794: pasted__sqr__01b_ear__rt_ear_2_jnt 1
+    100796: pasted__sqr__01b_ear__rt_ear_side_grp
+    100798: pasted__sqr__01b_ear__rt_ear_side_grp 1
+    100800: pasted__sqr__06_jaw__base_jnt
+    100802: pasted__sqr__06_jaw__base_jnt 1
+    100804: pasted__sqr__06_jaw__deform_grp
+    100806: pasted__sqr__06_jaw__deform_grp 1
+    100808: pasted__sqr__06_jaw__geo_grp
+    100810: pasted__sqr__06_jaw__geo_grp 1
+    100812: pasted__sqr__06_jaw__joints_grp
+    100814: pasted__sqr__06_jaw__joints_grp 1
+    100816: pasted__sqr__06_jaw__lf_corner_jnt
+    100818: pasted__sqr__06_jaw__lf_corner_jnt 1
+    100820: pasted__sqr__06_jaw__lf_corner_jnt_constraint_grp
+    100822: pasted__sqr__06_jaw__lf_corner_jnt_constraint_grp 1
+    100824: pasted__sqr__06_jaw__lf_corner_jnt_side_grp
+    100826: pasted__sqr__06_jaw__lf_corner_jnt_side_grp 1
+    100828: pasted__sqr__06_jaw__lower_jaw_grp
+    100830: pasted__sqr__06_jaw__lower_jaw_grp 1
+    100832: pasted__sqr__06_jaw__lower_jaw_jnt
+    100834: pasted__sqr__06_jaw__lower_jaw_jnt 1
+    100836: pasted__sqr__06_jaw__lower_jaw_orient_grp
+    100838: pasted__sqr__06_jaw__lower_jaw_orient_grp 1
+    100840: pasted__sqr__06_jaw__lower_jaw_rotate_grp
+    100842: pasted__sqr__06_jaw__lower_jaw_rotate_grp 1
+    100844: pasted__sqr__06_jaw__lower_jaw_rsupport_grp
+    100846: pasted__sqr__06_jaw__lower_jaw_rsupport_grp 1
+    100848: pasted__sqr__06_jaw__lower_jaw_translate_grp
+    100850: pasted__sqr__06_jaw__lower_jaw_translate_grp 1
+    100852: pasted__sqr__06_jaw__lower_jaw_tsupport_grp
+    100854: pasted__sqr__06_jaw__lower_jaw_tsupport_grp 1
+    100856: pasted__sqr__06_jaw__rt_corner_jnt
+    100858: pasted__sqr__06_jaw__rt_corner_jnt 1
+    100860: pasted__sqr__06_jaw__rt_corner_jnt_constraint_grp
+    100862: pasted__sqr__06_jaw__rt_corner_jnt_constraint_grp 1
+    100864: pasted__sqr__06_jaw__rt_corner_jnt_side_grp
+    100866: pasted__sqr__06_jaw__rt_corner_jnt_side_grp 1
+    100868: pasted__sqr__06_jaw__upper_jaw_grp
+    100870: pasted__sqr__06_jaw__upper_jaw_grp 1
+    100872: pasted__sqr__06_jaw__upper_jaw_jnt
+    100874: pasted__sqr__06_jaw__upper_jaw_jnt 1
+    100876: pasted__sqr__06_jaw__upper_jaw_jnt_grp
+    100878: pasted__sqr__06_jaw__upper_jaw_jnt_grp 1
+    100880: pasted__sqr__06_jaw__upper_jaw_orient_grp
+    100882: pasted__sqr__06_jaw__upper_jaw_orient_grp 1
+    100884: pasted__sqr__06_jaw__upper_jaw_rotate_grp
+    100886: pasted__sqr__06_jaw__upper_jaw_rotate_grp 1
+    100888: pasted__sqr__06_jaw__upper_jaw_rsupport_grp
+    100890: pasted__sqr__06_jaw__upper_jaw_rsupport_grp 1
+    100892: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt
+    100894: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt 1
+    100896: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt_grp
+    100898: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt_grp 1
+    100900: pasted__sqr__06_jaw__upper_jaw_translate_grp
+    100902: pasted__sqr__06_jaw__upper_jaw_translate_grp 1
+    100904: pasted__sqr__06_jaw__upper_jaw_tsupport_grp
+    100906: pasted__sqr__06_jaw__upper_jaw_tsupport_grp 1
+    100908: pasted__sqr__07_mouth_corner__base_jnt
+    100910: pasted__sqr__07_mouth_corner__base_jnt 1
+    100912: pasted__sqr__07_mouth_corner__deform_grp
+    100914: pasted__sqr__07_mouth_corner__deform_grp 1
+    100916: pasted__sqr__07_mouth_corner__geo_grp
+    100918: pasted__sqr__07_mouth_corner__geo_grp 1
+    100920: pasted__sqr__07_mouth_corner__joints_grp
+    100922: pasted__sqr__07_mouth_corner__joints_grp 1
+    100924: pasted__sqr__07_mouth_corner__lf_jnt
+    100926: pasted__sqr__07_mouth_corner__lf_jnt 1
+    100928: pasted__sqr__07_mouth_corner__lf_jnt_back_idle_loc
+    100930: pasted__sqr__07_mouth_corner__lf_jnt_back_idle_loc 1
+    100932: pasted__sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc
+    100934: pasted__sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc 1
+    100936: pasted__sqr__07_mouth_corner__lf_jnt_back_open_translate_loc
+    100938: pasted__sqr__07_mouth_corner__lf_jnt_back_open_translate_loc 1
+    100940: pasted__sqr__07_mouth_corner__lf_jnt_down_grp
+    100942: pasted__sqr__07_mouth_corner__lf_jnt_down_grp 1
+    100944: pasted__sqr__07_mouth_corner__lf_jnt_down_grp_loc
+    100946: pasted__sqr__07_mouth_corner__lf_jnt_down_grp_loc 1
+    100948: pasted__sqr__07_mouth_corner__lf_jnt_down_idle_loc
+    100950: pasted__sqr__07_mouth_corner__lf_jnt_down_idle_loc 1
+    100952: pasted__sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc
+    100954: pasted__sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc 1
+    100956: pasted__sqr__07_mouth_corner__lf_jnt_down_open_translate_loc
+    100958: pasted__sqr__07_mouth_corner__lf_jnt_down_open_translate_loc 1
+    100960: pasted__sqr__07_mouth_corner__lf_jnt_down_rotate_grp
+    100962: pasted__sqr__07_mouth_corner__lf_jnt_down_rotate_grp 1
+    100964: pasted__sqr__07_mouth_corner__lf_jnt_forth_idle_loc
+    100966: pasted__sqr__07_mouth_corner__lf_jnt_forth_idle_loc 1
+    100968: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc
+    100970: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc 1
+    100972: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc
+    100974: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc 1
+    100976: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp
+    100978: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp 1
+    100980: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc
+    100982: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc 1
+    100984: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp
+    100986: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp 1
+    100988: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc
+    100990: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc 1
+    100992: pasted__sqr__07_mouth_corner__lf_jnt_orient_grp
+    100994: pasted__sqr__07_mouth_corner__lf_jnt_orient_grp 1
+    100996: pasted__sqr__07_mouth_corner__lf_jnt_orient_range_grp
+    100998: pasted__sqr__07_mouth_corner__lf_jnt_orient_range_grp 1
+    101000: pasted__sqr__07_mouth_corner__lf_jnt_side_grp
+    101002: pasted__sqr__07_mouth_corner__lf_jnt_side_grp 1
+    101004: pasted__sqr__07_mouth_corner__lf_jnt_up_down_orient_grp
+    101006: pasted__sqr__07_mouth_corner__lf_jnt_up_down_orient_grp 1
+    101008: pasted__sqr__07_mouth_corner__lf_jnt_up_grp
+    101010: pasted__sqr__07_mouth_corner__lf_jnt_up_grp 1
+    101012: pasted__sqr__07_mouth_corner__lf_jnt_up_grp_loc
+    101014: pasted__sqr__07_mouth_corner__lf_jnt_up_grp_loc 1
+    101016: pasted__sqr__07_mouth_corner__lf_jnt_up_idle_loc
+    101018: pasted__sqr__07_mouth_corner__lf_jnt_up_idle_loc 1
+    101020: pasted__sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc
+    101022: pasted__sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc 1
+    101024: pasted__sqr__07_mouth_corner__lf_jnt_up_open_translate_loc
+    101026: pasted__sqr__07_mouth_corner__lf_jnt_up_open_translate_loc 1
+    101028: pasted__sqr__07_mouth_corner__lf_jnt_up_rotate_grp
+    101030: pasted__sqr__07_mouth_corner__lf_jnt_up_rotate_grp 1
+    101032: pasted__sqr__07_mouth_corner__rt_jnt
+    101034: pasted__sqr__07_mouth_corner__rt_jnt 1
+    101036: pasted__sqr__07_mouth_corner__rt_jnt_back_idle_loc
+    101038: pasted__sqr__07_mouth_corner__rt_jnt_back_idle_loc 1
+    101040: pasted__sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc
+    101042: pasted__sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc 1
+    101044: pasted__sqr__07_mouth_corner__rt_jnt_back_open_translate_loc
+    101046: pasted__sqr__07_mouth_corner__rt_jnt_back_open_translate_loc 1
+    101048: pasted__sqr__07_mouth_corner__rt_jnt_down_grp
+    101050: pasted__sqr__07_mouth_corner__rt_jnt_down_grp 1
+    101052: pasted__sqr__07_mouth_corner__rt_jnt_down_grp_loc
+    101054: pasted__sqr__07_mouth_corner__rt_jnt_down_grp_loc 1
+    101056: pasted__sqr__07_mouth_corner__rt_jnt_down_idle_loc
+    101058: pasted__sqr__07_mouth_corner__rt_jnt_down_idle_loc 1
+    101060: pasted__sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc
+    101062: pasted__sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc 1
+    101064: pasted__sqr__07_mouth_corner__rt_jnt_down_open_translate_loc
+    101066: pasted__sqr__07_mouth_corner__rt_jnt_down_open_translate_loc 1
+    101068: pasted__sqr__07_mouth_corner__rt_jnt_down_rotate_grp
+    101070: pasted__sqr__07_mouth_corner__rt_jnt_down_rotate_grp 1
+    101072: pasted__sqr__07_mouth_corner__rt_jnt_forth_idle_loc
+    101074: pasted__sqr__07_mouth_corner__rt_jnt_forth_idle_loc 1
+    101076: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc
+    101078: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc 1
+    101080: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc
+    101082: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc 1
+    101084: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp
+    101086: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp 1
+    101088: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc
+    101090: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc 1
+    101092: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp
+    101094: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp 1
+    101096: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc
+    101098: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc 1
+    101100: pasted__sqr__07_mouth_corner__rt_jnt_orient_grp
+    101102: pasted__sqr__07_mouth_corner__rt_jnt_orient_grp 1
+    101104: pasted__sqr__07_mouth_corner__rt_jnt_orient_range_grp
+    101106: pasted__sqr__07_mouth_corner__rt_jnt_orient_range_grp 1
+    101108: pasted__sqr__07_mouth_corner__rt_jnt_side_grp
+    101110: pasted__sqr__07_mouth_corner__rt_jnt_side_grp 1
+    101112: pasted__sqr__07_mouth_corner__rt_jnt_up_down_orient_grp
+    101114: pasted__sqr__07_mouth_corner__rt_jnt_up_down_orient_grp 1
+    101116: pasted__sqr__07_mouth_corner__rt_jnt_up_grp
+    101118: pasted__sqr__07_mouth_corner__rt_jnt_up_grp 1
+    101120: pasted__sqr__07_mouth_corner__rt_jnt_up_grp_loc
+    101122: pasted__sqr__07_mouth_corner__rt_jnt_up_grp_loc 1
+    101124: pasted__sqr__07_mouth_corner__rt_jnt_up_idle_loc
+    101126: pasted__sqr__07_mouth_corner__rt_jnt_up_idle_loc 1
+    101128: pasted__sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc
+    101130: pasted__sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc 1
+    101132: pasted__sqr__07_mouth_corner__rt_jnt_up_open_translate_loc
+    101134: pasted__sqr__07_mouth_corner__rt_jnt_up_open_translate_loc 1
+    101136: pasted__sqr__07_mouth_corner__rt_jnt_up_rotate_grp
+    101138: pasted__sqr__07_mouth_corner__rt_jnt_up_rotate_grp 1
+    101140: pasted__sqr_anim_geo_grp
+    101142: pasted__sqr_bottom_base_jnt
+    101144: pasted__sqr_bottom_base_jnt 1
+    101146: pasted__sqr_bottom_ctrl_grp
+    101148: pasted__sqr_bottom_deform_geo
+    101150: pasted__sqr_bottom_deform_geo 1
+    101152: pasted__sqr_bottom_deform_setup_grp
+    101154: pasted__sqr_bottom_deform_setup_grp 1
+    101156: pasted__sqr_bottom_jnt
+    101158: pasted__sqr_bottom_jnt 1
+    101160: pasted__sqr_bottom_jnt_grp
+    101162: pasted__sqr_bottom_jnt_grp 1
+    101164: pasted__sqr_bottom_joints_grp
+    101166: pasted__sqr_bottom_joints_grp 1
+    101168: pasted__sqr_COG_ctrl
+    101170: pasted__sqr_COG_ctrl 1
+    101172: pasted__sqr_COG_gimbal_ctrl
+    101174: pasted__sqr_COG_gimbal_ctrl 1
+    101176: pasted__sqr_ear_controls_grp
+    101178: pasted__sqr_ear_lf_rivet
+    101180: pasted__sqr_ear_rt_rivet
+    101182: pasted__sqr_facial_deform_hierarchy_grp
+    101184: pasted__sqr_facial_deform_hierarchy_grp 1
+    101186: pasted__sqr_facial_geo_hierarchy_grp
+    101188: pasted__sqr_facial_geo_hierarchy_grp 1
+    101190: pasted__sqr_facial_rig_grp
+    101192: pasted__sqr_facial_rig_grp 1
+    101194: pasted__sqr_facial_settings
+    101196: pasted__sqr_facial_settings 1
+    101198: pasted__sqr_far_closest_point_setup_grp
+    101200: pasted__sqr_far_closest_point_setup_grp 1
+    101202: pasted__sqr_free_spine_1_ctrl
+    101204: pasted__sqr_free_spine_1_ctrl 1
+    101206: pasted__sqr_free_spine_2_ctrl
+    101208: pasted__sqr_free_spine_2_ctrl 1
+    101210: pasted__sqr_free_spine_3_ctrl
+    101212: pasted__sqr_free_spine_3_ctrl 1
+    101214: pasted__sqr_free_spine_4_ctrl
+    101216: pasted__sqr_free_spine_4_ctrl 1
+    101218: pasted__sqr_geo_all_grp
+    101220: pasted__sqr_geo_all_grp 1
+    101222: pasted__sqr_grp
+    101224: pasted__sqr_grp 1
+    101226: pasted__sqr_head_sensor_jaw_layer_geo
+    101228: pasted__sqr_head_sensor_jaw_layer_geo 1
+    101230: pasted__sqr_lf_ear_2_ctrl_orient_grp
+    101232: pasted__sqr_lf_ear_2_jnt_transform_grp
+    101234: pasted__sqr_lf_ear_2_jnt_transform_grp 1
+    101236: pasted__sqr_lf_ear_2_orient_grp
+    101238: pasted__sqr_lf_ear_2_orient_grp 1
+    101240: pasted__sqr_lf_ear_ctrl_constraint_grp
+    101242: pasted__sqr_lf_mouth_corner_controls_constraint_grp
+    101244: pasted__sqr_lf_mouth_corner_controls_constraint_grp 1
+    101246: pasted__sqr_lf_mouth_corner_controls_grp
+    101248: pasted__sqr_lf_mouth_corner_controls_grp 1
+    101250: pasted__sqr_lf_mouth_corner_controls_offset_grp
+    101252: pasted__sqr_lf_mouth_corner_controls_offset_grp 1
+    101254: pasted__sqr_lf_mouth_corner_ctrl_grp
+    101256: pasted__sqr_lf_mouth_corner_ctrl_grp 1
+    101258: pasted__sqr_lower_jaw_ctrl_grp
+    101260: pasted__sqr_lower_jaw_ctrl_grp 1
+    101262: pasted__sqr_lower_jaw_offset_ctrl
+    101264: pasted__sqr_lower_jaw_offset_ctrl 1
+    101266: pasted__sqr_mouth_controls_constraint_grp
+    101268: pasted__sqr_mouth_controls_constraint_grp 1
+    101270: pasted__sqr_mouth_controls_grp
+    101272: pasted__sqr_mouth_controls_grp 1
+    101274: pasted__sqr_mouth_controls_jaw_rivet
+    101276: pasted__sqr_mouth_controls_jaw_rivet 1
+    101278: pasted__sqr_mouth_controls_lf_mouth_corner_rivet
+    101280: pasted__sqr_mouth_controls_lf_mouth_corner_rivet 1
+    101282: pasted__sqr_mouth_controls_rt_mouth_corner_rivet
+    101284: pasted__sqr_mouth_controls_rt_mouth_corner_rivet 1
+    101286: pasted__sqr_mouth_controls_sensor_grp
+    101288: pasted__sqr_mouth_controls_sensor_grp 1
+    101290: pasted__sqr_mouth_master_ctrl_grp
+    101292: pasted__sqr_mouth_master_ctrl_grp 1
+    101294: pasted__sqr_near_closest_point_setup_grp
+    101296: pasted__sqr_near_closest_point_setup_grp 1
+    101298: pasted__sqr_normal_geo_grp
+    101300: pasted__sqr_normal_geo_grp 1
+    101302: pasted__sqr_proxy_limb_ctrl
+    101304: pasted__sqr_rig_all_grp
+    101306: pasted__sqr_rig_all_grp 1
+    101308: pasted__sqr_rivets_grp
+    101310: pasted__sqr_rt_ear_2_ctrl_orient_grp
+    101312: pasted__sqr_rt_ear_2_jnt_transform_grp
+    101314: pasted__sqr_rt_ear_2_jnt_transform_grp 1
+    101316: pasted__sqr_rt_ear_2_orient_grp
+    101318: pasted__sqr_rt_ear_2_orient_grp 1
+    101320: pasted__sqr_rt_ear_ctrl_constraint_grp
+    101322: pasted__sqr_rt_mouth_corner_controls_constraint_grp
+    101324: pasted__sqr_rt_mouth_corner_controls_constraint_grp 1
+    101326: pasted__sqr_rt_mouth_corner_controls_grp
+    101328: pasted__sqr_rt_mouth_corner_controls_grp 1
+    101330: pasted__sqr_rt_mouth_corner_controls_offset_grp
+    101332: pasted__sqr_rt_mouth_corner_controls_offset_grp 1
+    101334: pasted__sqr_rt_mouth_corner_ctrl_grp
+    101336: pasted__sqr_rt_mouth_corner_ctrl_grp 1
+    101338: pasted__sqr_setup_grp
+    101340: pasted__sqr_setup_grp 1
+    101342: pasted__sqr_skin_geo_grp
+    101344: pasted__sqr_skin_geo_grp 1
+    101346: pasted__sqr_spine_curvature_scale_ctrl
+    101348: pasted__sqr_spine_curvature_scale_ctrl 1
+    101350: pasted__sqr_spine_ik_hip_ctrl
+    101352: pasted__sqr_spine_ik_hip_scale_ctrl
+    101354: pasted__sqr_spine_ik_shoulder_ctrl
+    101356: pasted__sqr_spine_ik_shoulder_scale_ctrl
+    101358: pasted__sqr_spine_weight_10_jnt
+    101360: pasted__sqr_spine_weight_10_jnt 1
+    101362: pasted__sqr_spine_weight_11_jnt
+    101364: pasted__sqr_spine_weight_11_jnt 1
+    101366: pasted__sqr_spine_weight_1_jnt
+    101368: pasted__sqr_spine_weight_1_jnt 1
+    101370: pasted__sqr_spine_weight_2_jnt
+    101372: pasted__sqr_spine_weight_2_jnt 1
+    101374: pasted__sqr_spine_weight_3_jnt
+    101376: pasted__sqr_spine_weight_3_jnt 1
+    101378: pasted__sqr_spine_weight_4_jnt
+    101380: pasted__sqr_spine_weight_4_jnt 1
+    101382: pasted__sqr_spine_weight_5_jnt
+    101384: pasted__sqr_spine_weight_5_jnt 1
+    101386: pasted__sqr_spine_weight_6_jnt
+    101388: pasted__sqr_spine_weight_6_jnt 1
+    101390: pasted__sqr_spine_weight_7_jnt
+    101392: pasted__sqr_spine_weight_7_jnt 1
+    101394: pasted__sqr_spine_weight_8_jnt
+    101396: pasted__sqr_spine_weight_8_jnt 1
+    101398: pasted__sqr_spine_weight_9_jnt
+    101400: pasted__sqr_spine_weight_9_jnt 1
+    101402: pasted__sqr_tail_1_ctrl_grp
+    101404: pasted__sqr_tail_controls_grp
+    101406: pasted__sqr_tail_controls_parent_const_grp
+    101408: pasted__sqr_tail_controls_point_const_grp
+    101410: pasted__sqr_tail_controls_scale_grp
+    101412: pasted__sqr_tail_deform_grp
+    101414: pasted__sqr_tail_sensor_setup_grp
+    101416: pasted__sqr_tail_sensor_setup_grp 1
+    101418: pasted__sqr_teeth_cp_far_crv
+    101420: pasted__sqr_teeth_cp_far_crv 1
+    101422: pasted__sqr_teeth_cp_far_crv_scale_grp
+    101424: pasted__sqr_teeth_cp_far_crv_scale_grp 1
+    101426: pasted__sqr_teeth_cp_near_crv
+    101428: pasted__sqr_teeth_cp_near_crv 1
+    101430: pasted__sqr_teeth_cp_near_crv_scale_grp
+    101432: pasted__sqr_teeth_cp_near_crv_scale_grp 1
+    101434: pasted__sqr_teeth_setup_grp
+    101436: pasted__sqr_teeth_setup_grp 1
+    101438: pasted__sqr_upper_jaw_ctrl_grp
+    101440: pasted__sqr_upper_jaw_ctrl_grp 1
+    101442: pCube1
+    101444: pCylinder1
+    101446: phipCtrl
+    101448: pre_teeth_deform_setup_grp
+    101450: pshoulderCtrl
+    101452: pSphere1
+    101454: softMod1Handle
+    101456: spine
+    101458: spine_0_jnt
+    101460: spine_10_jnt
+    101462: spine_11_jnt
+    101464: spine_1_jnt
+    101466: spine_2_jnt
+    101468: spine_3_jnt
+    101470: spine_4_jnt
+    101472: spine_5_jnt
+    101474: spine_6_jnt
+    101476: spine_7_jnt
+    101478: spine_8_jnt
+    101480: spine_9_jnt
+    101482: spine_curvature_ctrl_global_scale_grp
+    101484: spine_curvature_ctrl_grp
+    101486: spine_curvature_ctrl_scale_grp
+    101488: spine_distance
+    101490: spine_end_locator
+    101492: spine_first_locator
+    101494: spine_ik_hip_inv_scale_grp
+    101496: spine_ik_shoulder_ctrl_corrective_grp
+    101498: spine_ik_shoulder_inv_scale_grp
+    101500: spine_joints_grp
+    101502: spine_sdk
+    101504: spine_weight_10_jnt_breath_grp
+    101506: spine_weight_10_jnt_free_grp
+    101508: spine_weight_10_jnt_grp
+    101510: spine_weight_10_jnt_ik_crv_grp
+    101512: spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    101514: spine_weight_10_jnt_scale_grp
+    101516: spine_weight_10_jnt_shoulder_grp
+    101518: spine_weight_10_jnt_translate_by_free_spine_4_grp
+    101520: spine_weight_11_jnt_breath_grp
+    101522: spine_weight_11_jnt_curvature_offset_grp
+    101524: spine_weight_11_jnt_free_grp
+    101526: spine_weight_11_jnt_grp
+    101528: spine_weight_11_jnt_ik_crv_grp
+    101530: spine_weight_11_jnt_shoulder_grp
+    101532: spine_weight_1_jnt_curvature_offset_grp
+    101534: spine_weight_1_jnt_free_grp
+    101536: spine_weight_1_jnt_grp
+    101538: spine_weight_1_jnt_hip_grp
+    101540: spine_weight_1_jnt_hip_local_grp
+    101542: spine_weight_1_jnt_ik_crv_grp
+    101544: spine_weight_2_jnt_breath_grp
+    101546: spine_weight_2_jnt_free_grp
+    101548: spine_weight_2_jnt_grp
+    101550: spine_weight_2_jnt_hip_grp
+    101552: spine_weight_2_jnt_hip_local_grp
+    101554: spine_weight_2_jnt_ik_crv_grp
+    101556: spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    101558: spine_weight_2_jnt_scale_grp
+    101560: spine_weight_2_jnt_translate_by_free_spine_1_grp
+    101562: spine_weight_3_jnt_breath_grp
+    101564: spine_weight_3_jnt_free_grp
+    101566: spine_weight_3_jnt_grp
+    101568: spine_weight_3_jnt_hip_grp
+    101570: spine_weight_3_jnt_ik_crv_grp
+    101572: spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    101574: spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    101576: spine_weight_3_jnt_scale_grp
+    101578: spine_weight_3_jnt_translate_by_free_spine_1_grp
+    101580: spine_weight_3_jnt_translate_by_free_spine_2_grp
+    101582: spine_weight_4_jnt_breath_grp
+    101584: spine_weight_4_jnt_free_grp
+    101586: spine_weight_4_jnt_grp
+    101588: spine_weight_4_jnt_hip_grp
+    101590: spine_weight_4_jnt_ik_crv_grp
+    101592: spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    101594: spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    101596: spine_weight_4_jnt_scale_grp
+    101598: spine_weight_4_jnt_translate_by_free_spine_1_grp
+    101600: spine_weight_4_jnt_translate_by_free_spine_2_grp
+    101602: spine_weight_5_jnt_breath_grp
+    101604: spine_weight_5_jnt_free_grp
+    101606: spine_weight_5_jnt_grp
+    101608: spine_weight_5_jnt_hip_grp
+    101610: spine_weight_5_jnt_ik_crv_grp
+    101612: spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    101614: spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    101616: spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    101618: spine_weight_5_jnt_scale_grp
+    101620: spine_weight_5_jnt_translate_by_free_spine_1_grp
+    101622: spine_weight_5_jnt_translate_by_free_spine_2_grp
+    101624: spine_weight_5_jnt_translate_by_free_spine_3_grp
+    101626: spine_weight_6_jnt_breath_grp
+    101628: spine_weight_6_jnt_free_grp
+    101630: spine_weight_6_jnt_grp
+    101632: spine_weight_6_jnt_ik_crv_grp
+    101634: spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    101636: spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    101638: spine_weight_6_jnt_scale_grp
+    101640: spine_weight_6_jnt_translate_by_free_spine_2_grp
+    101642: spine_weight_6_jnt_translate_by_free_spine_3_grp
+    101644: spine_weight_7_jnt_breath_grp
+    101646: spine_weight_7_jnt_free_grp
+    101648: spine_weight_7_jnt_grp
+    101650: spine_weight_7_jnt_ik_crv_grp
+    101652: spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    101654: spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    101656: spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    101658: spine_weight_7_jnt_scale_grp
+    101660: spine_weight_7_jnt_translate_by_free_spine_2_grp
+    101662: spine_weight_7_jnt_translate_by_free_spine_3_grp
+    101664: spine_weight_7_jnt_translate_by_free_spine_4_grp
+    101666: spine_weight_8_jnt_breath_grp
+    101668: spine_weight_8_jnt_free_grp
+    101670: spine_weight_8_jnt_grp
+    101672: spine_weight_8_jnt_ik_crv_grp
+    101674: spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    101676: spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    101678: spine_weight_8_jnt_scale_grp
+    101680: spine_weight_8_jnt_translate_by_free_spine_3_grp
+    101682: spine_weight_8_jnt_translate_by_free_spine_4_grp
+    101684: spine_weight_9_jnt_breath_grp
+    101686: spine_weight_9_jnt_free_grp
+    101688: spine_weight_9_jnt_grp
+    101690: spine_weight_9_jnt_ik_crv_grp
+    101692: spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    101694: spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    101696: spine_weight_9_jnt_scale_grp
+    101698: spine_weight_9_jnt_shoulder_grp
+    101700: spine_weight_9_jnt_translate_by_free_spine_3_grp
+    101702: spine_weight_9_jnt_translate_by_free_spine_4_grp
+    101704: spine_weight_joints_grp
+    101706: sqr__01b_ear__joints_grp
+    101708: sqr__01b_ear__lf_ear_2_jnt
+    101710: sqr__01b_ear__lf_ear_side_grp
+    101712: sqr__01b_ear__rt_ear_2_jnt
+    101714: sqr__01b_ear__rt_ear_side_grp
+    101716: sqr__06_jaw__base_jnt
+    101718: sqr__06_jaw__deform_grp
+    101720: sqr__06_jaw__geo_grp
+    101722: sqr__06_jaw__joints_grp
+    101724: sqr__06_jaw__lf_corner_jnt
+    101726: sqr__06_jaw__lf_corner_jnt_constraint_grp
+    101728: sqr__06_jaw__lf_corner_jnt_side_grp
+    101730: sqr__06_jaw__lower_jaw_grp
+    101732: sqr__06_jaw__lower_jaw_jnt
+    101734: sqr__06_jaw__lower_jaw_orient_grp
+    101736: sqr__06_jaw__lower_jaw_rotate_grp
+    101738: sqr__06_jaw__lower_jaw_rsupport_grp
+    101740: sqr__06_jaw__lower_jaw_translate_grp
+    101742: sqr__06_jaw__lower_jaw_tsupport_grp
+    101744: sqr__06_jaw__rt_corner_jnt
+    101746: sqr__06_jaw__rt_corner_jnt_constraint_grp
+    101748: sqr__06_jaw__rt_corner_jnt_side_grp
+    101750: sqr__06_jaw__upper_jaw_grp
+    101752: sqr__06_jaw__upper_jaw_jnt
+    101754: sqr__06_jaw__upper_jaw_jnt_grp
+    101756: sqr__06_jaw__upper_jaw_orient_grp
+    101758: sqr__06_jaw__upper_jaw_rotate_grp
+    101760: sqr__06_jaw__upper_jaw_rsupport_grp
+    101762: sqr__06_jaw__upper_jaw_scaleY_jnt
+    101764: sqr__06_jaw__upper_jaw_scaleY_jnt_grp
+    101766: sqr__06_jaw__upper_jaw_translate_grp
+    101768: sqr__06_jaw__upper_jaw_tsupport_grp
+    101770: sqr__07_mouth_corner__base_jnt
+    101772: sqr__07_mouth_corner__deform_grp
+    101774: sqr__07_mouth_corner__geo_grp
+    101776: sqr__07_mouth_corner__joints_grp
+    101778: sqr__07_mouth_corner__lf_jnt
+    101780: sqr__07_mouth_corner__lf_jnt_back_idle_loc
+    101782: sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc
+    101784: sqr__07_mouth_corner__lf_jnt_back_open_translate_loc
+    101786: sqr__07_mouth_corner__lf_jnt_down_grp
+    101788: sqr__07_mouth_corner__lf_jnt_down_grp_loc
+    101790: sqr__07_mouth_corner__lf_jnt_down_idle_loc
+    101792: sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc
+    101794: sqr__07_mouth_corner__lf_jnt_down_open_translate_loc
+    101796: sqr__07_mouth_corner__lf_jnt_down_rotate_grp
+    101798: sqr__07_mouth_corner__lf_jnt_forth_idle_loc
+    101800: sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc
+    101802: sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc
+    101804: sqr__07_mouth_corner__lf_jnt_lr_back_grp
+    101806: sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc
+    101808: sqr__07_mouth_corner__lf_jnt_lr_forth_grp
+    101810: sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc
+    101812: sqr__07_mouth_corner__lf_jnt_orient_grp
+    101814: sqr__07_mouth_corner__lf_jnt_orient_range_grp
+    101816: sqr__07_mouth_corner__lf_jnt_side_grp
+    101818: sqr__07_mouth_corner__lf_jnt_up_down_orient_grp
+    101820: sqr__07_mouth_corner__lf_jnt_up_grp
+    101822: sqr__07_mouth_corner__lf_jnt_up_grp_loc
+    101824: sqr__07_mouth_corner__lf_jnt_up_idle_loc
+    101826: sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc
+    101828: sqr__07_mouth_corner__lf_jnt_up_open_translate_loc
+    101830: sqr__07_mouth_corner__lf_jnt_up_rotate_grp
+    101832: sqr__07_mouth_corner__rt_jnt
+    101834: sqr__07_mouth_corner__rt_jnt_back_idle_loc
+    101836: sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc
+    101838: sqr__07_mouth_corner__rt_jnt_back_open_translate_loc
+    101840: sqr__07_mouth_corner__rt_jnt_down_grp
+    101842: sqr__07_mouth_corner__rt_jnt_down_grp_loc
+    101844: sqr__07_mouth_corner__rt_jnt_down_idle_loc
+    101846: sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc
+    101848: sqr__07_mouth_corner__rt_jnt_down_open_translate_loc
+    101850: sqr__07_mouth_corner__rt_jnt_down_rotate_grp
+    101852: sqr__07_mouth_corner__rt_jnt_forth_idle_loc
+    101854: sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc
+    101856: sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc
+    101858: sqr__07_mouth_corner__rt_jnt_lr_back_grp
+    101860: sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc
+    101862: sqr__07_mouth_corner__rt_jnt_lr_forth_grp
+    101864: sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc
+    101866: sqr__07_mouth_corner__rt_jnt_orient_grp
+    101868: sqr__07_mouth_corner__rt_jnt_orient_range_grp
+    101870: sqr__07_mouth_corner__rt_jnt_side_grp
+    101872: sqr__07_mouth_corner__rt_jnt_up_down_orient_grp
+    101874: sqr__07_mouth_corner__rt_jnt_up_grp
+    101876: sqr__07_mouth_corner__rt_jnt_up_grp_loc
+    101878: sqr__07_mouth_corner__rt_jnt_up_idle_loc
+    101880: sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc
+    101882: sqr__07_mouth_corner__rt_jnt_up_open_translate_loc
+    101884: sqr__07_mouth_corner__rt_jnt_up_rotate_grp
+    101886: sqr_anim_body_geo1
+    101888: sqr_anim_body_geo2
+    101890: sqr_anim_geo_grp
+    101892: sqr_bottom_base_jnt
+    101894: sqr_bottom_ctrl
+    101896: sqr_bottom_ctrl_grp
+    101898: sqr_bottom_deform_geo
+    101900: sqr_bottom_deform_setup_grp
+    101902: sqr_bottom_jnt
+    101904: sqr_bottom_jnt_grp
+    101906: sqr_bottom_joints_grp
+    101908: sqr_COG_ctrl
+    101910: sqr_COG_gimbal_ctrl
+    101912: sqr_ear_controls_grp
+    101914: sqr_ear_lf_rivet
+    101916: sqr_ear_rt_rivet
+    101918: sqr_facial_deform_hierarchy_grp
+    101920: sqr_facial_geo_hierarchy_grp
+    101922: sqr_facial_rig_grp
+    101924: sqr_facial_settings
+    101926: sqr_far_closest_point_setup_grp
+    101928: sqr_free_spine_1_ctrl
+    101930: sqr_free_spine_2_ctrl
+    101932: sqr_free_spine_3_ctrl
+    101934: sqr_free_spine_4_ctrl
+    101936: sqr_geo_all_grp
+    101938: sqr_grp
+    101940: sqr_head_sensor_jaw_layer_geo
+    101942: sqr_jaw_distance_setup
+    101944: sqr_lf_ear_2_ctrl_orient_grp
+    101946: sqr_lf_ear_2_jnt_transform_grp
+    101948: sqr_lf_ear_2_orient_grp
+    101950: sqr_lf_ear_ctrl_constraint_grp
+    101952: sqr_lf_mouth_corner_controls_constraint_grp
+    101954: sqr_lf_mouth_corner_controls_grp
+    101956: sqr_lf_mouth_corner_controls_offset_grp
+    101958: sqr_lf_mouth_corner_ctrl_grp
+    101960: sqr_lower_jaw_ctrl_grp
+    101962: sqr_lower_jaw_offset_ctrl
+    101964: sqr_mouth_controls_constraint_grp
+    101966: sqr_mouth_controls_grp
+    101968: sqr_mouth_controls_jaw_rivet
+    101970: sqr_mouth_controls_lf_mouth_corner_rivet
+    101972: sqr_mouth_controls_rt_mouth_corner_rivet
+    101974: sqr_mouth_controls_sensor_grp
+    101976: sqr_mouth_master_ctrl_grp
+    101978: sqr_near_closest_point_setup_grp
+    101980: sqr_normal_geo_grp
+    101982: sqr_pre_teeth_geo
+    101984: sqr_pre_teeth_grp
+    101986: sqr_pre_teeth_jnt
+    101988: sqr_pre_teeth_orient_grp
+    101990: sqr_pre_teeth_transform_grp
+    101992: sqr_proxy_geo_grp
+    101994: sqr_proxy_limb_ctrl
+    101996: sqr_rig_all_grp
+    101998: sqr_rivets_grp
+    102000: sqr_root_ctrl
+    102002: sqr_rt_ear_2_ctrl_orient_grp
+    102004: sqr_rt_ear_2_jnt_transform_grp
+    102006: sqr_rt_ear_2_orient_grp
+    102008: sqr_rt_ear_ctrl_constraint_grp
+    102010: sqr_rt_mouth_corner_controls_constraint_grp
+    102012: sqr_rt_mouth_corner_controls_grp
+    102014: sqr_rt_mouth_corner_controls_offset_grp
+    102016: sqr_rt_mouth_corner_ctrl_grp
+    102018: sqr_setup_grp
+    102020: sqr_skin_geo_grp
+    102022: sqr_spine_curvature_ctrl
+    102024: sqr_spine_curvature_scale_ctrl
+    102026: sqr_spine_ik_hip_ctrl
+    102028: sqr_spine_ik_hip_scale_ctrl
+    102030: sqr_spine_ik_shoulder_ctrl
+    102032: sqr_spine_ik_shoulder_scale_ctrl
+    102034: sqr_spine_weight_10_jnt
+    102036: sqr_spine_weight_11_jnt
+    102038: sqr_spine_weight_11_jnt_proxy_geo
+    102040: sqr_spine_weight_11_jnt_proxy_geo_grp
+    102042: sqr_spine_weight_1_jnt
+    102044: sqr_spine_weight_1_jnt_proxy_geo
+    102046: sqr_spine_weight_1_jnt_proxy_geo_grp
+    102048: sqr_spine_weight_2_jnt
+    102050: sqr_spine_weight_3_jnt
+    102052: sqr_spine_weight_3_jnt_proxy_geo
+    102054: sqr_spine_weight_3_jnt_proxy_geo_grp
+    102056: sqr_spine_weight_4_jnt
+    102058: sqr_spine_weight_5_jnt
+    102060: sqr_spine_weight_5_jnt_proxy_geo
+    102062: sqr_spine_weight_5_jnt_proxy_geo_grp
+    102064: sqr_spine_weight_6_jnt
+    102066: sqr_spine_weight_7_jnt
+    102068: sqr_spine_weight_7_jnt_proxy_geo
+    102070: sqr_spine_weight_7_jnt_proxy_geo_grp
+    102072: sqr_spine_weight_8_jnt
+    102074: sqr_spine_weight_9_jnt
+    102076: sqr_spine_weight_9_jnt_proxy_geo
+    102078: sqr_spine_weight_9_jnt_proxy_geo_grp
+    102080: sqr_tail_1_ctrl_grp
+    102082: sqr_tail_1_jnt
+    102084: sqr_tail_1_jnt_grp
+    102086: sqr_tail_1_jnt_proxy_geo
+    102088: sqr_tail_1_jnt_proxy_geo_grp
+    102090: sqr_tail_2_jnt
+    102092: sqr_tail_2_jnt_grp
+    102094: sqr_tail_2_jnt_proxy_geo
+    102096: sqr_tail_2_jnt_proxy_geo_grp
+    102098: sqr_tail_2b_jnt
+    102100: sqr_tail_2b_jnt_grp
+    102102: sqr_tail_2b_jnt_proxy_geo
+    102104: sqr_tail_2b_jnt_proxy_geo_grp
+    102106: sqr_tail_3_jnt
+    102108: sqr_tail_3_jnt_grp
+    102110: sqr_tail_3_jnt_proxy_geo
+    102112: sqr_tail_3_jnt_proxy_geo_grp
+    102114: sqr_tail_3b_jnt
+    102116: sqr_tail_3b_jnt_grp
+    102118: sqr_tail_3b_jnt_proxy_geo
+    102120: sqr_tail_3b_jnt_proxy_geo_grp
+    102122: sqr_tail_4_jnt
+    102124: sqr_tail_4_jnt_grp
+    102126: sqr_tail_4_jnt_proxy_geo
+    102128: sqr_tail_4_jnt_proxy_geo_grp
+    102130: sqr_tail_4b_jnt
+    102132: sqr_tail_4b_jnt_grp
+    102134: sqr_tail_4b_jnt_proxy_geo
+    102136: sqr_tail_4b_jnt_proxy_geo_grp
+    102138: sqr_tail_5_jnt
+    102140: sqr_tail_5_jnt_grp
+    102142: sqr_tail_5_jnt_proxy_geo
+    102144: sqr_tail_5_jnt_proxy_geo_grp
+    102146: sqr_tail_5b_jnt
+    102148: sqr_tail_5b_jnt_grp
+    102150: sqr_tail_5b_jnt_proxy_geo
+    102152: sqr_tail_5b_jnt_proxy_geo_grp
+    102154: sqr_tail_6_jnt
+    102156: sqr_tail_6_jnt_grp
+    102158: sqr_tail_6_jnt_proxy_geo
+    102160: sqr_tail_6_jnt_proxy_geo_grp
+    102162: sqr_tail_6b_jnt
+    102164: sqr_tail_6b_jnt_grp
+    102166: sqr_tail_6b_jnt_proxy_geo
+    102168: sqr_tail_6b_jnt_proxy_geo_grp
+    102170: sqr_tail_7_jnt
+    102172: sqr_tail_7_jnt_proxy_geo
+    102174: sqr_tail_7_jnt_proxy_geo_grp
+    102176: sqr_tail_7b_jnt
+    102178: sqr_tail_7b_jnt_grp
+    102180: sqr_tail_7b_jnt_proxy_geo
+    102182: sqr_tail_7b_jnt_proxy_geo_grp
+    102184: sqr_tail_7c_jnt
+    102186: sqr_tail_7c_jnt_grp
+    102188: sqr_tail_7c_jnt_proxy_geo
+    102190: sqr_tail_7c_jnt_proxy_geo_grp
+    102192: sqr_tail_base_jnt
+    102194: sqr_tail_base_jnt_transform_grp
+    102196: sqr_tail_controls_grp
+    102198: sqr_tail_controls_parent_const_grp
+    102200: sqr_tail_controls_point_const_grp
+    102202: sqr_tail_controls_scale_grp
+    102204: sqr_tail_deform_geo
+    102206: sqr_tail_deform_grp
+    102208: sqr_tail_jnt
+    102210: sqr_tail_jnt_grp
+    102212: sqr_tail_jnt_parent_const_grp
+    102214: sqr_tail_jnt_point_const_grp
+    102216: sqr_tail_jnt_scale_grp
+    102218: sqr_tail_joints_grp
+    102220: sqr_tail_sensor_rivet
+    102222: sqr_tail_sensor_setup_grp
+    102224: sqr_teeth_cp_far_crv
+    102226: sqr_teeth_cp_far_crv_scale_grp
+    102228: sqr_teeth_cp_near_crv
+    102230: sqr_teeth_cp_near_crv_scale_grp
+    102232: sqr_teeth_ctrl
+    102234: sqr_teeth_ctrl_constraint_grp
+    102236: sqr_teeth_ctrl_orient_grp
+    102238: sqr_teeth_joints_grp
+    102240: sqr_teeth_lf_jnt
+    102242: sqr_teeth_lf_jnt_auto_orient_grp
+    102244: sqr_teeth_lf_jnt_constraint_grp
+    102246: sqr_teeth_lf_rivet
+    102248: sqr_teeth_mid_far_cpConstraintIn
+    102250: sqr_teeth_mid_far_cpConstraintPos
+    102252: sqr_teeth_mid_far_ik_constraint_grp
+    102254: sqr_teeth_mid_far_ik_end_jnt
+    102256: sqr_teeth_mid_far_ik_start_jnt
+    102258: sqr_teeth_mid_far_ikHandle
+    102260: sqr_teeth_mid_jnt
+    102262: sqr_teeth_mid_jnt_auto_orient_grp
+    102264: sqr_teeth_mid_jnt_constraint_grp
+    102266: sqr_teeth_mid_near_cpConstraintIn
+    102268: sqr_teeth_mid_near_cpConstraintPos
+    102270: sqr_teeth_mid_near_ik_constraint_grp
+    102272: sqr_teeth_mid_near_ik_end_jnt
+    102274: sqr_teeth_mid_near_ik_start_jnt
+    102276: sqr_teeth_mid_near_ikHandle
+    102278: sqr_teeth_mid_pv_loc
+    102280: sqr_teeth_mid_rivet
+    102282: sqr_teeth_rt_jnt
+    102284: sqr_teeth_rt_jnt_auto_orient_grp
+    102286: sqr_teeth_rt_jnt_constraint_grp
+    102288: sqr_teeth_rt_rivet
+    102290: sqr_teeth_setup_grp
+    102292: sqr_upper_jaw_ctrl_grp
+    102294: tail
+    102296: transform1
+    102298: transform2
+    102300: transform3
+    102302: upper_jaw_dist_rivet
+    400000: BB_cog_ctrl_const_grp
+    400002: //RootNode
+    400004: CIKSpineCl2_1
+    400006: CIKSpineCl2_2
+    400008: COG_gimbal_ctrl_const_grp
+    400010: COGCtrl_grp
+    400012: COGCtrl_scale_const_grp
+    400014: controllers_bs_grp
+    400016: Cspine_0_jnt
+    400018: curvature_clusters_grp
+    400020: distanceDimension1
+    400022: ffd1Base
+    400024: ffd1Lattice
+    400026: ffd1LatticeGroup
+    400028: free_spine_1_ctrl_grp
+    400030: free_spine_2_ctrl_grp
+    400032: free_spine_3_ctrl_grp
+    400034: free_spine_4_ctrl_grp
+    400036: free_spine_controls_grp
+    400038: gIKSpine
+    400040: gIKSpineXTR
+    400042: group
+    400044: group1
+    400046: group2
+    400048: group3
+    400050: hipCtrlOrientGrp
+    400052: hipOriginalCtrl
+    400054: IKSpine
+    400056: IKSpine_0Handle
+    400058: IKSpine_1_curvature_max_grp
+    400060: IKSpine_1_curvature_min_grp
+    400062: IKSpine_1_grp
+    400064: IKSpine_1Handle
+    400066: IKSpine_2_curvature_grp
+    400068: IKSpine_2_fk_grp
+    400070: IKSpine_2_ik_grp
+    400072: IKSpine_2_orient_grp
+    400074: IKSpine_2_rotation_grp
+    400076: IKSpine_2Handle
+    400078: IKSpine_3_curvature_grp
+    400080: IKSpine_3_fk_grp
+    400082: IKSpine_3_ik_grp
+    400084: IKSpine_3_orient_grp
+    400086: IKSpine_3_rotation_grp
+    400088: IKSpine_3Handle
+    400090: IKSpine_4_curvature_max_grp
+    400092: IKSpine_4_curvature_min_grp
+    400094: IKSpine_4_grp
+    400096: IKSpine_4Handle
+    400098: IKSpine_5Handle
+    400100: IKSpineCurve
+    400102: jHipOrient
+    400104: jShoulderOrient
+    400106: jShoulderOrientEnd
+    400108: jTorso_1
+    400110: jTorso_2
+    400112: jTorso_3
+    400114: jTorso_3End
+    400116: lower_jaw_dist_rivet
+    400118: orientIKHandle
+    400120: pasted__BB_cog_ctrl_const_grp
+    400122: pasted__BB_cog_ctrl_const_grp 1
+    400124: pasted__CIKSpineCl2_1
+    400126: pasted__CIKSpineCl2_2
+    400128: pasted__COG_gimbal_ctrl_const_grp
+    400130: pasted__COG_gimbal_ctrl_const_grp 1
+    400132: pasted__COGCtrl_grp
+    400134: pasted__COGCtrl_grp 1
+    400136: pasted__COGCtrl_scale_const_grp
+    400138: pasted__COGCtrl_scale_const_grp 1
+    400140: pasted__controllers_bs_grp
+    400142: pasted__controllers_bs_grp 1
+    400144: pasted__Cspine_0_jnt
+    400146: pasted__Cspine_0_jnt 1
+    400148: pasted__curvature_clusters_grp
+    400150: pasted__curvature_clusters_grp 1
+    400152: pasted__ffd1Base
+    400154: pasted__ffd1Base 1
+    400156: pasted__ffd1Lattice
+    400158: pasted__ffd1Lattice 1
+    400160: pasted__ffd1LatticeGroup
+    400162: pasted__ffd1LatticeGroup 1
+    400164: pasted__free_spine_1_ctrl_grp
+    400166: pasted__free_spine_1_ctrl_grp 1
+    400168: pasted__free_spine_2_ctrl_grp
+    400170: pasted__free_spine_2_ctrl_grp 1
+    400172: pasted__free_spine_3_ctrl_grp
+    400174: pasted__free_spine_3_ctrl_grp 1
+    400176: pasted__free_spine_4_ctrl_grp
+    400178: pasted__free_spine_4_ctrl_grp 1
+    400180: pasted__free_spine_controls_grp
+    400182: pasted__free_spine_controls_grp 1
+    400184: pasted__gIKSpine
+    400186: pasted__gIKSpine 1
+    400188: pasted__gIKSpineXTR
+    400190: pasted__gIKSpineXTR 1
+    400192: pasted__hipCtrlOrientGrp
+    400194: pasted__hipOriginalCtrl
+    400196: pasted__IKSpine_0Handle
+    400198: pasted__IKSpine_1_curvature_max_grp
+    400200: pasted__IKSpine_1_curvature_min_grp
+    400202: pasted__IKSpine_1_grp
+    400204: pasted__IKSpine_1Handle
+    400206: pasted__IKSpine_2_curvature_grp
+    400208: pasted__IKSpine_2_curvature_grp 1
+    400210: pasted__IKSpine_2_fk_grp
+    400212: pasted__IKSpine_2_fk_grp 1
+    400214: pasted__IKSpine_2_ik_grp
+    400216: pasted__IKSpine_2_ik_grp 1
+    400218: pasted__IKSpine_2_orient_grp
+    400220: pasted__IKSpine_2_orient_grp 1
+    400222: pasted__IKSpine_2_rotation_grp
+    400224: pasted__IKSpine_2_rotation_grp 1
+    400226: pasted__IKSpine_2Handle
+    400228: pasted__IKSpine_2Handle 1
+    400230: pasted__IKSpine_3_curvature_grp
+    400232: pasted__IKSpine_3_curvature_grp 1
+    400234: pasted__IKSpine_3_fk_grp
+    400236: pasted__IKSpine_3_fk_grp 1
+    400238: pasted__IKSpine_3_ik_grp
+    400240: pasted__IKSpine_3_ik_grp 1
+    400242: pasted__IKSpine_3_orient_grp
+    400244: pasted__IKSpine_3_orient_grp 1
+    400246: pasted__IKSpine_3_rotation_grp
+    400248: pasted__IKSpine_3_rotation_grp 1
+    400250: pasted__IKSpine_3Handle
+    400252: pasted__IKSpine_3Handle 1
+    400254: pasted__IKSpine_4_curvature_max_grp
+    400256: pasted__IKSpine_4_curvature_min_grp
+    400258: pasted__IKSpine_4_grp
+    400260: pasted__IKSpine_4Handle
+    400262: pasted__IKSpine_5Handle
+    400264: pasted__IKSpineCurve
+    400266: pasted__IKSpineCurve 1
+    400268: pasted__jTorso_1
+    400270: pasted__jTorso_1 1
+    400272: pasted__jTorso_2
+    400274: pasted__jTorso_2 1
+    400276: pasted__jTorso_3
+    400278: pasted__jTorso_3 1
+    400280: pasted__jTorso_3End
+    400282: pasted__jTorso_3End 1
+    400284: pasted__phipCtrl
+    400286: pasted__phipCtrl 1
+    400288: pasted__pshoulderCtrl
+    400290: pasted__pshoulderCtrl 1
+    400292: pasted__pSphere1
+    400294: pasted__spine_0_jnt
+    400296: pasted__spine_0_jnt 1
+    400298: pasted__spine_10_jnt
+    400300: pasted__spine_10_jnt 1
+    400302: pasted__spine_11_jnt
+    400304: pasted__spine_11_jnt 1
+    400306: pasted__spine_1_jnt
+    400308: pasted__spine_1_jnt 1
+    400310: pasted__spine_2_jnt
+    400312: pasted__spine_2_jnt 1
+    400314: pasted__spine_3_jnt
+    400316: pasted__spine_3_jnt 1
+    400318: pasted__spine_4_jnt
+    400320: pasted__spine_4_jnt 1
+    400322: pasted__spine_5_jnt
+    400324: pasted__spine_5_jnt 1
+    400326: pasted__spine_6_jnt
+    400328: pasted__spine_6_jnt 1
+    400330: pasted__spine_7_jnt
+    400332: pasted__spine_7_jnt 1
+    400334: pasted__spine_8_jnt
+    400336: pasted__spine_8_jnt 1
+    400338: pasted__spine_9_jnt
+    400340: pasted__spine_9_jnt 1
+    400342: pasted__spine_curvature_ctrl_global_scale_grp
+    400344: pasted__spine_curvature_ctrl_global_scale_grp 1
+    400346: pasted__spine_curvature_ctrl_grp
+    400348: pasted__spine_curvature_ctrl_grp 1
+    400350: pasted__spine_curvature_ctrl_scale_grp
+    400352: pasted__spine_curvature_ctrl_scale_grp 1
+    400354: pasted__spine_distance
+    400356: pasted__spine_end_locator
+    400358: pasted__spine_first_locator
+    400360: pasted__spine_ik_hip_inv_scale_grp
+    400362: pasted__spine_ik_shoulder_ctrl_corrective_grp
+    400364: pasted__spine_ik_shoulder_ctrl_corrective_grp 1
+    400366: pasted__spine_ik_shoulder_inv_scale_grp
+    400368: pasted__spine_joints_grp
+    400370: pasted__spine_joints_grp 1
+    400372: pasted__spine_sdk
+    400374: pasted__spine_sdk 1
+    400376: pasted__spine_weight_10_jnt_breath_grp
+    400378: pasted__spine_weight_10_jnt_breath_grp 1
+    400380: pasted__spine_weight_10_jnt_free_grp
+    400382: pasted__spine_weight_10_jnt_free_grp 1
+    400384: pasted__spine_weight_10_jnt_grp
+    400386: pasted__spine_weight_10_jnt_grp 1
+    400388: pasted__spine_weight_10_jnt_ik_crv_grp
+    400390: pasted__spine_weight_10_jnt_ik_crv_grp 1
+    400392: pasted__spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    400394: pasted__spine_weight_10_jnt_rotate_by_free_spine_4_grp 1
+    400396: pasted__spine_weight_10_jnt_scale_grp
+    400398: pasted__spine_weight_10_jnt_scale_grp 1
+    400400: pasted__spine_weight_10_jnt_shoulder_grp
+    400402: pasted__spine_weight_10_jnt_shoulder_grp 1
+    400404: pasted__spine_weight_10_jnt_translate_by_free_spine_4_grp
+    400406: pasted__spine_weight_10_jnt_translate_by_free_spine_4_grp 1
+    400408: pasted__spine_weight_11_jnt_breath_grp
+    400410: pasted__spine_weight_11_jnt_breath_grp 1
+    400412: pasted__spine_weight_11_jnt_curvature_offset_grp
+    400414: pasted__spine_weight_11_jnt_curvature_offset_grp 1
+    400416: pasted__spine_weight_11_jnt_free_grp
+    400418: pasted__spine_weight_11_jnt_free_grp 1
+    400420: pasted__spine_weight_11_jnt_grp
+    400422: pasted__spine_weight_11_jnt_grp 1
+    400424: pasted__spine_weight_11_jnt_ik_crv_grp
+    400426: pasted__spine_weight_11_jnt_ik_crv_grp 1
+    400428: pasted__spine_weight_11_jnt_shoulder_grp
+    400430: pasted__spine_weight_11_jnt_shoulder_grp 1
+    400432: pasted__spine_weight_1_jnt_curvature_offset_grp
+    400434: pasted__spine_weight_1_jnt_curvature_offset_grp 1
+    400436: pasted__spine_weight_1_jnt_free_grp
+    400438: pasted__spine_weight_1_jnt_free_grp 1
+    400440: pasted__spine_weight_1_jnt_grp
+    400442: pasted__spine_weight_1_jnt_grp 1
+    400444: pasted__spine_weight_1_jnt_hip_grp
+    400446: pasted__spine_weight_1_jnt_hip_grp 1
+    400448: pasted__spine_weight_1_jnt_hip_local_grp
+    400450: pasted__spine_weight_1_jnt_hip_local_grp 1
+    400452: pasted__spine_weight_1_jnt_ik_crv_grp
+    400454: pasted__spine_weight_1_jnt_ik_crv_grp 1
+    400456: pasted__spine_weight_2_jnt_breath_grp
+    400458: pasted__spine_weight_2_jnt_breath_grp 1
+    400460: pasted__spine_weight_2_jnt_free_grp
+    400462: pasted__spine_weight_2_jnt_free_grp 1
+    400464: pasted__spine_weight_2_jnt_grp
+    400466: pasted__spine_weight_2_jnt_grp 1
+    400468: pasted__spine_weight_2_jnt_hip_grp
+    400470: pasted__spine_weight_2_jnt_hip_grp 1
+    400472: pasted__spine_weight_2_jnt_hip_local_grp
+    400474: pasted__spine_weight_2_jnt_hip_local_grp 1
+    400476: pasted__spine_weight_2_jnt_ik_crv_grp
+    400478: pasted__spine_weight_2_jnt_ik_crv_grp 1
+    400480: pasted__spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    400482: pasted__spine_weight_2_jnt_rotate_by_free_spine_1_grp 1
+    400484: pasted__spine_weight_2_jnt_scale_grp
+    400486: pasted__spine_weight_2_jnt_scale_grp 1
+    400488: pasted__spine_weight_2_jnt_translate_by_free_spine_1_grp
+    400490: pasted__spine_weight_2_jnt_translate_by_free_spine_1_grp 1
+    400492: pasted__spine_weight_3_jnt_breath_grp
+    400494: pasted__spine_weight_3_jnt_breath_grp 1
+    400496: pasted__spine_weight_3_jnt_free_grp
+    400498: pasted__spine_weight_3_jnt_free_grp 1
+    400500: pasted__spine_weight_3_jnt_grp
+    400502: pasted__spine_weight_3_jnt_grp 1
+    400504: pasted__spine_weight_3_jnt_hip_grp
+    400506: pasted__spine_weight_3_jnt_hip_grp 1
+    400508: pasted__spine_weight_3_jnt_ik_crv_grp
+    400510: pasted__spine_weight_3_jnt_ik_crv_grp 1
+    400512: pasted__spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    400514: pasted__spine_weight_3_jnt_rotate_by_free_spine_1_grp 1
+    400516: pasted__spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    400518: pasted__spine_weight_3_jnt_rotate_by_free_spine_2_grp 1
+    400520: pasted__spine_weight_3_jnt_scale_grp
+    400522: pasted__spine_weight_3_jnt_scale_grp 1
+    400524: pasted__spine_weight_3_jnt_translate_by_free_spine_1_grp
+    400526: pasted__spine_weight_3_jnt_translate_by_free_spine_1_grp 1
+    400528: pasted__spine_weight_3_jnt_translate_by_free_spine_2_grp
+    400530: pasted__spine_weight_3_jnt_translate_by_free_spine_2_grp 1
+    400532: pasted__spine_weight_4_jnt_breath_grp
+    400534: pasted__spine_weight_4_jnt_breath_grp 1
+    400536: pasted__spine_weight_4_jnt_free_grp
+    400538: pasted__spine_weight_4_jnt_free_grp 1
+    400540: pasted__spine_weight_4_jnt_grp
+    400542: pasted__spine_weight_4_jnt_grp 1
+    400544: pasted__spine_weight_4_jnt_hip_grp
+    400546: pasted__spine_weight_4_jnt_hip_grp 1
+    400548: pasted__spine_weight_4_jnt_ik_crv_grp
+    400550: pasted__spine_weight_4_jnt_ik_crv_grp 1
+    400552: pasted__spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    400554: pasted__spine_weight_4_jnt_rotate_by_free_spine_1_grp 1
+    400556: pasted__spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    400558: pasted__spine_weight_4_jnt_rotate_by_free_spine_2_grp 1
+    400560: pasted__spine_weight_4_jnt_scale_grp
+    400562: pasted__spine_weight_4_jnt_scale_grp 1
+    400564: pasted__spine_weight_4_jnt_translate_by_free_spine_1_grp
+    400566: pasted__spine_weight_4_jnt_translate_by_free_spine_1_grp 1
+    400568: pasted__spine_weight_4_jnt_translate_by_free_spine_2_grp
+    400570: pasted__spine_weight_4_jnt_translate_by_free_spine_2_grp 1
+    400572: pasted__spine_weight_5_jnt_breath_grp
+    400574: pasted__spine_weight_5_jnt_breath_grp 1
+    400576: pasted__spine_weight_5_jnt_free_grp
+    400578: pasted__spine_weight_5_jnt_free_grp 1
+    400580: pasted__spine_weight_5_jnt_grp
+    400582: pasted__spine_weight_5_jnt_grp 1
+    400584: pasted__spine_weight_5_jnt_hip_grp
+    400586: pasted__spine_weight_5_jnt_hip_grp 1
+    400588: pasted__spine_weight_5_jnt_ik_crv_grp
+    400590: pasted__spine_weight_5_jnt_ik_crv_grp 1
+    400592: pasted__spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    400594: pasted__spine_weight_5_jnt_rotate_by_free_spine_1_grp 1
+    400596: pasted__spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    400598: pasted__spine_weight_5_jnt_rotate_by_free_spine_2_grp 1
+    400600: pasted__spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    400602: pasted__spine_weight_5_jnt_rotate_by_free_spine_3_grp 1
+    400604: pasted__spine_weight_5_jnt_scale_grp
+    400606: pasted__spine_weight_5_jnt_scale_grp 1
+    400608: pasted__spine_weight_5_jnt_translate_by_free_spine_1_grp
+    400610: pasted__spine_weight_5_jnt_translate_by_free_spine_1_grp 1
+    400612: pasted__spine_weight_5_jnt_translate_by_free_spine_2_grp
+    400614: pasted__spine_weight_5_jnt_translate_by_free_spine_2_grp 1
+    400616: pasted__spine_weight_5_jnt_translate_by_free_spine_3_grp
+    400618: pasted__spine_weight_5_jnt_translate_by_free_spine_3_grp 1
+    400620: pasted__spine_weight_6_jnt_breath_grp
+    400622: pasted__spine_weight_6_jnt_breath_grp 1
+    400624: pasted__spine_weight_6_jnt_free_grp
+    400626: pasted__spine_weight_6_jnt_free_grp 1
+    400628: pasted__spine_weight_6_jnt_grp
+    400630: pasted__spine_weight_6_jnt_grp 1
+    400632: pasted__spine_weight_6_jnt_ik_crv_grp
+    400634: pasted__spine_weight_6_jnt_ik_crv_grp 1
+    400636: pasted__spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    400638: pasted__spine_weight_6_jnt_rotate_by_free_spine_2_grp 1
+    400640: pasted__spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    400642: pasted__spine_weight_6_jnt_rotate_by_free_spine_3_grp 1
+    400644: pasted__spine_weight_6_jnt_scale_grp
+    400646: pasted__spine_weight_6_jnt_scale_grp 1
+    400648: pasted__spine_weight_6_jnt_translate_by_free_spine_2_grp
+    400650: pasted__spine_weight_6_jnt_translate_by_free_spine_2_grp 1
+    400652: pasted__spine_weight_6_jnt_translate_by_free_spine_3_grp
+    400654: pasted__spine_weight_6_jnt_translate_by_free_spine_3_grp 1
+    400656: pasted__spine_weight_7_jnt_breath_grp
+    400658: pasted__spine_weight_7_jnt_breath_grp 1
+    400660: pasted__spine_weight_7_jnt_free_grp
+    400662: pasted__spine_weight_7_jnt_free_grp 1
+    400664: pasted__spine_weight_7_jnt_grp
+    400666: pasted__spine_weight_7_jnt_grp 1
+    400668: pasted__spine_weight_7_jnt_ik_crv_grp
+    400670: pasted__spine_weight_7_jnt_ik_crv_grp 1
+    400672: pasted__spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    400674: pasted__spine_weight_7_jnt_rotate_by_free_spine_2_grp 1
+    400676: pasted__spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    400678: pasted__spine_weight_7_jnt_rotate_by_free_spine_3_grp 1
+    400680: pasted__spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    400682: pasted__spine_weight_7_jnt_rotate_by_free_spine_4_grp 1
+    400684: pasted__spine_weight_7_jnt_scale_grp
+    400686: pasted__spine_weight_7_jnt_scale_grp 1
+    400688: pasted__spine_weight_7_jnt_translate_by_free_spine_2_grp
+    400690: pasted__spine_weight_7_jnt_translate_by_free_spine_2_grp 1
+    400692: pasted__spine_weight_7_jnt_translate_by_free_spine_3_grp
+    400694: pasted__spine_weight_7_jnt_translate_by_free_spine_3_grp 1
+    400696: pasted__spine_weight_7_jnt_translate_by_free_spine_4_grp
+    400698: pasted__spine_weight_7_jnt_translate_by_free_spine_4_grp 1
+    400700: pasted__spine_weight_8_jnt_breath_grp
+    400702: pasted__spine_weight_8_jnt_breath_grp 1
+    400704: pasted__spine_weight_8_jnt_free_grp
+    400706: pasted__spine_weight_8_jnt_free_grp 1
+    400708: pasted__spine_weight_8_jnt_grp
+    400710: pasted__spine_weight_8_jnt_grp 1
+    400712: pasted__spine_weight_8_jnt_ik_crv_grp
+    400714: pasted__spine_weight_8_jnt_ik_crv_grp 1
+    400716: pasted__spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    400718: pasted__spine_weight_8_jnt_rotate_by_free_spine_3_grp 1
+    400720: pasted__spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    400722: pasted__spine_weight_8_jnt_rotate_by_free_spine_4_grp 1
+    400724: pasted__spine_weight_8_jnt_scale_grp
+    400726: pasted__spine_weight_8_jnt_scale_grp 1
+    400728: pasted__spine_weight_8_jnt_translate_by_free_spine_3_grp
+    400730: pasted__spine_weight_8_jnt_translate_by_free_spine_3_grp 1
+    400732: pasted__spine_weight_8_jnt_translate_by_free_spine_4_grp
+    400734: pasted__spine_weight_8_jnt_translate_by_free_spine_4_grp 1
+    400736: pasted__spine_weight_9_jnt_breath_grp
+    400738: pasted__spine_weight_9_jnt_breath_grp 1
+    400740: pasted__spine_weight_9_jnt_free_grp
+    400742: pasted__spine_weight_9_jnt_free_grp 1
+    400744: pasted__spine_weight_9_jnt_grp
+    400746: pasted__spine_weight_9_jnt_grp 1
+    400748: pasted__spine_weight_9_jnt_ik_crv_grp
+    400750: pasted__spine_weight_9_jnt_ik_crv_grp 1
+    400752: pasted__spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    400754: pasted__spine_weight_9_jnt_rotate_by_free_spine_3_grp 1
+    400756: pasted__spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    400758: pasted__spine_weight_9_jnt_rotate_by_free_spine_4_grp 1
+    400760: pasted__spine_weight_9_jnt_scale_grp
+    400762: pasted__spine_weight_9_jnt_scale_grp 1
+    400764: pasted__spine_weight_9_jnt_shoulder_grp
+    400766: pasted__spine_weight_9_jnt_shoulder_grp 1
+    400768: pasted__spine_weight_9_jnt_translate_by_free_spine_3_grp
+    400770: pasted__spine_weight_9_jnt_translate_by_free_spine_3_grp 1
+    400772: pasted__spine_weight_9_jnt_translate_by_free_spine_4_grp
+    400774: pasted__spine_weight_9_jnt_translate_by_free_spine_4_grp 1
+    400776: pasted__spine_weight_joints_grp
+    400778: pasted__spine_weight_joints_grp 1
+    400780: pasted__sqr__01b_ear__joints_grp
+    400782: pasted__sqr__01b_ear__joints_grp 1
+    400784: pasted__sqr__01b_ear__lf_ear_2_jnt
+    400786: pasted__sqr__01b_ear__lf_ear_2_jnt 1
+    400788: pasted__sqr__01b_ear__lf_ear_side_grp
+    400790: pasted__sqr__01b_ear__lf_ear_side_grp 1
+    400792: pasted__sqr__01b_ear__rt_ear_2_jnt
+    400794: pasted__sqr__01b_ear__rt_ear_2_jnt 1
+    400796: pasted__sqr__01b_ear__rt_ear_side_grp
+    400798: pasted__sqr__01b_ear__rt_ear_side_grp 1
+    400800: pasted__sqr__06_jaw__base_jnt
+    400802: pasted__sqr__06_jaw__base_jnt 1
+    400804: pasted__sqr__06_jaw__deform_grp
+    400806: pasted__sqr__06_jaw__deform_grp 1
+    400808: pasted__sqr__06_jaw__geo_grp
+    400810: pasted__sqr__06_jaw__geo_grp 1
+    400812: pasted__sqr__06_jaw__joints_grp
+    400814: pasted__sqr__06_jaw__joints_grp 1
+    400816: pasted__sqr__06_jaw__lf_corner_jnt
+    400818: pasted__sqr__06_jaw__lf_corner_jnt 1
+    400820: pasted__sqr__06_jaw__lf_corner_jnt_constraint_grp
+    400822: pasted__sqr__06_jaw__lf_corner_jnt_constraint_grp 1
+    400824: pasted__sqr__06_jaw__lf_corner_jnt_side_grp
+    400826: pasted__sqr__06_jaw__lf_corner_jnt_side_grp 1
+    400828: pasted__sqr__06_jaw__lower_jaw_grp
+    400830: pasted__sqr__06_jaw__lower_jaw_grp 1
+    400832: pasted__sqr__06_jaw__lower_jaw_jnt
+    400834: pasted__sqr__06_jaw__lower_jaw_jnt 1
+    400836: pasted__sqr__06_jaw__lower_jaw_orient_grp
+    400838: pasted__sqr__06_jaw__lower_jaw_orient_grp 1
+    400840: pasted__sqr__06_jaw__lower_jaw_rotate_grp
+    400842: pasted__sqr__06_jaw__lower_jaw_rotate_grp 1
+    400844: pasted__sqr__06_jaw__lower_jaw_rsupport_grp
+    400846: pasted__sqr__06_jaw__lower_jaw_rsupport_grp 1
+    400848: pasted__sqr__06_jaw__lower_jaw_translate_grp
+    400850: pasted__sqr__06_jaw__lower_jaw_translate_grp 1
+    400852: pasted__sqr__06_jaw__lower_jaw_tsupport_grp
+    400854: pasted__sqr__06_jaw__lower_jaw_tsupport_grp 1
+    400856: pasted__sqr__06_jaw__rt_corner_jnt
+    400858: pasted__sqr__06_jaw__rt_corner_jnt 1
+    400860: pasted__sqr__06_jaw__rt_corner_jnt_constraint_grp
+    400862: pasted__sqr__06_jaw__rt_corner_jnt_constraint_grp 1
+    400864: pasted__sqr__06_jaw__rt_corner_jnt_side_grp
+    400866: pasted__sqr__06_jaw__rt_corner_jnt_side_grp 1
+    400868: pasted__sqr__06_jaw__upper_jaw_grp
+    400870: pasted__sqr__06_jaw__upper_jaw_grp 1
+    400872: pasted__sqr__06_jaw__upper_jaw_jnt
+    400874: pasted__sqr__06_jaw__upper_jaw_jnt 1
+    400876: pasted__sqr__06_jaw__upper_jaw_jnt_grp
+    400878: pasted__sqr__06_jaw__upper_jaw_jnt_grp 1
+    400880: pasted__sqr__06_jaw__upper_jaw_orient_grp
+    400882: pasted__sqr__06_jaw__upper_jaw_orient_grp 1
+    400884: pasted__sqr__06_jaw__upper_jaw_rotate_grp
+    400886: pasted__sqr__06_jaw__upper_jaw_rotate_grp 1
+    400888: pasted__sqr__06_jaw__upper_jaw_rsupport_grp
+    400890: pasted__sqr__06_jaw__upper_jaw_rsupport_grp 1
+    400892: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt
+    400894: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt 1
+    400896: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt_grp
+    400898: pasted__sqr__06_jaw__upper_jaw_scaleY_jnt_grp 1
+    400900: pasted__sqr__06_jaw__upper_jaw_translate_grp
+    400902: pasted__sqr__06_jaw__upper_jaw_translate_grp 1
+    400904: pasted__sqr__06_jaw__upper_jaw_tsupport_grp
+    400906: pasted__sqr__06_jaw__upper_jaw_tsupport_grp 1
+    400908: pasted__sqr__07_mouth_corner__base_jnt
+    400910: pasted__sqr__07_mouth_corner__base_jnt 1
+    400912: pasted__sqr__07_mouth_corner__deform_grp
+    400914: pasted__sqr__07_mouth_corner__deform_grp 1
+    400916: pasted__sqr__07_mouth_corner__geo_grp
+    400918: pasted__sqr__07_mouth_corner__geo_grp 1
+    400920: pasted__sqr__07_mouth_corner__joints_grp
+    400922: pasted__sqr__07_mouth_corner__joints_grp 1
+    400924: pasted__sqr__07_mouth_corner__lf_jnt
+    400926: pasted__sqr__07_mouth_corner__lf_jnt 1
+    400928: pasted__sqr__07_mouth_corner__lf_jnt_back_idle_loc
+    400930: pasted__sqr__07_mouth_corner__lf_jnt_back_idle_loc 1
+    400932: pasted__sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc
+    400934: pasted__sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc 1
+    400936: pasted__sqr__07_mouth_corner__lf_jnt_back_open_translate_loc
+    400938: pasted__sqr__07_mouth_corner__lf_jnt_back_open_translate_loc 1
+    400940: pasted__sqr__07_mouth_corner__lf_jnt_down_grp
+    400942: pasted__sqr__07_mouth_corner__lf_jnt_down_grp 1
+    400944: pasted__sqr__07_mouth_corner__lf_jnt_down_grp_loc
+    400946: pasted__sqr__07_mouth_corner__lf_jnt_down_grp_loc 1
+    400948: pasted__sqr__07_mouth_corner__lf_jnt_down_idle_loc
+    400950: pasted__sqr__07_mouth_corner__lf_jnt_down_idle_loc 1
+    400952: pasted__sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc
+    400954: pasted__sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc 1
+    400956: pasted__sqr__07_mouth_corner__lf_jnt_down_open_translate_loc
+    400958: pasted__sqr__07_mouth_corner__lf_jnt_down_open_translate_loc 1
+    400960: pasted__sqr__07_mouth_corner__lf_jnt_down_rotate_grp
+    400962: pasted__sqr__07_mouth_corner__lf_jnt_down_rotate_grp 1
+    400964: pasted__sqr__07_mouth_corner__lf_jnt_forth_idle_loc
+    400966: pasted__sqr__07_mouth_corner__lf_jnt_forth_idle_loc 1
+    400968: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc
+    400970: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc 1
+    400972: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc
+    400974: pasted__sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc 1
+    400976: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp
+    400978: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp 1
+    400980: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc
+    400982: pasted__sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc 1
+    400984: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp
+    400986: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp 1
+    400988: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc
+    400990: pasted__sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc 1
+    400992: pasted__sqr__07_mouth_corner__lf_jnt_orient_grp
+    400994: pasted__sqr__07_mouth_corner__lf_jnt_orient_grp 1
+    400996: pasted__sqr__07_mouth_corner__lf_jnt_orient_range_grp
+    400998: pasted__sqr__07_mouth_corner__lf_jnt_orient_range_grp 1
+    401000: pasted__sqr__07_mouth_corner__lf_jnt_side_grp
+    401002: pasted__sqr__07_mouth_corner__lf_jnt_side_grp 1
+    401004: pasted__sqr__07_mouth_corner__lf_jnt_up_down_orient_grp
+    401006: pasted__sqr__07_mouth_corner__lf_jnt_up_down_orient_grp 1
+    401008: pasted__sqr__07_mouth_corner__lf_jnt_up_grp
+    401010: pasted__sqr__07_mouth_corner__lf_jnt_up_grp 1
+    401012: pasted__sqr__07_mouth_corner__lf_jnt_up_grp_loc
+    401014: pasted__sqr__07_mouth_corner__lf_jnt_up_grp_loc 1
+    401016: pasted__sqr__07_mouth_corner__lf_jnt_up_idle_loc
+    401018: pasted__sqr__07_mouth_corner__lf_jnt_up_idle_loc 1
+    401020: pasted__sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc
+    401022: pasted__sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc 1
+    401024: pasted__sqr__07_mouth_corner__lf_jnt_up_open_translate_loc
+    401026: pasted__sqr__07_mouth_corner__lf_jnt_up_open_translate_loc 1
+    401028: pasted__sqr__07_mouth_corner__lf_jnt_up_rotate_grp
+    401030: pasted__sqr__07_mouth_corner__lf_jnt_up_rotate_grp 1
+    401032: pasted__sqr__07_mouth_corner__rt_jnt
+    401034: pasted__sqr__07_mouth_corner__rt_jnt 1
+    401036: pasted__sqr__07_mouth_corner__rt_jnt_back_idle_loc
+    401038: pasted__sqr__07_mouth_corner__rt_jnt_back_idle_loc 1
+    401040: pasted__sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc
+    401042: pasted__sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc 1
+    401044: pasted__sqr__07_mouth_corner__rt_jnt_back_open_translate_loc
+    401046: pasted__sqr__07_mouth_corner__rt_jnt_back_open_translate_loc 1
+    401048: pasted__sqr__07_mouth_corner__rt_jnt_down_grp
+    401050: pasted__sqr__07_mouth_corner__rt_jnt_down_grp 1
+    401052: pasted__sqr__07_mouth_corner__rt_jnt_down_grp_loc
+    401054: pasted__sqr__07_mouth_corner__rt_jnt_down_grp_loc 1
+    401056: pasted__sqr__07_mouth_corner__rt_jnt_down_idle_loc
+    401058: pasted__sqr__07_mouth_corner__rt_jnt_down_idle_loc 1
+    401060: pasted__sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc
+    401062: pasted__sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc 1
+    401064: pasted__sqr__07_mouth_corner__rt_jnt_down_open_translate_loc
+    401066: pasted__sqr__07_mouth_corner__rt_jnt_down_open_translate_loc 1
+    401068: pasted__sqr__07_mouth_corner__rt_jnt_down_rotate_grp
+    401070: pasted__sqr__07_mouth_corner__rt_jnt_down_rotate_grp 1
+    401072: pasted__sqr__07_mouth_corner__rt_jnt_forth_idle_loc
+    401074: pasted__sqr__07_mouth_corner__rt_jnt_forth_idle_loc 1
+    401076: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc
+    401078: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc 1
+    401080: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc
+    401082: pasted__sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc 1
+    401084: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp
+    401086: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp 1
+    401088: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc
+    401090: pasted__sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc 1
+    401092: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp
+    401094: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp 1
+    401096: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc
+    401098: pasted__sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc 1
+    401100: pasted__sqr__07_mouth_corner__rt_jnt_orient_grp
+    401102: pasted__sqr__07_mouth_corner__rt_jnt_orient_grp 1
+    401104: pasted__sqr__07_mouth_corner__rt_jnt_orient_range_grp
+    401106: pasted__sqr__07_mouth_corner__rt_jnt_orient_range_grp 1
+    401108: pasted__sqr__07_mouth_corner__rt_jnt_side_grp
+    401110: pasted__sqr__07_mouth_corner__rt_jnt_side_grp 1
+    401112: pasted__sqr__07_mouth_corner__rt_jnt_up_down_orient_grp
+    401114: pasted__sqr__07_mouth_corner__rt_jnt_up_down_orient_grp 1
+    401116: pasted__sqr__07_mouth_corner__rt_jnt_up_grp
+    401118: pasted__sqr__07_mouth_corner__rt_jnt_up_grp 1
+    401120: pasted__sqr__07_mouth_corner__rt_jnt_up_grp_loc
+    401122: pasted__sqr__07_mouth_corner__rt_jnt_up_grp_loc 1
+    401124: pasted__sqr__07_mouth_corner__rt_jnt_up_idle_loc
+    401126: pasted__sqr__07_mouth_corner__rt_jnt_up_idle_loc 1
+    401128: pasted__sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc
+    401130: pasted__sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc 1
+    401132: pasted__sqr__07_mouth_corner__rt_jnt_up_open_translate_loc
+    401134: pasted__sqr__07_mouth_corner__rt_jnt_up_open_translate_loc 1
+    401136: pasted__sqr__07_mouth_corner__rt_jnt_up_rotate_grp
+    401138: pasted__sqr__07_mouth_corner__rt_jnt_up_rotate_grp 1
+    401140: pasted__sqr_anim_geo_grp
+    401142: pasted__sqr_bottom_base_jnt
+    401144: pasted__sqr_bottom_base_jnt 1
+    401146: pasted__sqr_bottom_ctrl_grp
+    401148: pasted__sqr_bottom_deform_geo
+    401150: pasted__sqr_bottom_deform_geo 1
+    401152: pasted__sqr_bottom_deform_setup_grp
+    401154: pasted__sqr_bottom_deform_setup_grp 1
+    401156: pasted__sqr_bottom_jnt
+    401158: pasted__sqr_bottom_jnt 1
+    401160: pasted__sqr_bottom_jnt_grp
+    401162: pasted__sqr_bottom_jnt_grp 1
+    401164: pasted__sqr_bottom_joints_grp
+    401166: pasted__sqr_bottom_joints_grp 1
+    401168: pasted__sqr_COG_ctrl
+    401170: pasted__sqr_COG_ctrl 1
+    401172: pasted__sqr_COG_gimbal_ctrl
+    401174: pasted__sqr_COG_gimbal_ctrl 1
+    401176: pasted__sqr_ear_controls_grp
+    401178: pasted__sqr_ear_lf_rivet
+    401180: pasted__sqr_ear_rt_rivet
+    401182: pasted__sqr_facial_deform_hierarchy_grp
+    401184: pasted__sqr_facial_deform_hierarchy_grp 1
+    401186: pasted__sqr_facial_geo_hierarchy_grp
+    401188: pasted__sqr_facial_geo_hierarchy_grp 1
+    401190: pasted__sqr_facial_rig_grp
+    401192: pasted__sqr_facial_rig_grp 1
+    401194: pasted__sqr_facial_settings
+    401196: pasted__sqr_facial_settings 1
+    401198: pasted__sqr_far_closest_point_setup_grp
+    401200: pasted__sqr_far_closest_point_setup_grp 1
+    401202: pasted__sqr_free_spine_1_ctrl
+    401204: pasted__sqr_free_spine_1_ctrl 1
+    401206: pasted__sqr_free_spine_2_ctrl
+    401208: pasted__sqr_free_spine_2_ctrl 1
+    401210: pasted__sqr_free_spine_3_ctrl
+    401212: pasted__sqr_free_spine_3_ctrl 1
+    401214: pasted__sqr_free_spine_4_ctrl
+    401216: pasted__sqr_free_spine_4_ctrl 1
+    401218: pasted__sqr_geo_all_grp
+    401220: pasted__sqr_geo_all_grp 1
+    401222: pasted__sqr_grp
+    401224: pasted__sqr_grp 1
+    401226: pasted__sqr_head_sensor_jaw_layer_geo
+    401228: pasted__sqr_head_sensor_jaw_layer_geo 1
+    401230: pasted__sqr_lf_ear_2_ctrl_orient_grp
+    401232: pasted__sqr_lf_ear_2_jnt_transform_grp
+    401234: pasted__sqr_lf_ear_2_jnt_transform_grp 1
+    401236: pasted__sqr_lf_ear_2_orient_grp
+    401238: pasted__sqr_lf_ear_2_orient_grp 1
+    401240: pasted__sqr_lf_ear_ctrl_constraint_grp
+    401242: pasted__sqr_lf_mouth_corner_controls_constraint_grp
+    401244: pasted__sqr_lf_mouth_corner_controls_constraint_grp 1
+    401246: pasted__sqr_lf_mouth_corner_controls_grp
+    401248: pasted__sqr_lf_mouth_corner_controls_grp 1
+    401250: pasted__sqr_lf_mouth_corner_controls_offset_grp
+    401252: pasted__sqr_lf_mouth_corner_controls_offset_grp 1
+    401254: pasted__sqr_lf_mouth_corner_ctrl_grp
+    401256: pasted__sqr_lf_mouth_corner_ctrl_grp 1
+    401258: pasted__sqr_lower_jaw_ctrl_grp
+    401260: pasted__sqr_lower_jaw_ctrl_grp 1
+    401262: pasted__sqr_lower_jaw_offset_ctrl
+    401264: pasted__sqr_lower_jaw_offset_ctrl 1
+    401266: pasted__sqr_mouth_controls_constraint_grp
+    401268: pasted__sqr_mouth_controls_constraint_grp 1
+    401270: pasted__sqr_mouth_controls_grp
+    401272: pasted__sqr_mouth_controls_grp 1
+    401274: pasted__sqr_mouth_controls_jaw_rivet
+    401276: pasted__sqr_mouth_controls_jaw_rivet 1
+    401278: pasted__sqr_mouth_controls_lf_mouth_corner_rivet
+    401280: pasted__sqr_mouth_controls_lf_mouth_corner_rivet 1
+    401282: pasted__sqr_mouth_controls_rt_mouth_corner_rivet
+    401284: pasted__sqr_mouth_controls_rt_mouth_corner_rivet 1
+    401286: pasted__sqr_mouth_controls_sensor_grp
+    401288: pasted__sqr_mouth_controls_sensor_grp 1
+    401290: pasted__sqr_mouth_master_ctrl_grp
+    401292: pasted__sqr_mouth_master_ctrl_grp 1
+    401294: pasted__sqr_near_closest_point_setup_grp
+    401296: pasted__sqr_near_closest_point_setup_grp 1
+    401298: pasted__sqr_normal_geo_grp
+    401300: pasted__sqr_normal_geo_grp 1
+    401302: pasted__sqr_proxy_limb_ctrl
+    401304: pasted__sqr_rig_all_grp
+    401306: pasted__sqr_rig_all_grp 1
+    401308: pasted__sqr_rivets_grp
+    401310: pasted__sqr_rt_ear_2_ctrl_orient_grp
+    401312: pasted__sqr_rt_ear_2_jnt_transform_grp
+    401314: pasted__sqr_rt_ear_2_jnt_transform_grp 1
+    401316: pasted__sqr_rt_ear_2_orient_grp
+    401318: pasted__sqr_rt_ear_2_orient_grp 1
+    401320: pasted__sqr_rt_ear_ctrl_constraint_grp
+    401322: pasted__sqr_rt_mouth_corner_controls_constraint_grp
+    401324: pasted__sqr_rt_mouth_corner_controls_constraint_grp 1
+    401326: pasted__sqr_rt_mouth_corner_controls_grp
+    401328: pasted__sqr_rt_mouth_corner_controls_grp 1
+    401330: pasted__sqr_rt_mouth_corner_controls_offset_grp
+    401332: pasted__sqr_rt_mouth_corner_controls_offset_grp 1
+    401334: pasted__sqr_rt_mouth_corner_ctrl_grp
+    401336: pasted__sqr_rt_mouth_corner_ctrl_grp 1
+    401338: pasted__sqr_setup_grp
+    401340: pasted__sqr_setup_grp 1
+    401342: pasted__sqr_skin_geo_grp
+    401344: pasted__sqr_skin_geo_grp 1
+    401346: pasted__sqr_spine_curvature_scale_ctrl
+    401348: pasted__sqr_spine_curvature_scale_ctrl 1
+    401350: pasted__sqr_spine_ik_hip_ctrl
+    401352: pasted__sqr_spine_ik_hip_scale_ctrl
+    401354: pasted__sqr_spine_ik_shoulder_ctrl
+    401356: pasted__sqr_spine_ik_shoulder_scale_ctrl
+    401358: pasted__sqr_spine_weight_10_jnt
+    401360: pasted__sqr_spine_weight_10_jnt 1
+    401362: pasted__sqr_spine_weight_11_jnt
+    401364: pasted__sqr_spine_weight_11_jnt 1
+    401366: pasted__sqr_spine_weight_1_jnt
+    401368: pasted__sqr_spine_weight_1_jnt 1
+    401370: pasted__sqr_spine_weight_2_jnt
+    401372: pasted__sqr_spine_weight_2_jnt 1
+    401374: pasted__sqr_spine_weight_3_jnt
+    401376: pasted__sqr_spine_weight_3_jnt 1
+    401378: pasted__sqr_spine_weight_4_jnt
+    401380: pasted__sqr_spine_weight_4_jnt 1
+    401382: pasted__sqr_spine_weight_5_jnt
+    401384: pasted__sqr_spine_weight_5_jnt 1
+    401386: pasted__sqr_spine_weight_6_jnt
+    401388: pasted__sqr_spine_weight_6_jnt 1
+    401390: pasted__sqr_spine_weight_7_jnt
+    401392: pasted__sqr_spine_weight_7_jnt 1
+    401394: pasted__sqr_spine_weight_8_jnt
+    401396: pasted__sqr_spine_weight_8_jnt 1
+    401398: pasted__sqr_spine_weight_9_jnt
+    401400: pasted__sqr_spine_weight_9_jnt 1
+    401402: pasted__sqr_tail_1_ctrl_grp
+    401404: pasted__sqr_tail_controls_grp
+    401406: pasted__sqr_tail_controls_parent_const_grp
+    401408: pasted__sqr_tail_controls_point_const_grp
+    401410: pasted__sqr_tail_controls_scale_grp
+    401412: pasted__sqr_tail_deform_grp
+    401414: pasted__sqr_tail_sensor_setup_grp
+    401416: pasted__sqr_tail_sensor_setup_grp 1
+    401418: pasted__sqr_teeth_cp_far_crv
+    401420: pasted__sqr_teeth_cp_far_crv 1
+    401422: pasted__sqr_teeth_cp_far_crv_scale_grp
+    401424: pasted__sqr_teeth_cp_far_crv_scale_grp 1
+    401426: pasted__sqr_teeth_cp_near_crv
+    401428: pasted__sqr_teeth_cp_near_crv 1
+    401430: pasted__sqr_teeth_cp_near_crv_scale_grp
+    401432: pasted__sqr_teeth_cp_near_crv_scale_grp 1
+    401434: pasted__sqr_teeth_setup_grp
+    401436: pasted__sqr_teeth_setup_grp 1
+    401438: pasted__sqr_upper_jaw_ctrl_grp
+    401440: pasted__sqr_upper_jaw_ctrl_grp 1
+    401442: pCube1
+    401444: pCylinder1
+    401446: phipCtrl
+    401448: pre_teeth_deform_setup_grp
+    401450: pshoulderCtrl
+    401452: pSphere1
+    401454: softMod1Handle
+    401456: spine
+    401458: spine_0_jnt
+    401460: spine_10_jnt
+    401462: spine_11_jnt
+    401464: spine_1_jnt
+    401466: spine_2_jnt
+    401468: spine_3_jnt
+    401470: spine_4_jnt
+    401472: spine_5_jnt
+    401474: spine_6_jnt
+    401476: spine_7_jnt
+    401478: spine_8_jnt
+    401480: spine_9_jnt
+    401482: spine_curvature_ctrl_global_scale_grp
+    401484: spine_curvature_ctrl_grp
+    401486: spine_curvature_ctrl_scale_grp
+    401488: spine_distance
+    401490: spine_end_locator
+    401492: spine_first_locator
+    401494: spine_ik_hip_inv_scale_grp
+    401496: spine_ik_shoulder_ctrl_corrective_grp
+    401498: spine_ik_shoulder_inv_scale_grp
+    401500: spine_joints_grp
+    401502: spine_sdk
+    401504: spine_weight_10_jnt_breath_grp
+    401506: spine_weight_10_jnt_free_grp
+    401508: spine_weight_10_jnt_grp
+    401510: spine_weight_10_jnt_ik_crv_grp
+    401512: spine_weight_10_jnt_rotate_by_free_spine_4_grp
+    401514: spine_weight_10_jnt_scale_grp
+    401516: spine_weight_10_jnt_shoulder_grp
+    401518: spine_weight_10_jnt_translate_by_free_spine_4_grp
+    401520: spine_weight_11_jnt_breath_grp
+    401522: spine_weight_11_jnt_curvature_offset_grp
+    401524: spine_weight_11_jnt_free_grp
+    401526: spine_weight_11_jnt_grp
+    401528: spine_weight_11_jnt_ik_crv_grp
+    401530: spine_weight_11_jnt_shoulder_grp
+    401532: spine_weight_1_jnt_curvature_offset_grp
+    401534: spine_weight_1_jnt_free_grp
+    401536: spine_weight_1_jnt_grp
+    401538: spine_weight_1_jnt_hip_grp
+    401540: spine_weight_1_jnt_hip_local_grp
+    401542: spine_weight_1_jnt_ik_crv_grp
+    401544: spine_weight_2_jnt_breath_grp
+    401546: spine_weight_2_jnt_free_grp
+    401548: spine_weight_2_jnt_grp
+    401550: spine_weight_2_jnt_hip_grp
+    401552: spine_weight_2_jnt_hip_local_grp
+    401554: spine_weight_2_jnt_ik_crv_grp
+    401556: spine_weight_2_jnt_rotate_by_free_spine_1_grp
+    401558: spine_weight_2_jnt_scale_grp
+    401560: spine_weight_2_jnt_translate_by_free_spine_1_grp
+    401562: spine_weight_3_jnt_breath_grp
+    401564: spine_weight_3_jnt_free_grp
+    401566: spine_weight_3_jnt_grp
+    401568: spine_weight_3_jnt_hip_grp
+    401570: spine_weight_3_jnt_ik_crv_grp
+    401572: spine_weight_3_jnt_rotate_by_free_spine_1_grp
+    401574: spine_weight_3_jnt_rotate_by_free_spine_2_grp
+    401576: spine_weight_3_jnt_scale_grp
+    401578: spine_weight_3_jnt_translate_by_free_spine_1_grp
+    401580: spine_weight_3_jnt_translate_by_free_spine_2_grp
+    401582: spine_weight_4_jnt_breath_grp
+    401584: spine_weight_4_jnt_free_grp
+    401586: spine_weight_4_jnt_grp
+    401588: spine_weight_4_jnt_hip_grp
+    401590: spine_weight_4_jnt_ik_crv_grp
+    401592: spine_weight_4_jnt_rotate_by_free_spine_1_grp
+    401594: spine_weight_4_jnt_rotate_by_free_spine_2_grp
+    401596: spine_weight_4_jnt_scale_grp
+    401598: spine_weight_4_jnt_translate_by_free_spine_1_grp
+    401600: spine_weight_4_jnt_translate_by_free_spine_2_grp
+    401602: spine_weight_5_jnt_breath_grp
+    401604: spine_weight_5_jnt_free_grp
+    401606: spine_weight_5_jnt_grp
+    401608: spine_weight_5_jnt_hip_grp
+    401610: spine_weight_5_jnt_ik_crv_grp
+    401612: spine_weight_5_jnt_rotate_by_free_spine_1_grp
+    401614: spine_weight_5_jnt_rotate_by_free_spine_2_grp
+    401616: spine_weight_5_jnt_rotate_by_free_spine_3_grp
+    401618: spine_weight_5_jnt_scale_grp
+    401620: spine_weight_5_jnt_translate_by_free_spine_1_grp
+    401622: spine_weight_5_jnt_translate_by_free_spine_2_grp
+    401624: spine_weight_5_jnt_translate_by_free_spine_3_grp
+    401626: spine_weight_6_jnt_breath_grp
+    401628: spine_weight_6_jnt_free_grp
+    401630: spine_weight_6_jnt_grp
+    401632: spine_weight_6_jnt_ik_crv_grp
+    401634: spine_weight_6_jnt_rotate_by_free_spine_2_grp
+    401636: spine_weight_6_jnt_rotate_by_free_spine_3_grp
+    401638: spine_weight_6_jnt_scale_grp
+    401640: spine_weight_6_jnt_translate_by_free_spine_2_grp
+    401642: spine_weight_6_jnt_translate_by_free_spine_3_grp
+    401644: spine_weight_7_jnt_breath_grp
+    401646: spine_weight_7_jnt_free_grp
+    401648: spine_weight_7_jnt_grp
+    401650: spine_weight_7_jnt_ik_crv_grp
+    401652: spine_weight_7_jnt_rotate_by_free_spine_2_grp
+    401654: spine_weight_7_jnt_rotate_by_free_spine_3_grp
+    401656: spine_weight_7_jnt_rotate_by_free_spine_4_grp
+    401658: spine_weight_7_jnt_scale_grp
+    401660: spine_weight_7_jnt_translate_by_free_spine_2_grp
+    401662: spine_weight_7_jnt_translate_by_free_spine_3_grp
+    401664: spine_weight_7_jnt_translate_by_free_spine_4_grp
+    401666: spine_weight_8_jnt_breath_grp
+    401668: spine_weight_8_jnt_free_grp
+    401670: spine_weight_8_jnt_grp
+    401672: spine_weight_8_jnt_ik_crv_grp
+    401674: spine_weight_8_jnt_rotate_by_free_spine_3_grp
+    401676: spine_weight_8_jnt_rotate_by_free_spine_4_grp
+    401678: spine_weight_8_jnt_scale_grp
+    401680: spine_weight_8_jnt_translate_by_free_spine_3_grp
+    401682: spine_weight_8_jnt_translate_by_free_spine_4_grp
+    401684: spine_weight_9_jnt_breath_grp
+    401686: spine_weight_9_jnt_free_grp
+    401688: spine_weight_9_jnt_grp
+    401690: spine_weight_9_jnt_ik_crv_grp
+    401692: spine_weight_9_jnt_rotate_by_free_spine_3_grp
+    401694: spine_weight_9_jnt_rotate_by_free_spine_4_grp
+    401696: spine_weight_9_jnt_scale_grp
+    401698: spine_weight_9_jnt_shoulder_grp
+    401700: spine_weight_9_jnt_translate_by_free_spine_3_grp
+    401702: spine_weight_9_jnt_translate_by_free_spine_4_grp
+    401704: spine_weight_joints_grp
+    401706: sqr__01b_ear__joints_grp
+    401708: sqr__01b_ear__lf_ear_2_jnt
+    401710: sqr__01b_ear__lf_ear_side_grp
+    401712: sqr__01b_ear__rt_ear_2_jnt
+    401714: sqr__01b_ear__rt_ear_side_grp
+    401716: sqr__06_jaw__base_jnt
+    401718: sqr__06_jaw__deform_grp
+    401720: sqr__06_jaw__geo_grp
+    401722: sqr__06_jaw__joints_grp
+    401724: sqr__06_jaw__lf_corner_jnt
+    401726: sqr__06_jaw__lf_corner_jnt_constraint_grp
+    401728: sqr__06_jaw__lf_corner_jnt_side_grp
+    401730: sqr__06_jaw__lower_jaw_grp
+    401732: sqr__06_jaw__lower_jaw_jnt
+    401734: sqr__06_jaw__lower_jaw_orient_grp
+    401736: sqr__06_jaw__lower_jaw_rotate_grp
+    401738: sqr__06_jaw__lower_jaw_rsupport_grp
+    401740: sqr__06_jaw__lower_jaw_translate_grp
+    401742: sqr__06_jaw__lower_jaw_tsupport_grp
+    401744: sqr__06_jaw__rt_corner_jnt
+    401746: sqr__06_jaw__rt_corner_jnt_constraint_grp
+    401748: sqr__06_jaw__rt_corner_jnt_side_grp
+    401750: sqr__06_jaw__upper_jaw_grp
+    401752: sqr__06_jaw__upper_jaw_jnt
+    401754: sqr__06_jaw__upper_jaw_jnt_grp
+    401756: sqr__06_jaw__upper_jaw_orient_grp
+    401758: sqr__06_jaw__upper_jaw_rotate_grp
+    401760: sqr__06_jaw__upper_jaw_rsupport_grp
+    401762: sqr__06_jaw__upper_jaw_scaleY_jnt
+    401764: sqr__06_jaw__upper_jaw_scaleY_jnt_grp
+    401766: sqr__06_jaw__upper_jaw_translate_grp
+    401768: sqr__06_jaw__upper_jaw_tsupport_grp
+    401770: sqr__07_mouth_corner__base_jnt
+    401772: sqr__07_mouth_corner__deform_grp
+    401774: sqr__07_mouth_corner__geo_grp
+    401776: sqr__07_mouth_corner__joints_grp
+    401778: sqr__07_mouth_corner__lf_jnt
+    401780: sqr__07_mouth_corner__lf_jnt_back_idle_loc
+    401782: sqr__07_mouth_corner__lf_jnt_back_open_rotate_loc
+    401784: sqr__07_mouth_corner__lf_jnt_back_open_translate_loc
+    401786: sqr__07_mouth_corner__lf_jnt_down_grp
+    401788: sqr__07_mouth_corner__lf_jnt_down_grp_loc
+    401790: sqr__07_mouth_corner__lf_jnt_down_idle_loc
+    401792: sqr__07_mouth_corner__lf_jnt_down_open_rotate_loc
+    401794: sqr__07_mouth_corner__lf_jnt_down_open_translate_loc
+    401796: sqr__07_mouth_corner__lf_jnt_down_rotate_grp
+    401798: sqr__07_mouth_corner__lf_jnt_forth_idle_loc
+    401800: sqr__07_mouth_corner__lf_jnt_forth_open_rotate_loc
+    401802: sqr__07_mouth_corner__lf_jnt_forth_open_translate_loc
+    401804: sqr__07_mouth_corner__lf_jnt_lr_back_grp
+    401806: sqr__07_mouth_corner__lf_jnt_lr_back_grp_loc
+    401808: sqr__07_mouth_corner__lf_jnt_lr_forth_grp
+    401810: sqr__07_mouth_corner__lf_jnt_lr_forth_grp_loc
+    401812: sqr__07_mouth_corner__lf_jnt_orient_grp
+    401814: sqr__07_mouth_corner__lf_jnt_orient_range_grp
+    401816: sqr__07_mouth_corner__lf_jnt_side_grp
+    401818: sqr__07_mouth_corner__lf_jnt_up_down_orient_grp
+    401820: sqr__07_mouth_corner__lf_jnt_up_grp
+    401822: sqr__07_mouth_corner__lf_jnt_up_grp_loc
+    401824: sqr__07_mouth_corner__lf_jnt_up_idle_loc
+    401826: sqr__07_mouth_corner__lf_jnt_up_open_rotate_loc
+    401828: sqr__07_mouth_corner__lf_jnt_up_open_translate_loc
+    401830: sqr__07_mouth_corner__lf_jnt_up_rotate_grp
+    401832: sqr__07_mouth_corner__rt_jnt
+    401834: sqr__07_mouth_corner__rt_jnt_back_idle_loc
+    401836: sqr__07_mouth_corner__rt_jnt_back_open_rotate_loc
+    401838: sqr__07_mouth_corner__rt_jnt_back_open_translate_loc
+    401840: sqr__07_mouth_corner__rt_jnt_down_grp
+    401842: sqr__07_mouth_corner__rt_jnt_down_grp_loc
+    401844: sqr__07_mouth_corner__rt_jnt_down_idle_loc
+    401846: sqr__07_mouth_corner__rt_jnt_down_open_rotate_loc
+    401848: sqr__07_mouth_corner__rt_jnt_down_open_translate_loc
+    401850: sqr__07_mouth_corner__rt_jnt_down_rotate_grp
+    401852: sqr__07_mouth_corner__rt_jnt_forth_idle_loc
+    401854: sqr__07_mouth_corner__rt_jnt_forth_open_rotate_loc
+    401856: sqr__07_mouth_corner__rt_jnt_forth_open_translate_loc
+    401858: sqr__07_mouth_corner__rt_jnt_lr_back_grp
+    401860: sqr__07_mouth_corner__rt_jnt_lr_back_grp_loc
+    401862: sqr__07_mouth_corner__rt_jnt_lr_forth_grp
+    401864: sqr__07_mouth_corner__rt_jnt_lr_forth_grp_loc
+    401866: sqr__07_mouth_corner__rt_jnt_orient_grp
+    401868: sqr__07_mouth_corner__rt_jnt_orient_range_grp
+    401870: sqr__07_mouth_corner__rt_jnt_side_grp
+    401872: sqr__07_mouth_corner__rt_jnt_up_down_orient_grp
+    401874: sqr__07_mouth_corner__rt_jnt_up_grp
+    401876: sqr__07_mouth_corner__rt_jnt_up_grp_loc
+    401878: sqr__07_mouth_corner__rt_jnt_up_idle_loc
+    401880: sqr__07_mouth_corner__rt_jnt_up_open_rotate_loc
+    401882: sqr__07_mouth_corner__rt_jnt_up_open_translate_loc
+    401884: sqr__07_mouth_corner__rt_jnt_up_rotate_grp
+    401886: sqr_anim_body_geo1
+    401888: sqr_anim_body_geo2
+    401890: sqr_anim_geo_grp
+    401892: sqr_bottom_base_jnt
+    401894: sqr_bottom_ctrl
+    401896: sqr_bottom_ctrl_grp
+    401898: sqr_bottom_deform_geo
+    401900: sqr_bottom_deform_setup_grp
+    401902: sqr_bottom_jnt
+    401904: sqr_bottom_jnt_grp
+    401906: sqr_bottom_joints_grp
+    401908: sqr_COG_ctrl
+    401910: sqr_COG_gimbal_ctrl
+    401912: sqr_ear_controls_grp
+    401914: sqr_ear_lf_rivet
+    401916: sqr_ear_rt_rivet
+    401918: sqr_facial_deform_hierarchy_grp
+    401920: sqr_facial_geo_hierarchy_grp
+    401922: sqr_facial_rig_grp
+    401924: sqr_facial_settings
+    401926: sqr_far_closest_point_setup_grp
+    401928: sqr_free_spine_1_ctrl
+    401930: sqr_free_spine_2_ctrl
+    401932: sqr_free_spine_3_ctrl
+    401934: sqr_free_spine_4_ctrl
+    401936: sqr_geo_all_grp
+    401938: sqr_grp
+    401940: sqr_head_sensor_jaw_layer_geo
+    401942: sqr_jaw_distance_setup
+    401944: sqr_lf_ear_2_ctrl_orient_grp
+    401946: sqr_lf_ear_2_jnt_transform_grp
+    401948: sqr_lf_ear_2_orient_grp
+    401950: sqr_lf_ear_ctrl_constraint_grp
+    401952: sqr_lf_mouth_corner_controls_constraint_grp
+    401954: sqr_lf_mouth_corner_controls_grp
+    401956: sqr_lf_mouth_corner_controls_offset_grp
+    401958: sqr_lf_mouth_corner_ctrl_grp
+    401960: sqr_lower_jaw_ctrl_grp
+    401962: sqr_lower_jaw_offset_ctrl
+    401964: sqr_mouth_controls_constraint_grp
+    401966: sqr_mouth_controls_grp
+    401968: sqr_mouth_controls_jaw_rivet
+    401970: sqr_mouth_controls_lf_mouth_corner_rivet
+    401972: sqr_mouth_controls_rt_mouth_corner_rivet
+    401974: sqr_mouth_controls_sensor_grp
+    401976: sqr_mouth_master_ctrl_grp
+    401978: sqr_near_closest_point_setup_grp
+    401980: sqr_normal_geo_grp
+    401982: sqr_pre_teeth_geo
+    401984: sqr_pre_teeth_grp
+    401986: sqr_pre_teeth_jnt
+    401988: sqr_pre_teeth_orient_grp
+    401990: sqr_pre_teeth_transform_grp
+    401992: sqr_proxy_geo_grp
+    401994: sqr_proxy_limb_ctrl
+    401996: sqr_rig_all_grp
+    401998: sqr_rivets_grp
+    402000: sqr_root_ctrl
+    402002: sqr_rt_ear_2_ctrl_orient_grp
+    402004: sqr_rt_ear_2_jnt_transform_grp
+    402006: sqr_rt_ear_2_orient_grp
+    402008: sqr_rt_ear_ctrl_constraint_grp
+    402010: sqr_rt_mouth_corner_controls_constraint_grp
+    402012: sqr_rt_mouth_corner_controls_grp
+    402014: sqr_rt_mouth_corner_controls_offset_grp
+    402016: sqr_rt_mouth_corner_ctrl_grp
+    402018: sqr_setup_grp
+    402020: sqr_skin_geo_grp
+    402022: sqr_spine_curvature_ctrl
+    402024: sqr_spine_curvature_scale_ctrl
+    402026: sqr_spine_ik_hip_ctrl
+    402028: sqr_spine_ik_hip_scale_ctrl
+    402030: sqr_spine_ik_shoulder_ctrl
+    402032: sqr_spine_ik_shoulder_scale_ctrl
+    402034: sqr_spine_weight_10_jnt
+    402036: sqr_spine_weight_11_jnt
+    402038: sqr_spine_weight_11_jnt_proxy_geo
+    402040: sqr_spine_weight_11_jnt_proxy_geo_grp
+    402042: sqr_spine_weight_1_jnt
+    402044: sqr_spine_weight_1_jnt_proxy_geo
+    402046: sqr_spine_weight_1_jnt_proxy_geo_grp
+    402048: sqr_spine_weight_2_jnt
+    402050: sqr_spine_weight_3_jnt
+    402052: sqr_spine_weight_3_jnt_proxy_geo
+    402054: sqr_spine_weight_3_jnt_proxy_geo_grp
+    402056: sqr_spine_weight_4_jnt
+    402058: sqr_spine_weight_5_jnt
+    402060: sqr_spine_weight_5_jnt_proxy_geo
+    402062: sqr_spine_weight_5_jnt_proxy_geo_grp
+    402064: sqr_spine_weight_6_jnt
+    402066: sqr_spine_weight_7_jnt
+    402068: sqr_spine_weight_7_jnt_proxy_geo
+    402070: sqr_spine_weight_7_jnt_proxy_geo_grp
+    402072: sqr_spine_weight_8_jnt
+    402074: sqr_spine_weight_9_jnt
+    402076: sqr_spine_weight_9_jnt_proxy_geo
+    402078: sqr_spine_weight_9_jnt_proxy_geo_grp
+    402080: sqr_tail_1_ctrl_grp
+    402082: sqr_tail_1_jnt
+    402084: sqr_tail_1_jnt_grp
+    402086: sqr_tail_1_jnt_proxy_geo
+    402088: sqr_tail_1_jnt_proxy_geo_grp
+    402090: sqr_tail_2_jnt
+    402092: sqr_tail_2_jnt_grp
+    402094: sqr_tail_2_jnt_proxy_geo
+    402096: sqr_tail_2_jnt_proxy_geo_grp
+    402098: sqr_tail_2b_jnt
+    402100: sqr_tail_2b_jnt_grp
+    402102: sqr_tail_2b_jnt_proxy_geo
+    402104: sqr_tail_2b_jnt_proxy_geo_grp
+    402106: sqr_tail_3_jnt
+    402108: sqr_tail_3_jnt_grp
+    402110: sqr_tail_3_jnt_proxy_geo
+    402112: sqr_tail_3_jnt_proxy_geo_grp
+    402114: sqr_tail_3b_jnt
+    402116: sqr_tail_3b_jnt_grp
+    402118: sqr_tail_3b_jnt_proxy_geo
+    402120: sqr_tail_3b_jnt_proxy_geo_grp
+    402122: sqr_tail_4_jnt
+    402124: sqr_tail_4_jnt_grp
+    402126: sqr_tail_4_jnt_proxy_geo
+    402128: sqr_tail_4_jnt_proxy_geo_grp
+    402130: sqr_tail_4b_jnt
+    402132: sqr_tail_4b_jnt_grp
+    402134: sqr_tail_4b_jnt_proxy_geo
+    402136: sqr_tail_4b_jnt_proxy_geo_grp
+    402138: sqr_tail_5_jnt
+    402140: sqr_tail_5_jnt_grp
+    402142: sqr_tail_5_jnt_proxy_geo
+    402144: sqr_tail_5_jnt_proxy_geo_grp
+    402146: sqr_tail_5b_jnt
+    402148: sqr_tail_5b_jnt_grp
+    402150: sqr_tail_5b_jnt_proxy_geo
+    402152: sqr_tail_5b_jnt_proxy_geo_grp
+    402154: sqr_tail_6_jnt
+    402156: sqr_tail_6_jnt_grp
+    402158: sqr_tail_6_jnt_proxy_geo
+    402160: sqr_tail_6_jnt_proxy_geo_grp
+    402162: sqr_tail_6b_jnt
+    402164: sqr_tail_6b_jnt_grp
+    402166: sqr_tail_6b_jnt_proxy_geo
+    402168: sqr_tail_6b_jnt_proxy_geo_grp
+    402170: sqr_tail_7_jnt
+    402172: sqr_tail_7_jnt_proxy_geo
+    402174: sqr_tail_7_jnt_proxy_geo_grp
+    402176: sqr_tail_7b_jnt
+    402178: sqr_tail_7b_jnt_grp
+    402180: sqr_tail_7b_jnt_proxy_geo
+    402182: sqr_tail_7b_jnt_proxy_geo_grp
+    402184: sqr_tail_7c_jnt
+    402186: sqr_tail_7c_jnt_grp
+    402188: sqr_tail_7c_jnt_proxy_geo
+    402190: sqr_tail_7c_jnt_proxy_geo_grp
+    402192: sqr_tail_base_jnt
+    402194: sqr_tail_base_jnt_transform_grp
+    402196: sqr_tail_controls_grp
+    402198: sqr_tail_controls_parent_const_grp
+    402200: sqr_tail_controls_point_const_grp
+    402202: sqr_tail_controls_scale_grp
+    402204: sqr_tail_deform_geo
+    402206: sqr_tail_deform_grp
+    402208: sqr_tail_jnt
+    402210: sqr_tail_jnt_grp
+    402212: sqr_tail_jnt_parent_const_grp
+    402214: sqr_tail_jnt_point_const_grp
+    402216: sqr_tail_jnt_scale_grp
+    402218: sqr_tail_joints_grp
+    402220: sqr_tail_sensor_rivet
+    402222: sqr_tail_sensor_setup_grp
+    402224: sqr_teeth_cp_far_crv
+    402226: sqr_teeth_cp_far_crv_scale_grp
+    402228: sqr_teeth_cp_near_crv
+    402230: sqr_teeth_cp_near_crv_scale_grp
+    402232: sqr_teeth_ctrl
+    402234: sqr_teeth_ctrl_constraint_grp
+    402236: sqr_teeth_ctrl_orient_grp
+    402238: sqr_teeth_joints_grp
+    402240: sqr_teeth_lf_jnt
+    402242: sqr_teeth_lf_jnt_auto_orient_grp
+    402244: sqr_teeth_lf_jnt_constraint_grp
+    402246: sqr_teeth_lf_rivet
+    402248: sqr_teeth_mid_far_cpConstraintIn
+    402250: sqr_teeth_mid_far_cpConstraintPos
+    402252: sqr_teeth_mid_far_ik_constraint_grp
+    402254: sqr_teeth_mid_far_ik_end_jnt
+    402256: sqr_teeth_mid_far_ik_start_jnt
+    402258: sqr_teeth_mid_far_ikHandle
+    402260: sqr_teeth_mid_jnt
+    402262: sqr_teeth_mid_jnt_auto_orient_grp
+    402264: sqr_teeth_mid_jnt_constraint_grp
+    402266: sqr_teeth_mid_near_cpConstraintIn
+    402268: sqr_teeth_mid_near_cpConstraintPos
+    402270: sqr_teeth_mid_near_ik_constraint_grp
+    402272: sqr_teeth_mid_near_ik_end_jnt
+    402274: sqr_teeth_mid_near_ik_start_jnt
+    402276: sqr_teeth_mid_near_ikHandle
+    402278: sqr_teeth_mid_pv_loc
+    402280: sqr_teeth_mid_rivet
+    402282: sqr_teeth_rt_jnt
+    402284: sqr_teeth_rt_jnt_auto_orient_grp
+    402286: sqr_teeth_rt_jnt_constraint_grp
+    402288: sqr_teeth_rt_rivet
+    402290: sqr_teeth_setup_grp
+    402292: sqr_upper_jaw_ctrl_grp
+    402294: tail
+    402296: transform1
+    402298: transform2
+    402300: transform3
+    402302: upper_jaw_dist_rivet
+    2300000: sqr_anim_body_geo1
+    2300002: sqr_anim_body_geo2
+    2300004: sqr_spine_weight_11_jnt_proxy_geo
+    2300006: sqr_spine_weight_1_jnt_proxy_geo
+    2300008: sqr_spine_weight_3_jnt_proxy_geo
+    2300010: sqr_spine_weight_5_jnt_proxy_geo
+    2300012: sqr_spine_weight_7_jnt_proxy_geo
+    2300014: sqr_spine_weight_9_jnt_proxy_geo
+    2300016: sqr_tail_1_jnt_proxy_geo
+    2300018: sqr_tail_2_jnt_proxy_geo
+    2300020: sqr_tail_2b_jnt_proxy_geo
+    2300022: sqr_tail_3_jnt_proxy_geo
+    2300024: sqr_tail_3b_jnt_proxy_geo
+    2300026: sqr_tail_4_jnt_proxy_geo
+    2300028: sqr_tail_4b_jnt_proxy_geo
+    2300030: sqr_tail_5_jnt_proxy_geo
+    2300032: sqr_tail_5b_jnt_proxy_geo
+    2300034: sqr_tail_6_jnt_proxy_geo
+    2300036: sqr_tail_6b_jnt_proxy_geo
+    2300038: sqr_tail_7_jnt_proxy_geo
+    2300040: sqr_tail_7b_jnt_proxy_geo
+    2300042: sqr_tail_7c_jnt_proxy_geo
+    3300000: sqr_anim_body_geo1
+    3300002: sqr_anim_body_geo2
+    3300004: sqr_spine_weight_11_jnt_proxy_geo
+    3300006: sqr_spine_weight_1_jnt_proxy_geo
+    3300008: sqr_spine_weight_3_jnt_proxy_geo
+    3300010: sqr_spine_weight_5_jnt_proxy_geo
+    3300012: sqr_spine_weight_7_jnt_proxy_geo
+    3300014: sqr_spine_weight_9_jnt_proxy_geo
+    3300016: sqr_tail_1_jnt_proxy_geo
+    3300018: sqr_tail_2_jnt_proxy_geo
+    3300020: sqr_tail_2b_jnt_proxy_geo
+    3300022: sqr_tail_3_jnt_proxy_geo
+    3300024: sqr_tail_3b_jnt_proxy_geo
+    3300026: sqr_tail_4_jnt_proxy_geo
+    3300028: sqr_tail_4b_jnt_proxy_geo
+    3300030: sqr_tail_5_jnt_proxy_geo
+    3300032: sqr_tail_5b_jnt_proxy_geo
+    3300034: sqr_tail_6_jnt_proxy_geo
+    3300036: sqr_tail_6b_jnt_proxy_geo
+    3300038: sqr_tail_7_jnt_proxy_geo
+    3300040: sqr_tail_7b_jnt_proxy_geo
+    3300042: sqr_tail_7c_jnt_proxy_geo
+    4300000: sqr_tail_7c_jnt_proxy_geo
+    4300002: sqr_tail_7b_jnt_proxy_geo
+    4300004: sqr_tail_7_jnt_proxy_geo
+    4300006: sqr_tail_6b_jnt_proxy_geo
+    4300008: sqr_tail_6_jnt_proxy_geo
+    4300010: sqr_tail_5b_jnt_proxy_geo
+    4300012: sqr_tail_5_jnt_proxy_geo
+    4300014: sqr_tail_4b_jnt_proxy_geo
+    4300016: sqr_tail_4_jnt_proxy_geo
+    4300018: sqr_tail_3b_jnt_proxy_geo
+    4300020: sqr_tail_3_jnt_proxy_geo
+    4300022: sqr_tail_2b_jnt_proxy_geo
+    4300024: sqr_tail_2_jnt_proxy_geo
+    4300026: sqr_tail_1_jnt_proxy_geo
+    4300028: sqr_spine_weight_11_jnt_proxy_geo
+    4300030: sqr_spine_weight_9_jnt_proxy_geo
+    4300032: sqr_spine_weight_7_jnt_proxy_geo
+    4300034: sqr_spine_weight_5_jnt_proxy_geo
+    4300036: sqr_spine_weight_3_jnt_proxy_geo
+    4300038: sqr_spine_weight_1_jnt_proxy_geo
+    4300040: sqr_anim_body_geo1
+    4300042: sqr_anim_body_geo2
+    4300044: sqr_bottom_deform_geo
+    4300046: sqr_pre_teeth_geo
+    4300048: sqr_head_sensor_jaw_layer_geo
+    4300050: sqr_tail_deform_geo
+    4300052: pasted__sqr_bottom_deform_geo
+    4300054: pasted__sqr_head_sensor_jaw_layer_geo
+    4300056: pasted__sqr_bottom_deform_geo
+    4300058: pasted__sqr_head_sensor_jaw_layer_geo
+    4300060: pCube1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: pasted__sqr_bottom_deform_geo
+    13700002: pasted__sqr_bottom_deform_geo 1
+    13700004: pasted__sqr_head_sensor_jaw_layer_geo
+    13700006: pasted__sqr_head_sensor_jaw_layer_geo 1
+    13700008: pCube1
+    13700010: sqr_bottom_deform_geo
+    13700012: sqr_head_sensor_jaw_layer_geo
+    13700014: sqr_pre_teeth_geo
+    13700016: sqr_tail_deform_geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
