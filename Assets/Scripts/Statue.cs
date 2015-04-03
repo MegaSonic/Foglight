@@ -16,13 +16,27 @@ public class Book{
 	public List<Page> pages;
 }
 
+[System.Serializable]
+public delegate void FireAfter ();
+
 public class Statue : MonoBehaviour {
 
 	public float hopeAmt;
 	public int level; // what square is this statue in?
 	public string statueName;
 	public string promptText;
+	public FireAfter fireAfterReading;
 	public List<Book> dialog;
+
+	private float writeOnSpeed = 0.01f;
+	private float writeOnTimer = 0f;
+	private int writeOnIndex = 0;
+	private string writeOnTemp;
+	private bool writing = false;
+
+	private float readPageDelay = 1.0f;
+	private float readPageDelayTimer = 0f;
+	private bool canReadPage = true;
 
 	private bool spent = false;
 	private bool looped = false;
@@ -100,9 +114,20 @@ public class Statue : MonoBehaviour {
 		if (dialog.Count == 0 || dialog[bookNum].pages.Count == 0)
 			return;
 
+		// set the page read delay timer
+		readPageDelayTimer = readPageDelay;
+		canReadPage = false;
+
+		dialogDisplay.text = "";
+
 		pageNum++;
 		if (pageNum >= dialog[bookNum].pages.Count) {
 			// we've finished the book
+
+			// fire the delegate if there is one
+			if (fireAfterReading != null)
+				fireAfterReading();
+
 			pageNum = 0;
 			looped = true;
 
@@ -113,11 +138,19 @@ public class Statue : MonoBehaviour {
 			}
 		}
 
-		if (!looped)
-			dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
+		if (!looped) {
+			writing = true;
+			writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
+			writeOnIndex = 0;
+			//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
+		}			
 		else {
-			if (dialog[bookNum].pages[pageNum].loop)
-				dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
+			if (dialog[bookNum].pages[pageNum].loop){
+				writing = true;
+				writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
+				writeOnIndex = 0;
+				//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
+			}
 			else
 				displayNextPage();
 		}
@@ -159,12 +192,37 @@ public class Statue : MonoBehaviour {
 				nameFog.Play();
 			}
 			bodyFog.Play ();
-			displayNextPage();
+			if (canReadPage)
+				displayNextPage();
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
 	
+		// write-on text
+		if (writing) {
+			writeOnTimer += Time.deltaTime;
+			if (writeOnTimer > writeOnSpeed)
+			{
+				writeOnTimer = 0f;
+				dialogDisplay.text += writeOnTemp[writeOnIndex];
+
+				writeOnIndex ++;
+				if (writeOnIndex >= writeOnTemp.Length)
+				{
+					writing = false;
+				}
+
+			}
+		}
+
+		// update page delay timer
+		if (readPageDelayTimer > 0f) {
+			readPageDelayTimer -= Time.deltaTime;
+		} else {
+			canReadPage = true;
+		}
+
 	}
 }
