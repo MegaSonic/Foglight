@@ -21,6 +21,8 @@ public class Discovery : MonoBehaviour {
 	private Text dialogDisplay;
 	private Image imageDisplay;
 
+	private ParticleSystem playerParticles;
+	private Color playerColor;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,8 @@ public class Discovery : MonoBehaviour {
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
 		
+		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
+		playerColor = playerParticles.startColor;
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -46,12 +50,15 @@ public class Discovery : MonoBehaviour {
 
 
 	void OnTriggerStay(Collider other){
-		if (Input.GetButtonDown ("Interact") && !spent) {
-			spent = true;
-			vibe.KillVibration ();
-			vibe.spent = true;
-			ps.AddHope(hopeAmt);
+		playerParticles.startColor = Color.green;
 
+		if (Input.GetButtonDown ("Interact")) {
+			vibe.KillVibration ();
+			if (!spent) {
+				spent = true;
+				vibe.spent = true;
+				ps.AddHope(hopeAmt);
+			}
 			nameDisplay.text = name;
 			dialogDisplay.text = text;
 			imageDisplay.sprite = image;
@@ -60,6 +67,7 @@ public class Discovery : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider coll) {
+		playerParticles.startColor = playerColor;
 		imageDisplay.enabled = false;
 		clearDialog();
 	}

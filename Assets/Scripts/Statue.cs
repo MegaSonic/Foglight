@@ -36,6 +36,7 @@ public class Statue : MonoBehaviour {
 	private Text dialogDisplay;
 
 	private ParticleSystem playerParticles;
+	private Color playerColor;
 
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
@@ -47,7 +48,8 @@ public class Statue : MonoBehaviour {
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
 
-
+		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
+		playerColor = playerParticles.startColor;
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -127,18 +129,27 @@ public class Statue : MonoBehaviour {
 		nameDisplay.text = statueName;
 		openNewestBook ();
 
-		/*
-		foreach (Particle p in playerParticles) {
-			p.color = Color.green;
-		}
-		*/
+
 	}
 
 	void OnTriggerExit(Collider other){
+		playerParticles.startColor = playerColor;
 		clearDialog ();	
 	}
 
 	void OnTriggerStay(Collider other){
+		playerParticles.startColor = Color.green;
+
+		/*ParticleSystem.Particle[] particles = new ParticleSystem.Particle[playerParticles.particleCount];
+		int count = playerParticles.GetParticles(particles);
+		for(int i = 0; i < count; i++)
+		{
+			
+			particles[i].color = Color.green;
+		}
+		playerParticles.SetParticles(particles, count);
+
+*/
 		if (Input.GetButtonDown ("Interact")){
 			if (!spent) {
 				spent = true;
