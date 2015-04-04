@@ -28,15 +28,22 @@ public class Statue : MonoBehaviour {
 	public FireAfter fireAfterReading;
 	public List<Book> dialog;
 
+	// variables to deal with the text write-on effect
 	private float writeOnSpeed = 0.01f;
 	private float writeOnTimer = 0f;
 	private int writeOnIndex = 0;
 	private string writeOnTemp;
 	private bool writing = false;
 
-	private float readPageDelay = 1.0f;
+	// variables to make a delay before write-on skip is allowed
+	private float skipDelay = 0.25f;
+	private float skipDelayTimer = 0f;
+	private bool canSkip = false;
+
+	// variables to make a delay between page turns
+	private float readPageDelay = 0.5f;
 	private float readPageDelayTimer = 0f;
-	private bool canReadPage = true;
+	public bool canReadPage = true;
 
 	private bool spent = false;
 	private bool looped = false;
@@ -114,11 +121,10 @@ public class Statue : MonoBehaviour {
 		if (dialog.Count == 0 || dialog[bookNum].pages.Count == 0)
 			return;
 
-		// set the page read delay timer
-		readPageDelayTimer = readPageDelay;
+		dialogDisplay.text = "";
 		canReadPage = false;
 
-		dialogDisplay.text = "";
+		// deal with the pages, delegate, and flags
 
 		pageNum++;
 		if (pageNum >= dialog[bookNum].pages.Count) {
@@ -138,8 +144,12 @@ public class Statue : MonoBehaviour {
 			}
 		}
 
+		// initiate the displaying
+
 		if (!looped) {
 			writing = true;
+			canSkip = false;
+			skipDelayTimer = 0f;
 			writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
 			writeOnIndex = 0;
 			//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
@@ -147,6 +157,8 @@ public class Statue : MonoBehaviour {
 		else {
 			if (dialog[bookNum].pages[pageNum].loop){
 				writing = true;
+				canSkip = false;
+				skipDelayTimer = 0f;
 				writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
 				writeOnIndex = 0;
 				//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
@@ -194,6 +206,18 @@ public class Statue : MonoBehaviour {
 			bodyFog.Play ();
 			if (canReadPage)
 				displayNextPage();
+
+			// let the player skip the write-on effect
+			else if (writing && canSkip)
+			{
+				writing = false;
+				dialogDisplay.text = writeOnTemp;
+				// start the delay timer
+				readPageDelayTimer = readPageDelay;
+				canReadPage = false;
+
+			}
+
 		}
 	}
 
@@ -203,6 +227,14 @@ public class Statue : MonoBehaviour {
 		// write-on text
 		if (writing) {
 			writeOnTimer += Time.deltaTime;
+
+			// update skip delay timer
+			if (!canSkip){
+				skipDelayTimer += Time.deltaTime;
+				if (skipDelayTimer > skipDelay)
+					canSkip = true;
+			}
+
 			if (writeOnTimer > writeOnSpeed)
 			{
 				writeOnTimer = 0f;
@@ -211,14 +243,18 @@ public class Statue : MonoBehaviour {
 				writeOnIndex ++;
 				if (writeOnIndex >= writeOnTemp.Length)
 				{
-					writing = false;
-				}
+					// the text is finished writing-on
 
+					writing = false;
+					canReadPage = true;
+				}
 			}
+
+
 		}
 
 		// update page delay timer
-		if (readPageDelayTimer > 0f) {
+		else if (readPageDelayTimer > 0f) {
 			readPageDelayTimer -= Time.deltaTime;
 		} else {
 			canReadPage = true;
