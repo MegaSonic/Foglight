@@ -5,27 +5,32 @@ public class World : MonoBehaviour {
 
 	public int amtOfSquares;
 
-	// we'll obvious do this differently
-	public int unlockedLevels;
-
-	[HideInInspector]
+	private int unlockedLevels = 1;
 	private float[] availableHope;
 
-	private bool ready;
+	//private bool ready;
 
 	// Use this for initialization
 	void Awake () {
 		availableHope = new float[amtOfSquares];
 	}
 
+	
+	public void UnlockLevel()
+	{
+		unlockedLevels++;
+	}
+
 	// Adds given amt to given level's available hope
 	public void AddHope (int level, float amt){
-		availableHope[level-1] += amt;
+		// availableHope[level-1] += amt; // use this if the level numbering starts with 1
+		availableHope[level] += amt; // use this if the level numbering starts with 0
 	}
 
 	// Returns the possible amount of hope available in given level
 	public float GetHope (int level){
-		return availableHope [level - 1];
+		//return availableHope [level - 1]; // use this if the level numbering starts with 1
+		return availableHope [level]; // use this if the level numbering starts with 0
 	}
 
 	// Returns the total possible amount of hope
@@ -33,9 +38,9 @@ public class World : MonoBehaviour {
 	public float GetHope () {
 		float result = 0;
 		for (int i = 0; i<unlockedLevels; i++) {
-			result += GetHope (i+1);
+			//result += GetHope (i + 1); // use this if the level numbering starts with 1
+			result += GetHope (i); // use this if the level numbering starts with 0
 		}
 		return result;
 	}
-
 }

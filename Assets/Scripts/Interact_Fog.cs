@@ -12,10 +12,13 @@ public class Interact_Fog : MonoBehaviour {
 
 	private Canvas can;
 	private Text promptDisplay;
+	private World w;
 
 	// Use this for initialization
 	void Start () {	
 		ps = FindObjectOfType<PlayerStats> ();
+
+		w = FindObjectOfType<World> ();
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -46,7 +49,7 @@ public class Interact_Fog : MonoBehaviour {
 		// if you're touching fog and you press the "interact" key
 		if(col.gameObject.tag=="fog")
 		{
-			if (ps.GetHope () > unlockHopeAmt)
+			if (ps.GetHope () >= unlockHopeAmt)
 			{
 				// display good prompt
 				promptDisplay.text = promptTextGood;
@@ -54,6 +57,8 @@ public class Interact_Fog : MonoBehaviour {
 				if (Input.GetButtonDown("Interact"))
 				{
 					promptDisplay.text = "";
+					w.UnlockLevel();
+
 					// make wall intangible
 					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
 

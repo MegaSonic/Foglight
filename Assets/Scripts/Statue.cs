@@ -43,7 +43,7 @@ public class Statue : MonoBehaviour {
 	// variables to make a delay between page turns
 	private float readPageDelay = 0.5f;
 	private float readPageDelayTimer = 0f;
-	public bool canReadPage = true;
+	private bool canReadPage = true;
 
 	private bool spent = false;
 	private bool looped = false;
@@ -62,15 +62,26 @@ public class Statue : MonoBehaviour {
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
 
-	// Use this for initialization
-	void Start () {
+	void Awake() {
+		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
+
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
-
-		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
+		
+		
 		playerColor = playerParticles.startColor;
+		
+
+
+	}
+
+	// Use this for initialization
+	void Start () {
+
+		// add this statue's hope to the global hope counter
+		world.AddHope (level, hopeAmt);
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -80,12 +91,9 @@ public class Statue : MonoBehaviour {
 			if (tmp[i].name == "displayText")
 				dialogDisplay = tmp[i];
 		}
-
+		
 		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
-
-		// add this statue's hope to the global hope counter
-		world.AddHope (level, hopeAmt);
 
 	}
 
