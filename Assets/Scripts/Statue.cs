@@ -16,16 +16,13 @@ public class Book{
 	public List<Page> pages;
 }
 
-[System.Serializable]
-public delegate void FireAfter ();
-
 public class Statue : MonoBehaviour {
 
 	public float hopeAmt;
 	public int level; // what square is this statue in?
 	public string statueName;
 	public string promptText;
-	public FireAfter fireAfterReading;
+	public int afterMethodIndex;
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
@@ -139,8 +136,15 @@ public class Statue : MonoBehaviour {
 			// we've finished the book
 
 			// fire the delegate if there is one
-			if (fireAfterReading != null)
-				fireAfterReading();
+			switch(afterMethodIndex){
+			case (0):
+				break;
+			case (1):
+				// testMethod();
+				break;
+
+				// etc
+			}
 
 			pageNum = 0;
 			looped = true;
