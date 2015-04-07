@@ -5,6 +5,7 @@ public class SpringFollow : MonoBehaviour {
 
 	// The target we are following
 	public Transform target;
+	public float height;
 	public float springyness;
 	
 	private Vector3 speed;
@@ -18,6 +19,8 @@ public class SpringFollow : MonoBehaviour {
 	void Update () {
 		//speed = Vector3.Lerp (speed, target.position-this.transform.position, springyness * Time.deltaTime);
 		//this.transform.position += speed;
-		this.transform.position = target.position;
+		Vector3 followLoc = target.position;
+		followLoc.y += height;
+		this.transform.position = followLoc;
 	}
 }
