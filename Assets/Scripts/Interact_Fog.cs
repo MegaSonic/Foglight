@@ -49,6 +49,7 @@ public class Interact_Fog : MonoBehaviour {
 		// if you're touching fog and you press the "interact" key
 		if(col.gameObject.tag=="fog")
 		{
+			unlockHopeAmt = int.Parse(col.gameObject.transform.parent.gameObject.tag);
 			if (ps.GetHope () >= unlockHopeAmt)
 			{
 				// display good prompt
