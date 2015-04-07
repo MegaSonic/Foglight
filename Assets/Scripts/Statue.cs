@@ -55,6 +55,7 @@ public class Statue : MonoBehaviour {
 
 	private ParticleSystem playerParticles;
 	private Color playerColor;
+	private float playerHeight;
 
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
@@ -69,7 +70,7 @@ public class Statue : MonoBehaviour {
 		
 		
 		playerColor = playerParticles.startColor;
-		
+		playerHeight = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height;
 
 
 	}
@@ -182,20 +183,22 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
+
 		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
 		openNewestBook ();
-
 
 	}
 
 	void OnTriggerExit(Collider other){
 		playerParticles.startColor = playerColor;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = playerHeight;
 		clearDialog ();	
 	}
 
 	void OnTriggerStay(Collider other){
 		playerParticles.startColor = Color.green;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = 0;
 
 		/*ParticleSystem.Particle[] particles = new ParticleSystem.Particle[playerParticles.particleCount];
 		int count = playerParticles.GetParticles(particles);
