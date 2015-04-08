@@ -6,13 +6,13 @@ public class Interact_Fog : MonoBehaviour {
 
 	private PlayerStats ps;
 
-	public float unlockHopeAmt;
 	public string promptTextGood = "Press X to push back the fog wall";
 	public string promptTextBad = "You need to gather {0} more hope to get past this wall!";
 
 	private Canvas can;
 	private Text promptDisplay;
 	private World w;
+	private float unlockHopeAmt;
 
 	// Use this for initialization
 	void Start () {	
@@ -44,12 +44,20 @@ public class Interact_Fog : MonoBehaviour {
 
 	}
 
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.gameObject.tag == "fog")
+			unlockHopeAmt = col.gameObject.GetComponent<Fog_Amount> ().GetHopeAmt();
+	
+	}
+
+
 	void OnTriggerStay(Collider col)
 	{
 		// if you're touching fog and you press the "interact" key
 		if(col.gameObject.tag=="fog")
 		{
-			unlockHopeAmt = int.Parse(col.gameObject.transform.parent.gameObject.tag);
+			//unlockHopeAmt = int.Parse(col.gameObject.transform.parent.gameObject.tag);
 			if (ps.GetHope () >= unlockHopeAmt)
 			{
 				// display good prompt
