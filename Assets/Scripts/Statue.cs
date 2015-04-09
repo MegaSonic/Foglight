@@ -188,6 +188,7 @@ public class Statue : MonoBehaviour {
 		nameDisplay.text = statueName;
 		openNewestBook ();
 
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = 0;
 	}
 
 	void OnTriggerExit(Collider other){
@@ -198,7 +199,7 @@ public class Statue : MonoBehaviour {
 
 	void OnTriggerStay(Collider other){
 		playerParticles.startColor = Color.green;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = 0;
+
 
 		/*ParticleSystem.Particle[] particles = new ParticleSystem.Particle[playerParticles.particleCount];
 		int count = playerParticles.GetParticles(particles);
