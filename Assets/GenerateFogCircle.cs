@@ -9,6 +9,8 @@ public class GenerateFogCircle : MonoBehaviour {
 
 	//public Transform basicFogCircle;
 	public float radius = 40;
+	public int sectionNumber;
+	public float unlockHopeAmt;
 
 	private bool flag = true;
 	private Transform one;
@@ -49,6 +51,10 @@ public class GenerateFogCircle : MonoBehaviour {
 		twoSys.emissionRate = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
 		threeSys.maxParticles = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
 		threeSys.emissionRate = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
+
+		one.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
+		two.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
+		three.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 
 	}
 	

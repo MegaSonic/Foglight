@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Fog_Amount : MonoBehaviour {
 
+	public int sectionNumber;
 	public float unlockHopeAmt;
 
 	public float GetHopeAmt()
@@ -10,13 +11,16 @@ public class Fog_Amount : MonoBehaviour {
 		return unlockHopeAmt;
 	}
 
+	public void setSectionAndHope(int section, float hope)
+	{
+		sectionNumber = section;
+		unlockHopeAmt = hope;
+		this.GetComponent<ParticleSystemRenderer> ().sortingOrder += -4 * sectionNumber;
+
+	}
+
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		this.GetComponent<ParticleSystemRenderer> ().sortingOrder += -4 * sectionNumber;
 	}
 }

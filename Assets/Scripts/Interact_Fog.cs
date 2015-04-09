@@ -47,7 +47,7 @@ public class Interact_Fog : MonoBehaviour {
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag == "fog")
-			unlockHopeAmt = col.gameObject.GetComponent<Fog_Amount> ().GetHopeAmt();
+			unlockHopeAmt = col.transform.parent.gameObject.GetComponent<Fog_Amount> ().GetHopeAmt();
 	
 	}
 
@@ -68,29 +68,30 @@ public class Interact_Fog : MonoBehaviour {
 					promptDisplay.text = "";
 					w.UnlockLevel();
 
-					// make wall intangible
-					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
-
-					// deactivate all particle systems with the same tag
-					var emittersInSection = GameObject.FindGameObjectsWithTag(col.gameObject.transform.parent.gameObject.tag);
+					// deactivate all particle systems with the same section
+					var emittersInSection = GameObject.FindGameObjectsWithTag("fogMaker");
 					foreach (var emitter in emittersInSection)
 					{
-						var particleSystem = emitter.GetComponent<ParticleSystem>();
-						particleSystem.enableEmission = false;
-
-						ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
-						int count = particleSystem.GetParticles(particles);
-						for(int i = 0; i < count; i++)
+						if(emitter.GetComponent<Fog_Amount>().sectionNumber == col.transform.parent.gameObject.GetComponent<Fog_Amount>().sectionNumber)
 						{
-
-							particles[i].velocity = ((particles[i].position - gameObject.transform.position).normalized * 30);
+							foreach (Transform child in emitter.transform){
+								Destroy(child.gameObject);
+							}
+							
+							var particleSystem = emitter.GetComponent<ParticleSystem>();
+							particleSystem.enableEmission = false;
+							
+							ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
+							int count = particleSystem.GetParticles(particles);
+							for(int i = 0; i < count; i++)
+							{
+								
+								particles[i].velocity = ((particles[i].position - gameObject.transform.position).normalized * 30);
+							}
+							particleSystem.SetParticles(particles, count);
 						}
-						particleSystem.SetParticles(particles, count);
-					}
 
-					// deactivate particle system
-					//col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
-					col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
+					}
 
 
 				}
