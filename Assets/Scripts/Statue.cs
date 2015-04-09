@@ -56,6 +56,8 @@ public class Statue : MonoBehaviour {
 	private ParticleSystem playerParticles;
 	private Color playerColor;
 	private float playerHeight;
+	private float camDistance;
+	private float camHeight;
 
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
@@ -68,10 +70,12 @@ public class Statue : MonoBehaviour {
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
 		
-		
+
+		// Temp Camera Stuff
 		playerColor = playerParticles.startColor;
 		playerHeight = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height;
-
+		camDistance = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance;
+		camHeight = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height;
 
 	}
 
@@ -188,13 +192,20 @@ public class Statue : MonoBehaviour {
 		nameDisplay.text = statueName;
 		openNewestBook ();
 
+		// Temp Camera Stuff
 		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = 0;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance = 6f;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height = 1.5f;
 	}
 
 	void OnTriggerExit(Collider other){
 		playerParticles.startColor = playerColor;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = playerHeight;
 		clearDialog ();	
+
+		// Temp Camera Stuff
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = playerHeight;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance = camDistance;
+		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height = camHeight;
 	}
 
 	void OnTriggerStay(Collider other){

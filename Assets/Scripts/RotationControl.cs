@@ -30,10 +30,11 @@ public class RotationControl : MonoBehaviour {
 		//// rotate the player manually ////
 		float camH = Input.GetAxis ("CamHorizontal");
 		float camV = Input.GetAxis ("CamVertical");
+		float H = Input.GetAxis ("Horizontal");
 
-		if (Mathf.Abs (camH) > 0.1f) {						
+		if (Mathf.Abs (camH) > 0.1f || Mathf.Abs (H) > 0.1f) {						
 
-			target.RotateAround(target.position, Vector3.up, camH * manualRotateSpeed);
+			target.RotateAround(target.position, Vector3.up, (camH+H) * manualRotateSpeed);
 		}
 		
 		//// Alter the script on the camera ////
