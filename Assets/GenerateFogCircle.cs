@@ -11,8 +11,7 @@ public class GenerateFogCircle : MonoBehaviour {
 	public float radius = 40;
 	public int sectionNumber;
 	public float unlockHopeAmt;
-
-	private bool flag = true;
+	
 	private Transform one;
 	private Transform two;
 	private Transform three;
@@ -55,11 +54,6 @@ public class GenerateFogCircle : MonoBehaviour {
 		one.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 		two.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 		three.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
 	}
 }
