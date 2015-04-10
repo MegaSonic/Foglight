@@ -56,4 +56,12 @@ public class GenerateFogCircle : MonoBehaviour {
 		three.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 
 	}
+
+
+	void OnDrawGizmos() {
+		// collider.radius = radius;
+		Gizmos.color = Color.red;
+		Gizmos.matrix = transform.localToWorldMatrix;
+		Gizmos.DrawWireSphere(Vector3.zero, radius);
+	}
 }
