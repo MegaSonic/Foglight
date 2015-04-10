@@ -26,7 +26,7 @@ public class Statue : MonoBehaviour {
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
-	private float writeOnSpeed = 0.01f;
+	private float writeOnSpeed = 0.04f;
 	private float writeOnTimer = 0f;
 	private int writeOnIndex = 0;
 	private string writeOnTemp;
@@ -212,6 +212,7 @@ public class Statue : MonoBehaviour {
 		rc.height = camHeight;
 
 		clearDialog ();	
+		writing = false;
 	}
 
 	void OnTriggerStay(Collider other){
