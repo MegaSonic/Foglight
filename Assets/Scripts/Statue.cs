@@ -26,7 +26,7 @@ public class Statue : MonoBehaviour {
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
-	private float writeOnSpeed = 0.04f;
+	private float writeOnSpeed = 0.001f;
 	private float writeOnTimer = 0f;
 	private int writeOnIndex = 0;
 	private string writeOnTemp;
@@ -145,6 +145,12 @@ public class Statue : MonoBehaviour {
 		if (pageNum >= dialog[bookNum].pages.Count) {
 			// we've finished the book
 
+			// give the hope to the player
+			if (!spent) {
+				spent = true;
+				ps.AddHope(hopeAmt);
+			}
+
 			// fire the delegate if there is one
 			switch(afterMethodIndex){
 			case (0):
@@ -230,10 +236,7 @@ public class Statue : MonoBehaviour {
 
 */
 		if (Input.GetButtonDown ("Interact")){
-			if (!spent) {
-				spent = true;
-				ps.AddHope(hopeAmt);
-			}
+
 			if (statueName != "") {
 				nameFog.Play();
 			}
