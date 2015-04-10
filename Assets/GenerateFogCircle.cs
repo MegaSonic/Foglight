@@ -44,12 +44,12 @@ public class GenerateFogCircle : MonoBehaviour {
 		ParticleSystem twoSys = two.GetComponent<ParticleSystem> ();
 		ParticleSystem threeSys = three.GetComponent<ParticleSystem> ();
 
-		oneSys.maxParticles = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
-		oneSys.emissionRate = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
-		twoSys.maxParticles = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
-		twoSys.emissionRate = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
-		threeSys.maxParticles = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
-		threeSys.emissionRate = Mathf.CeilToInt (oneSys.maxParticles * (radius / 40));
+		oneSys.maxParticles =  Mathf.CeilToInt ((80 / radius) * oneSys.maxParticles * (radius / 40));
+		oneSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
+		twoSys.maxParticles =  Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
+		twoSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
+		threeSys.maxParticles = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
+		threeSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
 
 		one.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 		two.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
