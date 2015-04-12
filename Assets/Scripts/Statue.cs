@@ -26,7 +26,7 @@ public class Statue : MonoBehaviour {
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
-	private float writeOnSpeed = 0.01f;
+	private float writeOnSpeed = 0.001f;
 	private float writeOnTimer = 0f;
 	private int writeOnIndex = 0;
 	private string writeOnTemp;
@@ -48,6 +48,8 @@ public class Statue : MonoBehaviour {
 	private int bookNum = 0;
 
 	private World world;
+	private SpringFollow sf;
+	private RotationControl rc;
 	private PlayerStats ps;
 	private Canvas can;
 	private Text nameDisplay;
@@ -65,6 +67,9 @@ public class Statue : MonoBehaviour {
 	void Awake() {
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 
+		sf = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow> ();
+		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
+
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
@@ -73,9 +78,9 @@ public class Statue : MonoBehaviour {
 
 		// Temp Camera Stuff
 		playerColor = playerParticles.startColor;
-		playerHeight = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height;
-		camDistance = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance;
-		camHeight = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height;
+		playerHeight = sf.height;
+		camDistance = rc.distance;
+		camHeight = rc.height;
 
 	}
 
@@ -140,6 +145,12 @@ public class Statue : MonoBehaviour {
 		if (pageNum >= dialog[bookNum].pages.Count) {
 			// we've finished the book
 
+			// give the hope to the player
+			if (!spent) {
+				spent = true;
+				ps.AddHope(hopeAmt);
+			}
+
 			// fire the delegate if there is one
 			switch(afterMethodIndex){
 			case (0):
@@ -193,19 +204,21 @@ public class Statue : MonoBehaviour {
 		openNewestBook ();
 
 		// Temp Camera Stuff
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = 0;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance = 6f;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height = 1.5f;
+		sf.height = 0;
+		rc.distance = 6f;
+		rc.height = 1.5f;
 	}
 
 	void OnTriggerExit(Collider other){
 		playerParticles.startColor = playerColor;
-		clearDialog ();	
 
 		// Temp Camera Stuff
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow>().height = playerHeight;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().distance = camDistance;
-		GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ().height = camHeight;
+		sf.height = playerHeight;
+		rc.distance = camDistance;
+		rc.height = camHeight;
+
+		clearDialog ();	
+		writing = false;
 	}
 
 	void OnTriggerStay(Collider other){
@@ -223,10 +236,7 @@ public class Statue : MonoBehaviour {
 
 */
 		if (Input.GetButtonDown ("Interact")){
-			if (!spent) {
-				spent = true;
-				ps.AddHope(hopeAmt);
-			}
+
 			if (statueName != "") {
 				nameFog.Play();
 			}
