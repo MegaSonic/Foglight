@@ -67,20 +67,12 @@ public class Statue : MonoBehaviour {
 	void Awake() {
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 
-		sf = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow> ();
-		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
-
 		world = FindObjectOfType<World> ();
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
 		
 
-		// Temp Camera Stuff
-		playerColor = playerParticles.startColor;
-		playerHeight = sf.height;
-		camDistance = rc.distance;
-		camHeight = rc.height;
 
 	}
 
@@ -89,7 +81,7 @@ public class Statue : MonoBehaviour {
 
 		// add this statue's hope to the global hope counter
 		world.AddHope (level, hopeAmt);
-
+				
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
 		for (int i = 0; i<tmp.Length; i++) {
@@ -98,10 +90,21 @@ public class Statue : MonoBehaviour {
 			if (tmp[i].name == "displayText")
 				dialogDisplay = tmp[i];
 		}
-		
+
 		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
 
+
+		/*
+		sf = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow> ();
+		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
+
+		// Temp Camera Stuff
+		playerColor = playerParticles.startColor;
+		playerHeight = sf.height;
+		camDistance = rc.distance;
+		camHeight = rc.height;
+		*/
 	}
 
 	// clears the dialog box text
@@ -202,6 +205,13 @@ public class Statue : MonoBehaviour {
 		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
 		openNewestBook ();
+
+		sf = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow> ();
+		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
+		playerColor = playerParticles.startColor;
+		playerHeight = sf.height;
+		camDistance = rc.distance;
+		camHeight = rc.height;
 
 		// Temp Camera Stuff
 		sf.height = 0;
