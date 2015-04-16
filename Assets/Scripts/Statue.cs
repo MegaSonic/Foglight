@@ -71,8 +71,6 @@ public class Statue : MonoBehaviour {
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
-		
-
 
 	}
 
@@ -145,15 +143,16 @@ public class Statue : MonoBehaviour {
 		// deal with the pages, delegate, and flags
 
 		pageNum++;
-		if (pageNum >= dialog[bookNum].pages.Count) {
-			// we've finished the book
+
+		if (pageNum == dialog [bookNum].pages.Count - 1) {
+			// we're on the last page
 
 			// give the hope to the player
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
 			}
-
+			
 			// fire the delegate if there is one
 			switch(afterMethodIndex){
 			case (0):
@@ -161,9 +160,13 @@ public class Statue : MonoBehaviour {
 			case (1):
 				// testMethod();
 				break;
-
+				
 				// etc
 			}
+		}
+
+		else if (pageNum >= dialog[bookNum].pages.Count) {
+			// we've finished the book
 
 			pageNum = 0;
 			looped = true;

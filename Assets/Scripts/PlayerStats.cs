@@ -29,4 +29,14 @@ public class PlayerStats : MonoBehaviour {
 	public void unlockFlag(string flag){
 		unlockedFlags.Add (flag);
 	}
+
+	// super secret developer key for adding hope
+	void Update()
+	{
+		if (Input.GetKeyDown("9") && Input.GetKeyDown (";"))
+		{
+			AddHope (1f);
+		}
+	}
+
 }
