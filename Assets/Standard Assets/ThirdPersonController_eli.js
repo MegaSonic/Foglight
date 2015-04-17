@@ -23,6 +23,8 @@ var trotAfterSeconds = 3.0;
 
 var canJump = true;
 
+private var locked = false;
+
 private var jumpRepeatTime = 0.05;
 private var jumpTimeout = 0.15;
 private var groundedTimeout = 0.25;
@@ -222,6 +224,11 @@ function DidJump ()
 
 function Update() {
 	
+	if (locked)
+	{
+		return;
+	}
+	
 	if (!isControllable)
 	{
 		// kill all inputs if not controllable.
@@ -287,6 +294,14 @@ function OnControllerColliderHit (hit : ControllerColliderHit )
 //	Debug.DrawRay(hit.point, hit.normal);
 	if (hit.moveDirection.y > 0.01) 
 		return;
+}
+
+function Freeze() {
+	locked = true;
+}
+
+function Unfreeze() {
+	locked = false;
 }
 
 function GetSpeed () {
