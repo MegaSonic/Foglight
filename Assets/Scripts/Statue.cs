@@ -154,7 +154,7 @@ public class Statue : MonoBehaviour {
 			case (0):
 				break;
 			case (1):
-				// testMethod();
+				spawnLetter();
 				break;
 				
 				// etc
@@ -318,5 +318,10 @@ public class Statue : MonoBehaviour {
 				canEngage = true;
 			}
 		}
+	}
+
+	void spawnLetter ()
+	{
+		GameObject go = Instantiate(Resources.Load("LetterPrefab")) as GameObject;
 	}
 }
