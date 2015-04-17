@@ -24,6 +24,11 @@ public class Discovery : MonoBehaviour {
 	private ParticleSystem playerParticles;
 	private Color playerColor;
 
+	// display timer variables
+	private float displayDelay = 0.5f;
+	private float displayDelayTimer = 0f;
+	private bool canDisplay = true;
+
 	private bool isVisible = false;
 
 	// Use this for initialization
@@ -56,6 +61,10 @@ public class Discovery : MonoBehaviour {
 
 	void OnTriggerStay(Collider other){
 		if (Input.GetButtonDown ("Interact")) {
+
+			if (!canDisplay)
+				return;
+
 			if (!isVisible) {
 				vibe.KillVibration ();
 				if (!spent) {
@@ -74,6 +83,8 @@ public class Discovery : MonoBehaviour {
 				playerParticles.startColor = playerColor;
 				isVisible = false;
 				clearDialog();
+				canDisplay = false;
+				displayDelayTimer = 0f;
 			}
 		}
 	}
@@ -93,6 +104,11 @@ public class Discovery : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+		if (!canDisplay) {
+			displayDelayTimer += Time.deltaTime;
+			if (displayDelayTimer >= displayDelay){
+				canDisplay = true;
+			}
+		}
 	}
 }
