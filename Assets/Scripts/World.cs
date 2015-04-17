@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class World : MonoBehaviour {
 
@@ -7,15 +8,33 @@ public class World : MonoBehaviour {
 
 	private int unlockedLevels = 1;
 	private float[] availableHope;
+	private GenerateFogCircle[] fogCircles;
+	private int fogIndex;
 
 	//private bool ready;
 
 	// Use this for initialization
 	void Awake () {
 		availableHope = new float[amtOfSquares];
+
 	}
 
-	
+	void Start() {
+		fogCircles = new GenerateFogCircle[10];
+		fogIndex = 0;
+		GenerateFogCircle[] circles = FindObjectsOfType(typeof(GenerateFogCircle)) as GenerateFogCircle[];
+
+		foreach (GenerateFogCircle circle in circles) {
+			fogCircles[fogIndex] = circle;
+			fogIndex++;
+			if (circle.sectionNumber > 0) {
+				circle.gameObject.SetActive(false);
+			}
+		}
+
+		fogIndex = 0;
+	}
+
 	public void UnlockLevel()
 	{
 		unlockedLevels++;
@@ -43,4 +62,13 @@ public class World : MonoBehaviour {
 		}
 		return result;
 	}
+
+
+	public void UnlockNextCircle() {
+		fogIndex++;
+		if (fogCircles[fogIndex] != null)
+			fogCircles[fogIndex].gameObject.SetActive(true);
+
+	}
+
 }

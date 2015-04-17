@@ -34,22 +34,22 @@ public class GenerateFogCircle : MonoBehaviour {
 
 		one = GameObject.Instantiate (fogCircle1, this.transform.position, rotation) as Transform;
 		two = GameObject.Instantiate (fogCircle2, this.transform.position, rotation) as Transform;
-		// three = GameObject.Instantiate (fogCircle3, this.transform.position, rotation) as Transform;
+		//three = GameObject.Instantiate (fogCircle3, this.transform.position, rotation) as Transform;
 
 		one.transform.localScale = new Vector3 ((radius/40), (radius/40), 1f);
 		two.transform.localScale = new Vector3 (((radius+5)/40), ((radius+5)/40), 1f);
-		// three.transform.localScale = new Vector3 (((radius+10)/40), ((radius+10)/40), 1f);
+		//three.transform.localScale = new Vector3 (((radius+10)/40), ((radius+10)/40), 1f);
 
 		ParticleSystem oneSys = one.GetComponent<ParticleSystem> ();
 		ParticleSystem twoSys = two.GetComponent<ParticleSystem> ();
-		// ParticleSystem threeSys = three.GetComponent<ParticleSystem> ();
+		//ParticleSystem threeSys = three.GetComponent<ParticleSystem> ();
 
-		oneSys.maxParticles =  Mathf.CeilToInt ((80 / radius) * oneSys.maxParticles * (radius / 40));
-		oneSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
-		twoSys.maxParticles =  Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
-		twoSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
-		// threeSys.maxParticles = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
-		// threeSys.emissionRate = Mathf.CeilToInt ((80 / radius) *  oneSys.maxParticles * (radius / 40));
+		oneSys.maxParticles =  Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		oneSys.emissionRate = Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		twoSys.maxParticles =  Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		twoSys.emissionRate = Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		//threeSys.maxParticles = Mathf.CeilToInt ((3f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		//threeSys.emissionRate = Mathf.CeilToInt ((3f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
 
 		one.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 		two.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);

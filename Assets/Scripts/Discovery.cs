@@ -24,6 +24,13 @@ public class Discovery : MonoBehaviour {
 	private ParticleSystem playerParticles;
 	private Color playerColor;
 
+	// display timer variables
+	private float displayDelay = 0.5f;
+	private float displayDelayTimer = 0f;
+	private bool canDisplay = true;
+
+	private bool isVisible = false;
+
 	// Use this for initialization
 	void Start () {
 		vibe = GetComponentInChildren<Vibration> ();
@@ -48,21 +55,37 @@ public class Discovery : MonoBehaviour {
 		world.AddHope (level, hopeAmt);
 	}
 
+	void OnTriggerEntry(Collider other) {
+		playerParticles.startColor = Color.green;
+	}
 
 	void OnTriggerStay(Collider other){
-		playerParticles.startColor = Color.green;
-
 		if (Input.GetButtonDown ("Interact")) {
-			vibe.KillVibration ();
-			if (!spent) {
-				spent = true;
-				vibe.spent = true;
-				ps.AddHope(hopeAmt);
+
+			if (!canDisplay)
+				return;
+
+			if (!isVisible) {
+				vibe.KillVibration ();
+				if (!spent) {
+					spent = true;
+					vibe.spent = true;
+					ps.AddHope(hopeAmt);
+				}
+				nameDisplay.text = name;
+				dialogDisplay.text = text;
+				imageDisplay.sprite = image;
+				imageDisplay.enabled = true;
+				isVisible = true;
 			}
-			nameDisplay.text = name;
-			dialogDisplay.text = text;
-			imageDisplay.sprite = image;
-			imageDisplay.enabled = true;
+			else {
+				imageDisplay.enabled = false;
+				playerParticles.startColor = playerColor;
+				isVisible = false;
+				clearDialog();
+				canDisplay = false;
+				displayDelayTimer = 0f;
+			}
 		}
 	}
 
@@ -81,6 +104,11 @@ public class Discovery : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+		if (!canDisplay) {
+			displayDelayTimer += Time.deltaTime;
+			if (displayDelayTimer >= displayDelay){
+				canDisplay = true;
+			}
+		}
 	}
 }

@@ -42,12 +42,19 @@ public class Statue : MonoBehaviour {
 	private float readPageDelayTimer = 0f;
 	private bool canReadPage = true;
 
+	// variables to make a delay between engagements
+	private float engageDelay = 1f;
+	private float engageDelayTimer = 0f;
+	private bool canEngage = true;
+
 	private bool spent = false;
 	private bool looped = false;
 	private int pageNum = -1;
 	private int bookNum = 0;
+	private bool engaged = false; // if the player is engaged in a dialog with statue
 
 	private World world;
+	//private ThirdPersonController_eli controller; // whatever it ends up being
 	private SpringFollow sf;
 	private RotationControl rc;
 	private PlayerStats ps;
@@ -71,8 +78,6 @@ public class Statue : MonoBehaviour {
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
-		
-
 
 	}
 
@@ -94,17 +99,6 @@ public class Statue : MonoBehaviour {
 		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
 
-
-		/*
-		sf = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<SpringFollow> ();
-		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
-
-		// Temp Camera Stuff
-		playerColor = playerParticles.startColor;
-		playerHeight = sf.height;
-		camDistance = rc.distance;
-		camHeight = rc.height;
-		*/
 	}
 
 	// clears the dialog box text
@@ -145,34 +139,50 @@ public class Statue : MonoBehaviour {
 		// deal with the pages, delegate, and flags
 
 		pageNum++;
-		if (pageNum >= dialog[bookNum].pages.Count) {
-			// we've finished the book
+
+		if (pageNum == dialog [bookNum].pages.Count - 1) {
+			// we're on the last page
 
 			// give the hope to the player
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
 			}
-
+			
 			// fire the delegate if there is one
 			switch(afterMethodIndex){
 			case (0):
 				break;
 			case (1):
-				// testMethod();
+				spawnLetter();
 				break;
-
+				
 				// etc
 			}
-
-			pageNum = 0;
-			looped = true;
 
 			// unlock the flag for the player (if there is one)
 			if (!string.IsNullOrEmpty(dialog[bookNum].givesFlag))
 			{
 				ps.unlockFlag(dialog[bookNum].givesFlag);
 			}
+		}
+
+		else if (pageNum >= dialog[bookNum].pages.Count) {
+			// we've finished the book
+
+			pageNum = 0;
+			looped = true;
+			engaged = false;
+			//controller.Unfreeze();
+			print ("UNFREEZE");
+
+			// start engagement timer
+			canEngage = false;
+			engageDelayTimer = 0f;
+
+			clearDialog();
+			writing = false;
+			return;
 		}
 
 		// initiate the displaying
@@ -197,7 +207,6 @@ public class Statue : MonoBehaviour {
 			else
 				displayNextPage();
 		}
-
 	}
 
 	void OnTriggerEnter(Collider other){
@@ -234,18 +243,16 @@ public class Statue : MonoBehaviour {
 	void OnTriggerStay(Collider other){
 		playerParticles.startColor = Color.green;
 
-
-		/*ParticleSystem.Particle[] particles = new ParticleSystem.Particle[playerParticles.particleCount];
-		int count = playerParticles.GetParticles(particles);
-		for(int i = 0; i < count; i++)
-		{
-			
-			particles[i].color = Color.green;
-		}
-		playerParticles.SetParticles(particles, count);
-
-*/
 		if (Input.GetButtonDown ("Interact")){
+
+			if (!canEngage)
+				return;
+
+			if (!engaged){
+				engaged = true;
+				//controller.Freeze();
+				print ("FREEZE");
+			}
 
 			if (statueName != "") {
 				nameFog.Play();
@@ -262,9 +269,7 @@ public class Statue : MonoBehaviour {
 				// start the delay timer
 				readPageDelayTimer = readPageDelay;
 				canReadPage = false;
-
 			}
-
 		}
 	}
 
@@ -296,8 +301,6 @@ public class Statue : MonoBehaviour {
 					canReadPage = true;
 				}
 			}
-
-
 		}
 
 		// update page delay timer
@@ -307,5 +310,18 @@ public class Statue : MonoBehaviour {
 			canReadPage = true;
 		}
 
+		// update engage delay timer
+		if (!canEngage) {
+			engageDelayTimer += Time.deltaTime;
+			if (engageDelayTimer >= engageDelay)
+			{
+				canEngage = true;
+			}
+		}
+	}
+
+	void spawnLetter ()
+	{
+		GameObject go = Instantiate(Resources.Load("LetterPrefab")) as GameObject;
 	}
 }
