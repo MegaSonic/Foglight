@@ -8,7 +8,7 @@ public class World : MonoBehaviour {
 
 	private int unlockedLevels = 1;
 	private float[] availableHope;
-	private List<GenerateFogCircle> fogCircles;
+	private GenerateFogCircle[] fogCircles;
 	private int fogIndex;
 
 	//private bool ready;
@@ -20,19 +20,21 @@ public class World : MonoBehaviour {
 	}
 
 	void Start() {
-		fogCircles = new List<GenerateFogCircle>();
+		fogCircles = new GenerateFogCircle[10];
 		fogIndex = 0;
 		GenerateFogCircle[] circles = FindObjectsOfType(typeof(GenerateFogCircle)) as GenerateFogCircle[];
 
 		foreach (GenerateFogCircle circle in circles) {
-			fogCircles[circle.sectionNumber] = circle;
+			fogCircles[fogIndex] = circle;
+			fogIndex++;
 			if (circle.sectionNumber > 0) {
 				circle.gameObject.SetActive(false);
 			}
 		}
+
+		fogIndex = 0;
 	}
 
-	
 	public void UnlockLevel()
 	{
 		unlockedLevels++;
@@ -61,9 +63,12 @@ public class World : MonoBehaviour {
 		return result;
 	}
 
+
 	public void UnlockNextCircle() {
 		fogIndex++;
-		fogCircles[fogIndex].gameObject.SetActive(true);
+		if (fogCircles[fogIndex] != null)
+			fogCircles[fogIndex].gameObject.SetActive(true);
 
 	}
+
 }

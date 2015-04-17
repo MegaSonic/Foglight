@@ -67,6 +67,7 @@ public class Interact_Fog : MonoBehaviour {
 				{
 					promptDisplay.text = "";
 					w.UnlockLevel();
+					w.UnlockNextCircle();
 
 					// deactivate all particle systems with the same section
 					var emittersInSection = GameObject.FindGameObjectsWithTag("fogMaker");

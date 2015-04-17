@@ -24,6 +24,8 @@ public class Discovery : MonoBehaviour {
 	private ParticleSystem playerParticles;
 	private Color playerColor;
 
+	private bool isVisible = false;
+
 	// Use this for initialization
 	void Start () {
 		vibe = GetComponentInChildren<Vibration> ();
@@ -53,16 +55,24 @@ public class Discovery : MonoBehaviour {
 		playerParticles.startColor = Color.green;
 
 		if (Input.GetButtonDown ("Interact")) {
-			vibe.KillVibration ();
-			if (!spent) {
-				spent = true;
-				vibe.spent = true;
-				ps.AddHope(hopeAmt);
+			if (!isVisible) {
+				vibe.KillVibration ();
+				if (!spent) {
+					spent = true;
+					vibe.spent = true;
+					ps.AddHope(hopeAmt);
+				}
+				nameDisplay.text = name;
+				dialogDisplay.text = text;
+				imageDisplay.sprite = image;
+				imageDisplay.enabled = true;
+				isVisible = true;
 			}
-			nameDisplay.text = name;
-			dialogDisplay.text = text;
-			imageDisplay.sprite = image;
-			imageDisplay.enabled = true;
+			else {
+				imageDisplay.enabled = false;
+				playerParticles.startColor = playerColor;
+				clearDialog();
+			}
 		}
 	}
 
