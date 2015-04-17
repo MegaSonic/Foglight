@@ -50,10 +50,11 @@ public class Discovery : MonoBehaviour {
 		world.AddHope (level, hopeAmt);
 	}
 
+	void OnTriggerEntry(Collider other) {
+		playerParticles.startColor = Color.green;
+	}
 
 	void OnTriggerStay(Collider other){
-		playerParticles.startColor = Color.green;
-
 		if (Input.GetButtonDown ("Interact")) {
 			if (!isVisible) {
 				vibe.KillVibration ();
@@ -71,6 +72,7 @@ public class Discovery : MonoBehaviour {
 			else {
 				imageDisplay.enabled = false;
 				playerParticles.startColor = playerColor;
+				isVisible = false;
 				clearDialog();
 			}
 		}
