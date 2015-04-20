@@ -71,6 +71,8 @@ public class Statue : MonoBehaviour {
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
 
+	private GameObject fx;
+
 	void Awake() {
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 
@@ -99,6 +101,7 @@ public class Statue : MonoBehaviour {
 		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
 
+		fx = transform.FindChild ("Statue FX");
 	}
 
 	// clears the dialog box text
@@ -111,6 +114,20 @@ public class Statue : MonoBehaviour {
 		if (bodyFog.isPlaying) {
 			bodyFog.Stop ();
 		}
+	}
+
+	// activates particle fx
+	void activateFX(){
+		if (fx == null)
+			return;
+		fx.activeSelf = true;
+	}
+
+	// deactivates particle fx
+	void deactivateFX(){
+		if (fx == null)
+			return;
+		fx.activeSelf = false;
 	}
 
 	// looks for the newest unlocked book, and sets it as the default
@@ -253,6 +270,8 @@ public class Statue : MonoBehaviour {
 				//controller.Freeze();
 				print ("FREEZE");
 			}
+
+			deactivateFX();
 
 			if (statueName != "") {
 				nameFog.Play();
