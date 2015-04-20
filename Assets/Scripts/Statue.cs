@@ -196,6 +196,8 @@ public class Statue : MonoBehaviour {
 				spent = true;
 				ps.AddHope(hopeAmt);
 			}
+
+			deactivateFX();
 			
 			// fire the delegate if there is one
 			switch(afterMethodIndex){
@@ -304,8 +306,6 @@ public class Statue : MonoBehaviour {
 				//controller.Freeze();
 				print ("FREEZE");
 			}
-
-			deactivateFX();
 
 			if (statueName != "") {
 				nameFog.Play();
