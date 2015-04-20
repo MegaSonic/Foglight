@@ -14,6 +14,9 @@ public class Book{
 	public string needsFlag;
 	public string givesFlag;
 	public List<Page> pages;
+
+	[HideInInspector]
+	public bool hasBeenRead = false;
 }
 
 public class Statue : MonoBehaviour {
@@ -54,6 +57,8 @@ public class Statue : MonoBehaviour {
 	private bool engaged = false; // if the player is engaged in a dialog with statue
 
 	private World world;
+	private int ID;  // a unique ID number assigned by the world object
+
 	//private ThirdPersonController_eli controller; // whatever it ends up being
 	private SpringFollow sf;
 	private RotationControl rc;
@@ -101,7 +106,9 @@ public class Statue : MonoBehaviour {
 		// I'm doing this here out of convenience, but it's not necessarily the best place for it
 		clearDialog ();
 
-		fx = transform.FindChild ("Statue FX");
+		ID = world.registerStatue ();
+
+		fx = transform.FindChild ("Statue FX").gameObject;
 	}
 
 	// clears the dialog box text
@@ -120,17 +127,27 @@ public class Statue : MonoBehaviour {
 	void activateFX(){
 		if (fx == null)
 			return;
-		fx.activeSelf = true;
+		fx.SetActive(true);
 	}
 
 	// deactivates particle fx
 	void deactivateFX(){
 		if (fx == null)
 			return;
-		fx.activeSelf = false;
+		fx.SetActive(false);
 	}
 
-	// looks for the newest unlocked book, and sets it as the default
+	// returns true if there is an unread, unlocked book
+	bool isUnreadUnlockedBook() {
+		for (int i=0; i<dialog.Count; i++) {
+			if (!dialog[i].hasBeenRead && ps.flagUnlocked(dialog[i].needsFlag))
+				return true;
+		}
+		return false;
+	}
+
+	// looks for the newest unlocked book that hasn't been read yet, and sets it as the default
+	// if all books have been read, sets the last unlocked book as the default
 	void openNewestBook() {
 		// don't crash if there's no book
 		// and don't do any work if there's only one book
@@ -138,6 +155,20 @@ public class Statue : MonoBehaviour {
 			return;
 
 		for (int i = 0; i<dialog.Count; i++) {
+
+			// iterate through each book
+			// stop at the first book that hasn't been read and is not locked
+
+			// return upon the first unread book that either doesn't need to be unlocked
+			// or is unlocked
+			if ((!dialog[i].hasBeenRead && string.IsNullOrEmpty(dialog[i].needsFlag))
+			    || (!dialog[i].hasBeenRead && ps.flagUnlocked(dialog[i].needsFlag)))
+			{
+				bookNum = i;
+				return;
+			}
+
+			// if there isn't an unread book, get the most recent available one
 			if (string.IsNullOrEmpty(dialog[i].needsFlag))
 				bookNum = i;
 			else if(ps.flagUnlocked(dialog[i].needsFlag))
@@ -181,11 +212,14 @@ public class Statue : MonoBehaviour {
 			if (!string.IsNullOrEmpty(dialog[bookNum].givesFlag))
 			{
 				ps.unlockFlag(dialog[bookNum].givesFlag);
+				world.setNewDialog();
 			}
 		}
 
 		else if (pageNum >= dialog[bookNum].pages.Count) {
 			// we've finished the book
+
+			dialog[bookNum].hasBeenRead = true;
 
 			pageNum = 0;
 			looped = true;
@@ -294,6 +328,15 @@ public class Statue : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		// check to see if there is newly unlocked dialog
+		if (world.isNewDialog ()) {
+			world.acknowledgeNewDialog(ID);
+
+			if (isUnreadUnlockedBook())
+			    activateFX();	
+		}
+
 	
 		// write-on text
 		if (writing) {

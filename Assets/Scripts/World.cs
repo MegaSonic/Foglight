@@ -4,12 +4,17 @@ using System.Collections.Generic;
 
 public class World : MonoBehaviour {
 
-	public int amtOfSquares;
+	private int amtOfSquares = 20;
 
 	private int unlockedLevels = 1;
 	private float[] availableHope;
 	private GenerateFogCircle[] fogCircles;
 	private int fogIndex;
+
+	private bool newDialogIsUnlocked = false;
+	private int statueIDs = 0;
+	private int numOfStatues = 0;
+	private bool[] statuesAcknowledged;
 
 	//private bool ready;
 
@@ -34,6 +39,48 @@ public class World : MonoBehaviour {
 
 		fogIndex = 0;
 	}
+
+	public bool isNewDialog()
+	{
+		return newDialogIsUnlocked;
+	}
+
+	public void setNewDialog()
+	{
+		newDialogIsUnlocked = true;
+		statuesAcknowledged = new bool[numOfStatues];
+	}
+
+	// should be called once by each statue, lets the world know of its existence
+	// assigns a unique id number to the statue
+	public int registerStatue()
+	{
+		numOfStatues++;
+		statueIDs++;
+		return statueIDs;
+	}
+
+	// should be called by each statue to notify the world that it is aware of the newly unlocked dialog
+	public void acknowledgeNewDialog(int ID)
+	{
+		if (statuesAcknowledged [ID - 1])
+			return;
+
+		statuesAcknowledged [ID - 1] = true;
+
+		if (allStatuesAcknowledged())
+			newDialogIsUnlocked = false;
+	}
+
+	private bool allStatuesAcknowledged()
+	{
+		for (int i=0; i<statuesAcknowledged.Length; i++) {
+			if (!statuesAcknowledged[i])
+				return false;
+		}
+		return true;
+	}
+
 
 	public void UnlockLevel()
 	{

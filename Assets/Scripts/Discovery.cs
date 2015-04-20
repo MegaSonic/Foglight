@@ -8,7 +8,7 @@ public class Discovery : MonoBehaviour {
 
 	private Vibration vibe;
 
-	public string name;
+	public string dName;
 	public string text;
 	public Sprite image;
 	public float hopeAmt;
@@ -72,7 +72,7 @@ public class Discovery : MonoBehaviour {
 					vibe.spent = true;
 					ps.AddHope(hopeAmt);
 				}
-				nameDisplay.text = name;
+				nameDisplay.text = dName;
 				dialogDisplay.text = text;
 				imageDisplay.sprite = image;
 				imageDisplay.enabled = true;
