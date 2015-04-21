@@ -223,7 +223,7 @@ public class Statue : MonoBehaviour {
 
 			dialog[bookNum].hasBeenRead = true;
 
-			pageNum = 0;
+			pageNum = -1;
 			looped = true;
 			engaged = false;
 			//controller.Unfreeze();
@@ -233,8 +233,12 @@ public class Statue : MonoBehaviour {
 			canEngage = false;
 			engageDelayTimer = 0f;
 
+			canSkip = false;
 			clearDialog();
 			writing = false;
+
+			openNewestBook();
+
 			return;
 		}
 
@@ -333,8 +337,10 @@ public class Statue : MonoBehaviour {
 		if (world.isNewDialog ()) {
 			world.acknowledgeNewDialog(ID);
 
-			if (isUnreadUnlockedBook())
+			if (isUnreadUnlockedBook()){
 			    activateFX();	
+				looped = false;
+			}
 		}
 
 	
