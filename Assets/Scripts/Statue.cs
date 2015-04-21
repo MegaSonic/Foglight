@@ -222,8 +222,20 @@ public class Statue : MonoBehaviour {
 			// we've finished the book
 
 			dialog[bookNum].hasBeenRead = true;
-
 			pageNum = -1;
+
+			int oldBookNum = bookNum;
+			openNewestBook();
+
+			// if there are more books to read, do that
+			if (oldBookNum != bookNum)
+			{
+				displayNextPage();
+				return;
+			}
+
+			// otherwise release player
+
 			looped = true;
 			engaged = false;
 			//controller.Unfreeze();
@@ -237,7 +249,6 @@ public class Statue : MonoBehaviour {
 			clearDialog();
 			writing = false;
 
-			openNewestBook();
 
 			return;
 		}
