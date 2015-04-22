@@ -64,6 +64,7 @@ public class Statue : MonoBehaviour {
 	private RotationControl rc;
 	private PlayerStats ps;
 	private Canvas can;
+	private soundPlayer sound;
 	private Text nameDisplay;
 	private Text dialogDisplay;
 
@@ -108,6 +109,7 @@ public class Statue : MonoBehaviour {
 
 		ID = world.registerStatue ();
 
+		sound = FindObjectOfType<soundPlayer> ();
 		fx = transform.FindChild ("Statue FX").gameObject;
 	}
 
@@ -195,6 +197,7 @@ public class Statue : MonoBehaviour {
 			if (!spent) {
 				spent = true;
 				ps.AddHope(hopeAmt);
+				sound.PlayAddHope();
 			}
 
 			deactivateFX();
@@ -402,5 +405,6 @@ public class Statue : MonoBehaviour {
 	void spawnLetter ()
 	{
 		GameObject go = Instantiate(Resources.Load("LetterPrefab")) as GameObject;
+		sound.PlaySpawnObject ();
 	}
 }

@@ -113,4 +113,14 @@ public class soundPlayer : MonoBehaviour {
 			}
 		}
 	}
+
+	public void PlayAddHope(){
+
+
+	}
+
+	public void PlaySpawnObject(){
+
+	}
+
 }
