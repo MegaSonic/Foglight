@@ -8,7 +8,7 @@ public class Discovery : MonoBehaviour {
 
 	private Vibration vibe;
 
-	public string name;
+	public string dName;
 	public string text;
 	public Sprite image;
 	public float hopeAmt;
@@ -55,7 +55,26 @@ public class Discovery : MonoBehaviour {
 		world.AddHope (level, hopeAmt);
 	}
 
-	void OnTriggerEntry(Collider other) {
+	void DisplayPainting(){
+		nameDisplay.text = dName;
+		dialogDisplay.text = text;
+		imageDisplay.sprite = image;
+		imageDisplay.enabled = true;
+		canDisplay = false;
+		displayDelayTimer = 0f;
+		isVisible = true;
+	}
+
+	void HidePainting(){
+		imageDisplay.enabled = false;
+		clearDialog();
+		canDisplay = false;
+		displayDelayTimer = 0f;
+		isVisible = false;
+	}
+
+
+	void OnTriggerEnter(Collider other) {
 		playerParticles.startColor = Color.green;
 	}
 
@@ -72,27 +91,18 @@ public class Discovery : MonoBehaviour {
 					vibe.spent = true;
 					ps.AddHope(hopeAmt);
 				}
-				nameDisplay.text = name;
-				dialogDisplay.text = text;
-				imageDisplay.sprite = image;
-				imageDisplay.enabled = true;
-				isVisible = true;
+				DisplayPainting();
+
 			}
 			else {
-				imageDisplay.enabled = false;
-				playerParticles.startColor = playerColor;
-				isVisible = false;
-				clearDialog();
-				canDisplay = false;
-				displayDelayTimer = 0f;
+				HidePainting();
 			}
 		}
 	}
 
 	void OnTriggerExit(Collider coll) {
 		playerParticles.startColor = playerColor;
-		imageDisplay.enabled = false;
-		clearDialog();
+		HidePainting ();
 	}
 
 	// clears the dialog box text
