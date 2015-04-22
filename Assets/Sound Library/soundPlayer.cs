@@ -7,12 +7,7 @@ public class soundPlayer : MonoBehaviour {
 
 	private PlayerStats ps;
 	public float unlockHopeAmt;
-	/*
-	public string promptTextGood = "Press X to push back the fog wall";
-	public string promptTextBad = "You need to gather {0} more hope to get past this wall!";
-	private Canvas can;
-	private Text promptDisplay;
-	*/
+
 	//MOVEMENT SOUNDS
 	private AudioSource moveSoundSource; //plays when moving
 	private AudioSource moveRepSoundSource; //repeats when moving
@@ -45,30 +40,22 @@ public class soundPlayer : MonoBehaviour {
 		moveRepSoundTime = 0;
 				
 		ps = FindObjectOfType<PlayerStats> ();
-		/*
-		can = FindObjectOfType<Canvas> ();
-		Text[] tmp = can.GetComponentsInChildren<Text> ();
-		for (int i = 0; i<tmp.Length; i++) {
-			if (tmp[i].name == "displayText"){
-				promptDisplay = tmp[i];
-				break;
-			}
-		}*/
+
 	}
 	
 	// Update is called once per frame
-	void Update (Collider col) 
+	void Update () 
 	{
 
 		//if not colliding with fog wall, stop fog wall sounds
-		if (col.gameObject.tag != "fog") {
+		/*if (col.gameObject.tag != "fog") {
 			if (noHopeSoundSource.isPlaying.Equals (true)) {
 				noHopeSoundSource.Stop ();
 			}
 			if (hopeSoundSource.isPlaying.Equals (true)) {
 				hopeSoundSource.Stop ();
 			}
-		}
+		}*/
 				
 		//if you're moving
 		if (Input.GetAxis ("Horizontal") > 0 || Input.GetAxis ("Horizontal") < 0 || Input.GetAxis ("Vertical") > 0 || Input.GetAxis ("Vertical") < 0) {
@@ -93,33 +80,9 @@ public class soundPlayer : MonoBehaviour {
 			}
 			moveRepSoundTime = 0;
 		}
-			/*	
-				//move left sound
-				if (Input.GetAxis ("Horizontal") < 0) {
-					sourceChar.PlayOneShot (moveSound, 1F);
-				}
-				//move forward sound
-				if (Input.GetAxis ("Vertical") > 0) {
-					sourceChar.PlayOneShot (moveSound, 1F);
-				}
-				//move backward sound
-				if (Input.GetAxis ("Vertical") < 0) {
-					sourceChar.PlayOneShot (moveSound, 1F);
-				}*/
-				
-			//}
-		//}
+
 	}
-	
-	/*
-	void OnTriggerExit(Collider col)
-	{
-		if (col.gameObject.tag == "fog") {
-			promptDisplay.text = "";
-		}
-		
-	}
-	*/
+
 	void OnTriggerStay(Collider col)
 	{
 		// if you collide w/ fog...
@@ -142,51 +105,12 @@ public class soundPlayer : MonoBehaviour {
 					if (hopeSoundSource.isPlaying.Equals (true)) {
 						hopeSoundSource.Pause ();
 					}
-					/*promptDisplay.text = "";
-					// make wall intangible
-					Destroy(col.gameObject.transform.parent.gameObject.transform.FindChild("Collider").gameObject);
-					
-					// deactivate all particle systems with the same tag
-					var emittersInSection = GameObject.FindGameObjectsWithTag(col.gameObject.transform.parent.gameObject.tag);
-					foreach (var emitter in emittersInSection)
-					{
-						var particleSystem = emitter.GetComponent<ParticleSystem>();
-						particleSystem.enableEmission = false;
-						
-						ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
-						int count = particleSystem.GetParticles(particles);
-						for(int i = 0; i < count; i++)
-						{
-							moveRepSoundSource.transform.position = particles[i].position;
-							moveRepSoundSource.Play();
-							particles[i].velocity = ((particles[i].position - gameObject.transform.position).normalized * 30);
-						}
-						particleSystem.SetParticles(particles, count);
-					}
-
-					// deactivate particle system
-					//col.gameObject.transform.parent.gameObject.particleSystem.enableEmission = false;
-					col.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>().enableEmission = false;
-					*/
-					
 				}
 			} else { //...if you don't have enough hope...
 				if (noHopeSoundSource.isPlaying.Equals (false)) {
 					noHopeSoundSource.Play ();
 				}
-
-				// display bad prompt
-				//promptDisplay.text = string.Format (promptTextBad, unlockHopeAmt - ps.GetHope());
-
 			}
-		} /*else { //if you aren't touching wall
-			if (noHopeSoundSource.isPlaying.Equals (true)) {
-				noHopeSoundSource.Pause ();
-			}
-			if (hopeSoundSource.isPlaying.Equals (true)) {
-				hopeSoundSource.Pause ();
-			}
-		}*/
+		}
 	}
-	
 }
