@@ -66,7 +66,6 @@ public class Vibration : MonoBehaviour {
 	{
 		if (!spent) {
 			float dist = Dist(other.transform.position.x, other.transform.position.z);
-			print(dist);
 
 			// the trigger will sometimes fire when dist is slightly larger than radius, 
 			// so this should fix that

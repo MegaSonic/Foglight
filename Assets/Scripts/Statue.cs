@@ -226,6 +226,7 @@ public class Statue : MonoBehaviour {
 
 			dialog[bookNum].hasBeenRead = true;
 			pageNum = -1;
+			deactivateFX();
 
 			int oldBookNum = bookNum;
 			openNewestBook();
@@ -233,6 +234,7 @@ public class Statue : MonoBehaviour {
 			// if there are more books to read, do that
 			if (oldBookNum != bookNum)
 			{
+
 				displayNextPage();
 				return;
 			}
