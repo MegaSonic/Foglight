@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class soundPlayer : MonoBehaviour {
 
 	private PlayerStats ps;
+
+	private float startTimeAmt = 30f;
+	private float startTimer = 0f;
+	private bool timedSoundStarted = false;
+
 	public float unlockHopeAmt;
 
 	//MOVEMENT SOUNDS
@@ -56,6 +61,16 @@ public class soundPlayer : MonoBehaviour {
 				hopeSoundSource.Stop ();
 			}
 		}*/
+
+		// example for how to delay a start
+		if (!timedSoundStarted) {
+			startTimer += Time.deltaTime;
+			if (startTimer >= startTimeAmt)
+			{
+				timedSoundStarted = true;
+				// launch the sound
+			}
+		}
 				
 		//if you're moving
 		if (Input.GetAxis ("Horizontal") > 0 || Input.GetAxis ("Horizontal") < 0 || Input.GetAxis ("Vertical") > 0 || Input.GetAxis ("Vertical") < 0) {
@@ -63,8 +78,12 @@ public class soundPlayer : MonoBehaviour {
 			//play movement sound
 			if( moveSoundSource.isPlaying.Equals(false)){
 				moveSoundSource.Play ();
-			}		
-
+			}
+			else{
+				FadeVolume(moveSoundSource,.8f,.08f);
+				moveSoundSource.pitch = .77f;
+				//moveSoundSource.pitch = 1.05f;
+			}
 			//repeating sound after delay time: every so often (moveRepSoundDelay) a sound will play
 			if (moveRepSoundTime <= 0) {
 				moveRepSoundSource.Play();
@@ -76,7 +95,9 @@ public class soundPlayer : MonoBehaviour {
 		} else {
 			//pause movement sound
 			if( moveSoundSource.isPlaying.Equals(true)){
-				moveSoundSource.Pause ();
+				FadeVolume(moveSoundSource,.28f,.064f);
+				moveSoundSource.pitch = .76f;
+				//moveSoundSource.Pause ();
 			}
 			moveRepSoundTime = 0;
 		}
@@ -117,6 +138,27 @@ public class soundPlayer : MonoBehaviour {
 	public void PlayAddHope(){
 
 
+	}
+
+	public void FadeVolume(AudioSource track, float vol, float increment)
+	{
+		float trackVol = track.volume;
+		if(track.volume != vol)
+		{				
+			if (trackVol < (vol - increment))
+			{ 
+				trackVol += increment * Time.deltaTime;
+			} 
+			else if (track.volume > (vol + increment))
+			{ 
+				trackVol -= increment * Time.deltaTime;
+			} 
+			else
+			{ 
+				trackVol = vol;
+			}
+			track.volume = trackVol;
+		}
 	}
 
 	public void PlaySpawnObject(){
