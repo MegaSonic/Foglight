@@ -29,10 +29,9 @@ public class Statue : MonoBehaviour {
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
-	private float writeOnSpeed = 0.001f;
-	private float writeOnTimer = 0f;
+	private int writeOnSpeed = 3;
 	private int writeOnIndex = 0;
-	private string writeOnTemp;
+	private string writeOnTemp; // the full text block
 	private bool writing = false;
 
 	// variables to make a delay before write-on skip is allowed
@@ -217,7 +216,8 @@ public class Statue : MonoBehaviour {
 			if (!string.IsNullOrEmpty(dialog[bookNum].givesFlag))
 			{
 				ps.unlockFlag(dialog[bookNum].givesFlag);
-				world.setNewDialog();
+				if (!isUnreadUnlockedBook())
+					world.setNewDialog();
 			}
 		}
 
@@ -226,7 +226,6 @@ public class Statue : MonoBehaviour {
 
 			dialog[bookNum].hasBeenRead = true;
 			pageNum = -1;
-			deactivateFX();
 
 			int oldBookNum = bookNum;
 			openNewestBook();
@@ -234,7 +233,6 @@ public class Statue : MonoBehaviour {
 			// if there are more books to read, do that
 			if (oldBookNum != bookNum)
 			{
-
 				displayNextPage();
 				return;
 			}
@@ -362,7 +360,6 @@ public class Statue : MonoBehaviour {
 	
 		// write-on text
 		if (writing) {
-			writeOnTimer += Time.deltaTime;
 
 			// update skip delay timer
 			if (!canSkip){
@@ -371,20 +368,20 @@ public class Statue : MonoBehaviour {
 					canSkip = true;
 			}
 
-			if (writeOnTimer > writeOnSpeed)
+			for (int i=0; i<writeOnSpeed; i++)
 			{
-				writeOnTimer = 0f;
 				dialogDisplay.text += writeOnTemp[writeOnIndex];
-
 				writeOnIndex ++;
-				if (writeOnIndex >= writeOnTemp.Length)
-				{
-					// the text is finished writing-on
-
-					writing = false;
-					canReadPage = true;
-				}
 			}
+
+			if (writeOnIndex >= writeOnTemp.Length)
+			{
+				// the text is finished writing-on
+
+				writing = false;
+				canReadPage = true;
+			}
+
 		}
 
 		// update page delay timer
@@ -403,6 +400,12 @@ public class Statue : MonoBehaviour {
 			}
 		}
 	}
+	/*
+	string getWrittenOnText(float timePassed)
+	{
+		return 
+
+	}*/
 
 	void spawnLetter ()
 	{
