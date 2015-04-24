@@ -8,8 +8,8 @@ public class World : MonoBehaviour {
 
 	private int unlockedLevels = 1;
 	private float[] availableHope;
-	private GenerateFogCircle[] fogCircles;
-	private int fogIndex;
+	public GenerateFogCircle[] fogCircles;
+	public int fogIndex;
 
 	private bool newDialogIsUnlocked = false;
 	private int statueIDs = 0;
@@ -30,7 +30,7 @@ public class World : MonoBehaviour {
 		GenerateFogCircle[] circles = FindObjectsOfType(typeof(GenerateFogCircle)) as GenerateFogCircle[];
 
 		foreach (GenerateFogCircle circle in circles) {
-			fogCircles[fogIndex] = circle;
+			fogCircles[circle.sectionNumber] = circle;
 			fogIndex++;
 			if (circle.sectionNumber > 0) {
 				circle.gameObject.SetActive(false);

@@ -6,13 +6,15 @@ public class Interact_Fog : MonoBehaviour {
 
 	private PlayerStats ps;
 
-	public string promptTextGood = "Press X to push back the fog wall";
+	public string promptTextGood = "Press A to push back the fog wall";
 	public string promptTextBad = "You need to gather {0} more hope to get past this wall!";
 
 	private Canvas can;
 	private Text promptDisplay;
 	private World w;
 	private float unlockHopeAmt;
+
+	private bool unlock = false;
 
 	// Use this for initialization
 	void Start () {	
@@ -38,6 +40,7 @@ public class Interact_Fog : MonoBehaviour {
 
 	void OnTriggerExit(Collider col)
 	{
+		unlock = false;
 		if (col.gameObject.tag == "fog") {
 			promptDisplay.text = "";
 		}
@@ -46,6 +49,7 @@ public class Interact_Fog : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
+		unlock = true;
 		if (col.gameObject.tag == "fog")
 			unlockHopeAmt = col.transform.parent.gameObject.GetComponent<Fog_Amount> ().GetHopeAmt();
 	
@@ -63,18 +67,21 @@ public class Interact_Fog : MonoBehaviour {
 				// display good prompt
 				promptDisplay.text = promptTextGood;
 
-				if (Input.GetButtonDown("Interact"))
+				if (Input.GetButtonUp("Interact"))
 				{
 					promptDisplay.text = "";
 					w.UnlockLevel();
-					w.UnlockNextCircle();
+					if (unlock) {
+						w.UnlockNextCircle();
+						unlock = false;
+					}
 
 					// deactivate all particle systems with the same section
 					var emittersInSection = GameObject.FindGameObjectsWithTag("fogMaker");
 					foreach (var emitter in emittersInSection)
 					{
-						if(emitter.GetComponent<Fog_Amount>().sectionNumber == col.transform.parent.gameObject.GetComponent<Fog_Amount>().sectionNumber)
-						{
+						//if(emitter.GetComponent<Fog_Amount>().sectionNumber == col.transform.parent.gameObject.GetComponent<Fog_Amount>().sectionNumber)
+						//{
 							foreach (Transform child in emitter.transform){
 								Destroy(child.gameObject);
 							}
@@ -90,7 +97,7 @@ public class Interact_Fog : MonoBehaviour {
 								particles[i].velocity = ((particles[i].position - gameObject.transform.position).normalized * 30);
 							}
 							particleSystem.SetParticles(particles, count);
-						}
+						//}
 
 					}
 
