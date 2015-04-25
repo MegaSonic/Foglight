@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Threading;
 
 [System.Serializable]
 public class Page{
@@ -29,9 +30,10 @@ public class Statue : MonoBehaviour {
 	public List<Book> dialog;
 
 	// variables to deal with the text write-on effect
-	private int writeOnSpeed = 3;
+	private float writeOnDelay = 0f;
+	private float writeOnTimer = 0f;
 	private int writeOnIndex = 0;
-	private string writeOnTemp; // the full text block
+	private string writeOnTextBlock; // the full text block
 	private bool writing = false;
 
 	// variables to make a delay before write-on skip is allowed
@@ -85,7 +87,6 @@ public class Statue : MonoBehaviour {
 		ps = FindObjectOfType<PlayerStats> ();
 		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
 		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
-
 	}
 
 	// Use this for initialization
@@ -262,7 +263,7 @@ public class Statue : MonoBehaviour {
 			writing = true;
 			canSkip = false;
 			skipDelayTimer = 0f;
-			writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
+			writeOnTextBlock = dialog[bookNum].pages[pageNum].pageText;
 			writeOnIndex = 0;
 			//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
 		}			
@@ -271,7 +272,7 @@ public class Statue : MonoBehaviour {
 				writing = true;
 				canSkip = false;
 				skipDelayTimer = 0f;
-				writeOnTemp = dialog[bookNum].pages[pageNum].pageText;
+				writeOnTextBlock = dialog[bookNum].pages[pageNum].pageText;
 				writeOnIndex = 0;
 				//dialogDisplay.text = dialog[bookNum].pages[pageNum].pageText;
 			}
@@ -336,7 +337,7 @@ public class Statue : MonoBehaviour {
 			else if (writing && canSkip)
 			{
 				writing = false;
-				dialogDisplay.text = writeOnTemp;
+				dialogDisplay.text = writeOnTextBlock;
 				// start the delay timer
 				readPageDelayTimer = readPageDelay;
 				canReadPage = false;
@@ -360,6 +361,7 @@ public class Statue : MonoBehaviour {
 	
 		// write-on text
 		if (writing) {
+			writeOnTimer += Time.deltaTime;
 
 			// update skip delay timer
 			if (!canSkip){
@@ -367,21 +369,20 @@ public class Statue : MonoBehaviour {
 				if (skipDelayTimer > skipDelay)
 					canSkip = true;
 			}
-
-			for (int i=0; i<writeOnSpeed; i++)
+				
+			if (writeOnTimer > writeOnDelay)
 			{
-				dialogDisplay.text += writeOnTemp[writeOnIndex];
-				writeOnIndex ++;
+				writeOnTimer = 0f;
+				dialogDisplay.text += writeOnTextBlock[writeOnIndex];
+
+				writeOnIndex++;
+				if (writeOnIndex >= writeOnTextBlock.Length)
+				{
+					// the text is finished writing-on
+					writing = false;
+					canReadPage = true;
+				}
 			}
-
-			if (writeOnIndex >= writeOnTemp.Length)
-			{
-				// the text is finished writing-on
-
-				writing = false;
-				canReadPage = true;
-			}
-
 		}
 
 		// update page delay timer
@@ -400,12 +401,6 @@ public class Statue : MonoBehaviour {
 			}
 		}
 	}
-	/*
-	string getWrittenOnText(float timePassed)
-	{
-		return 
-
-	}*/
 
 	void spawnLetter ()
 	{
