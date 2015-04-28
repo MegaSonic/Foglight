@@ -80,6 +80,8 @@ public class Statue : MonoBehaviour {
 
 	private GameObject fx;
 
+	private bool letterSpawned;
+
 	void Awake() {
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 
@@ -407,8 +409,11 @@ public class Statue : MonoBehaviour {
 
 	void spawnLetter ()
 	{
-		GameObject go = Instantiate(Resources.Load("LetterPrefab")) as GameObject;
-		sound.PlaySpawnObject ();
+		if (!letterSpawned) {
+			letterSpawned = true;
+			GameObject go = Instantiate (Resources.Load ("LetterPrefab")) as GameObject;
+			sound.PlaySpawnObject ();
+		}
 	}
 
 	void endGame() 
