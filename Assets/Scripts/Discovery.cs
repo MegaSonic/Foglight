@@ -31,6 +31,9 @@ public class Discovery : MonoBehaviour {
 
 	private bool isVisible = false;
 
+	private ParticleSystem nameFog;
+	private ParticleSystem bodyFog;
+
 	// Use this for initialization
 	void Start () {
 		vibe = GetComponentInChildren<Vibration> ();
@@ -40,6 +43,9 @@ public class Discovery : MonoBehaviour {
 		
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 		playerColor = playerParticles.startColor;
+
+		nameFog = GameObject.FindGameObjectWithTag("NameFog").GetComponent<ParticleSystem>();
+		bodyFog = GameObject.FindGameObjectWithTag("BodyFog").GetComponent<ParticleSystem>();
 
 		can = FindObjectOfType<Canvas> ();
 		Text[] tmp = can.GetComponentsInChildren<Text> ();
@@ -60,6 +66,8 @@ public class Discovery : MonoBehaviour {
 		dialogDisplay.text = text;
 		imageDisplay.sprite = image;
 		imageDisplay.enabled = true;
+		nameFog.Play();
+		bodyFog.Play();
 		canDisplay = false;
 		displayDelayTimer = 0f;
 		isVisible = true;
@@ -67,6 +75,8 @@ public class Discovery : MonoBehaviour {
 
 	void HidePainting(){
 		imageDisplay.enabled = false;
+		nameFog.Stop();
+		bodyFog.Stop();
 		clearDialog();
 		canDisplay = false;
 		displayDelayTimer = 0f;
