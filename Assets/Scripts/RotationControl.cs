@@ -13,7 +13,9 @@ public class RotationControl : MonoBehaviour {
 
 	private Transform target;
 	private SmoothFollow_eli camScript;
-	
+	private bool locked;
+
+
 	// Use this for initialization
 	void Awake () {
 		target = this.transform;
@@ -26,6 +28,9 @@ public class RotationControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (locked)
+			return;
 
 		//// rotate the player manually ////
 		float camH = Input.GetAxis ("CamHorizontal");
@@ -63,5 +68,14 @@ public class RotationControl : MonoBehaviour {
 		{	
 			camScript.height += lookDownHeight * camV;
 		}
+	}
+
+	public void Freeze()
+	{
+		locked = true;
+	}
+	public void Unfreeze()
+	{
+		locked = false;
 	}
 }

@@ -61,6 +61,8 @@ public class Statue : MonoBehaviour {
 	private int ID;  // a unique ID number assigned by the world object
 
 	//private ThirdPersonController_eli controller; // whatever it ends up being
+	private GameObject player;
+
 	private SpringFollow sf;
 	private RotationControl rc;
 	private PlayerStats ps;
@@ -113,6 +115,8 @@ public class Statue : MonoBehaviour {
 
 		sound = FindObjectOfType<soundPlayer> ();
 		fx = transform.FindChild ("Statue FX").gameObject;
+
+		//controller = (ThirdPersonController_eli)gameObject.GetComponent ("ThirdPersonController_eli");
 	}
 
 	// clears the dialog box text
@@ -248,6 +252,8 @@ public class Statue : MonoBehaviour {
 			looped = true;
 			engaged = false;
 			//controller.Unfreeze();
+			player.SendMessage("Unfreeze");
+			rc.Unfreeze();
 			print ("UNFREEZE");
 
 			// start engagement timer
@@ -299,6 +305,8 @@ public class Statue : MonoBehaviour {
 		camDistance = rc.distance;
 		camHeight = rc.height;
 
+		player = other.gameObject;
+
 		// Temp Camera Stuff
 		sf.height = 0;
 		rc.distance = 6f;
@@ -328,6 +336,8 @@ public class Statue : MonoBehaviour {
 			if (!engaged){
 				engaged = true;
 				//controller.Freeze();
+				player.SendMessage("Freeze");
+				rc.Freeze();
 				print ("FREEZE");
 			}
 
