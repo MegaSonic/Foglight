@@ -65,7 +65,8 @@ public class Discovery : MonoBehaviour {
 		nameDisplay.text = dName;
 		dialogDisplay.text = text;
 		imageDisplay.sprite = image;
-		imageDisplay.enabled = true;
+		if (image != null)
+			imageDisplay.enabled = true;
 		nameFog.Play();
 		bodyFog.Play();
 		canDisplay = false;
