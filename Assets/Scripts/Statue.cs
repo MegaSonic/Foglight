@@ -209,6 +209,9 @@ public class Statue : MonoBehaviour {
 			case (1):
 				spawnLetter();
 				break;
+			case (2):
+				endGame ();
+				break;
 				
 				// etc
 			}
@@ -406,5 +409,10 @@ public class Statue : MonoBehaviour {
 	{
 		GameObject go = Instantiate(Resources.Load("LetterPrefab")) as GameObject;
 		sound.PlaySpawnObject ();
+	}
+
+	void endGame() 
+	{
+
 	}
 }
