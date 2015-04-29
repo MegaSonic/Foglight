@@ -339,6 +339,7 @@ public class Statue : MonoBehaviour {
 				player.SendMessage("Freeze");
 				rc.Freeze();
 				print ("FREEZE");
+				sound.PlayStatueInteractSound();
 			}
 
 			if (statueName != "") {
