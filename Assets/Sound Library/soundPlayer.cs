@@ -91,7 +91,7 @@ public class soundPlayer : MonoBehaviour {
 			repSoundTime = currRepSoundDelay;
 			playerLight.StartCoroutine(playerLight.lightBurst());
 		} else {
-			repSoundTime -= 10 * Time.deltaTime;
+			repSoundTime -= (int) (10 * Time.deltaTime);
 		}
 
 		//MOVEMENT!
