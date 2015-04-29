@@ -139,9 +139,10 @@ public class soundPlayer : MonoBehaviour {
 		FadePitch (moveSoundSource,movePitch,movePInc);
 		FadeVolume (moveSoundSource,moveVol,moveVInc);
 	}
-
+	/*
 	void OnTriggerStay(Collider col)
 	{
+
 		// if you collide w/ fog...
 		if (col.gameObject.tag == "fog") {
 			//...and have enough hope...
@@ -170,7 +171,7 @@ public class soundPlayer : MonoBehaviour {
 			}
 		}
 	}
-
+*/
 	public void PlayAddHope(){
 		soundFunctionGo = true;
 		moveSoundSource.pitch = .9f;
