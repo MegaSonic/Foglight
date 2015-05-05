@@ -21,6 +21,9 @@ public class Discovery : MonoBehaviour {
 	private Text dialogDisplay;
 	private Image imageDisplay;
 
+	private GameObject player;
+	private RotationControl rc;
+
 	private ParticleSystem playerParticles;
 	private Color playerColor;
 
@@ -72,6 +75,8 @@ public class Discovery : MonoBehaviour {
 		canDisplay = false;
 		displayDelayTimer = 0f;
 		isVisible = true;
+		player.SendMessage("Freeze");
+		rc.Freeze();
 	}
 
 	void HidePainting(){
@@ -82,11 +87,15 @@ public class Discovery : MonoBehaviour {
 		canDisplay = false;
 		displayDelayTimer = 0f;
 		isVisible = false;
+		player.SendMessage("Unfreeze");
+		rc.Unfreeze();
 	}
 
 
 	void OnTriggerEnter(Collider other) {
 		playerParticles.startColor = Color.green;
+		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
+		player = other.gameObject;
 	}
 
 	void OnTriggerStay(Collider other){

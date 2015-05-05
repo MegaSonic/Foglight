@@ -251,10 +251,8 @@ public class Statue : MonoBehaviour {
 
 			looped = true;
 			engaged = false;
-			//controller.Unfreeze();
 			player.SendMessage("Unfreeze");
 			rc.Unfreeze();
-			print ("UNFREEZE");
 
 			// start engagement timer
 			canEngage = false;
@@ -335,10 +333,8 @@ public class Statue : MonoBehaviour {
 
 			if (!engaged){
 				engaged = true;
-				//controller.Freeze();
 				player.SendMessage("Freeze");
 				rc.Freeze();
-				print ("FREEZE");
 				sound.PlayStatueInteractSound();
 			}
 
