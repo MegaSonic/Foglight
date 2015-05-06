@@ -6,8 +6,9 @@ public class Interact_Fog : MonoBehaviour {
 
 	private PlayerStats ps;
 
-	public string promptTextGood = "Press A to push back the fog wall";
-	public string promptTextBad = "You need to gather {0} more hope to get past this wall!";
+	private string promptTextGoodC = "Press A to push back the fog wall";
+	private string promptTextGoodK = "Press space to push back the fog wall";
+	private string promptTextBad = "You need to gather {0} more hope to get past this wall!";
 
 	private soundPlayer sound;
 	private Canvas can;
@@ -39,7 +40,19 @@ public class Interact_Fog : MonoBehaviour {
 	void Update () {
 	
 	}
-	
+
+	private bool IsControllerConnected()
+	{
+		string[] tmp = Input.GetJoystickNames ();
+
+		print (tmp[0]);
+
+		if (string.IsNullOrEmpty(tmp[0]))
+			return false;
+		else
+			return true;
+	}
+
 
 	void OnTriggerExit(Collider col)
 	{
@@ -68,7 +81,10 @@ public class Interact_Fog : MonoBehaviour {
 			if (ps.GetHope () >= unlockHopeAmt)
 			{
 				// display good prompt
-				promptDisplay.text = promptTextGood;
+				if (IsControllerConnected())
+					promptDisplay.text = promptTextGoodC;
+				else
+					promptDisplay.text = promptTextGoodK;
 
 				if (Input.GetButtonUp("Interact"))
 				{
