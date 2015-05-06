@@ -9,6 +9,8 @@ public class areaLightScript : MonoBehaviour {
 	public float hopeIntensity;
 	private float changeToIntensity;
 	private float increment;
+	private bool function_run;
+	private bool alternator;
 
 	void Awake() {
 		player = GetComponent<Light>();
@@ -22,11 +24,21 @@ public class areaLightScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*if (function_run == false) {
+			if (alternator == true)
+			{
+				changeToIntensity = player.intensity + 1f;
+			}
+			else {
+				changeToIntensity = player.intensity - 1f;
+			}
+		}*/
 		fadeLight ();
 	}
 
 	public IEnumerator lightBurst()
 	{
+		function_run = true;
 		player.intensity = burstIntensity;
 		changeToIntensity = burstIntensity;
 		yield return new WaitForSeconds (.4f); 
@@ -69,6 +81,8 @@ public class areaLightScript : MonoBehaviour {
 			else
 			{ 
 				player.intensity = changeToIntensity;
+				if (function_run)
+					function_run = false;
 			}
 			player.intensity = currIntensity;
 		}

@@ -29,11 +29,11 @@ public class soundPlayer : MonoBehaviour {
 	private bool soundFunctionGo = false;
 
 	//(for moveRepSoundSource)
-	public int moveRepSoundDelay;
-	public int stillRepSoundDelay;
-	public int runRepSoundDelay;
-	private int currRepSoundDelay;
-	private int repSoundTime;
+	public float moveRepSoundDelay;
+	public float stillRepSoundDelay;
+	public float runRepSoundDelay;
+	private float currRepSoundDelay;
+	private float repSoundTime;
 
 	private float movePitch;
 	private float movePInc;
@@ -51,7 +51,7 @@ public class soundPlayer : MonoBehaviour {
 		statueInteractSoundSource = allSources [5];
 		ambientSoundSource = allSources [6];
 		ambientBackupSource = allSources [7];
-
+		currRepSoundDelay = stillRepSoundDelay;
 		playerLight = FindObjectOfType<areaLightScript> ();
 		
 	}
@@ -91,7 +91,7 @@ public class soundPlayer : MonoBehaviour {
 			repSoundTime = currRepSoundDelay;
 			playerLight.StartCoroutine(playerLight.lightBurst());
 		} else {
-			repSoundTime -= (int) (10 * Time.deltaTime);
+			repSoundTime -= (10f * Time.deltaTime);
 		}
 
 		//MOVEMENT!
