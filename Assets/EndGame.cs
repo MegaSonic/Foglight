@@ -15,6 +15,8 @@ public class EndGame : MonoBehaviour {
 
 	public Animator endGameAnimation;
 
+	private bool endGame = false;
+
 	// Use this for initialization
 	void Start () {
 		world = FindObjectOfType<World> ();
@@ -44,12 +46,19 @@ public class EndGame : MonoBehaviour {
 	}
 	
 	void OnTriggerStay(Collider other) {
-		if (Input.GetButtonDown ("Interact")) {
+		if (Input.GetButtonDown ("Interact") && !endGame) {
+			endGame = true;
 			Debug.Log ("This should work!");
 			endGameAnimation.Play("fadeToWhite");
+			StartCoroutine(ReturnToTitle());
 		}
 	}
-	
+
+	IEnumerator ReturnToTitle() {
+		yield return new WaitForSeconds (5);
+		Application.LoadLevel (0);
+	}
+
 	void OnTriggerExit(Collider other){
 		bodyFog.Stop ();
 		dialogDisplay.text = "";
