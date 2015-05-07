@@ -126,14 +126,13 @@ public class Discovery : MonoBehaviour {
 				return;
 			
 			if (!isVisible) {
-				vibe.KillVibration ();
 				if (!spent) {
 					spent = true;
 					vibe.spent = true;
 					ps.AddHope(hopeAmt);
 				}
 				DisplayPainting();
-				
+				vibe.KillVibration ();
 			}
 			else {
 				HidePainting();
