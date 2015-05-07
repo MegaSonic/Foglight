@@ -312,12 +312,12 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other){
-		playerParticles.startColor = playerColor;
+		playerParticles.startColor = Color.white;
 
 		// Temp Camera Stuff
-		sf.height = playerHeight;
-		rc.distance = camDistance;
-		rc.height = camHeight;
+		sf.height = 1f;
+		rc.distance = 10f;
+		rc.height = 4f;
 
 		clearDialog ();	
 		writing = false;
