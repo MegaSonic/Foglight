@@ -86,7 +86,7 @@ public class Interact_Fog : MonoBehaviour {
 				else
 					promptDisplay.text = promptTextGoodK;
 
-				if (Input.GetButtonUp("Interact"))
+				if (Input.GetButton("Interact"))
 				{
 					promptDisplay.text = "";
 					w.UnlockLevel();

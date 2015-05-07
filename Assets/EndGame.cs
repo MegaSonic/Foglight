@@ -16,6 +16,7 @@ public class EndGame : MonoBehaviour {
 	public Animator endGameAnimation;
 
 	private bool endGame = false;
+	private bool inCollider = false;
 
 	// Use this for initialization
 	void Start () {
@@ -36,22 +37,23 @@ public class EndGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	}
-
-	void OnTriggerEnter(Collider other) {
-		dialogDisplay.text = "... Activate the lighthouse?";
-		if (!bodyFog.isPlaying)
-			bodyFog.Play ();
-	}
-	
-	void OnTriggerStay(Collider other) {
-		if (Input.GetButtonDown ("Interact") && !endGame) {
+		if (Input.GetButtonDown ("Interact") && !endGame && inCollider) {
 			endGame = true;
 			Debug.Log ("This should work!");
 			endGameAnimation.Play("fadeToWhite");
 			StartCoroutine(ReturnToTitle());
 		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		dialogDisplay.text = "... Activate the lighthouse?";
+		inCollider = true;
+		if (!bodyFog.isPlaying)
+			bodyFog.Play ();
+	}
+	
+	void OnTriggerStay(Collider other) {
+
 	}
 
 	IEnumerator ReturnToTitle() {
@@ -60,6 +62,7 @@ public class EndGame : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other){
+		inCollider = false;
 		bodyFog.Stop ();
 		dialogDisplay.text = "";
 	}

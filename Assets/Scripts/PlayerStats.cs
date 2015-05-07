@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour {
 	// super secret developer key for adding hope
 	void Update()
 	{
-		if (Input.GetKeyDown("9") && Input.GetKeyDown (";"))
+		if (Input.GetKey("9") && Input.GetKey (";"))
 		{
 			AddHope (1f);
 		}

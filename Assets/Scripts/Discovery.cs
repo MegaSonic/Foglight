@@ -37,6 +37,8 @@ public class Discovery : MonoBehaviour {
 	private ParticleSystem nameFog;
 	private ParticleSystem bodyFog;
 
+	private bool inCollider = false;
+
 	// Use this for initialization
 	void Start () {
 		vibe = GetComponentInChildren<Vibration> ();
@@ -96,33 +98,17 @@ public class Discovery : MonoBehaviour {
 		playerParticles.startColor = Color.green;
 		rc = GameObject.FindGameObjectWithTag ("Player").transform.parent.gameObject.GetComponentInChildren<RotationControl> ();
 		player = other.gameObject;
+		inCollider = true;
 	}
 
 	void OnTriggerStay(Collider other){
-		if (Input.GetButtonDown ("Interact")) {
 
-			if (!canDisplay)
-				return;
-
-			if (!isVisible) {
-				vibe.KillVibration ();
-				if (!spent) {
-					spent = true;
-					vibe.spent = true;
-					ps.AddHope(hopeAmt);
-				}
-				DisplayPainting();
-
-			}
-			else {
-				HidePainting();
-			}
-		}
 	}
 
 	void OnTriggerExit(Collider coll) {
 		playerParticles.startColor = playerColor;
 		HidePainting ();
+		inCollider = false;
 	}
 
 	// clears the dialog box text
@@ -134,6 +120,26 @@ public class Discovery : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButtonDown ("Interact") && inCollider) {
+			
+			if (!canDisplay)
+				return;
+			
+			if (!isVisible) {
+				vibe.KillVibration ();
+				if (!spent) {
+					spent = true;
+					vibe.spent = true;
+					ps.AddHope(hopeAmt);
+				}
+				DisplayPainting();
+				
+			}
+			else {
+				HidePainting();
+			}
+		}
+
 		if (!canDisplay) {
 			displayDelayTimer += Time.deltaTime;
 			if (displayDelayTimer >= displayDelay){

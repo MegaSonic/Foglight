@@ -83,6 +83,7 @@ public class Statue : MonoBehaviour {
 	private GameObject fx;
 
 	private bool letterSpawned;
+	private bool inCollider = false;
 
 	void Awake() {
 		playerParticles = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
@@ -291,7 +292,8 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-
+		inCollider = true;
+		playerParticles.startColor = Color.green;
 		dialogDisplay.text = promptText;
 		nameDisplay.text = statueName;
 		openNewestBook ();
@@ -312,6 +314,7 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other){
+		inCollider = false;
 		playerParticles.startColor = Color.white;
 
 		// Temp Camera Stuff
@@ -324,27 +327,32 @@ public class Statue : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other){
-		playerParticles.startColor = Color.green;
 
-		if (Input.GetButtonDown ("Interact")){
 
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetButtonDown ("Interact") && inCollider){
+			
 			if (!canEngage)
 				return;
-
+			
 			if (!engaged){
 				engaged = true;
 				player.SendMessage("Freeze");
 				rc.Freeze();
 				sound.PlayStatueInteractSound();
 			}
-
+			
 			if (statueName != "") {
 				nameFog.Play();
 			}
 			bodyFog.Play ();
 			if (canReadPage)
 				displayNextPage();
-
+			
 			// let the player skip the write-on effect
 			else if (writing && canSkip)
 			{
@@ -355,10 +363,6 @@ public class Statue : MonoBehaviour {
 				canReadPage = false;
 			}
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
 
 		// check to see if there is newly unlocked dialog
 		if (world.isNewDialog ()) {
