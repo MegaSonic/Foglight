@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GenerateFogCircle : MonoBehaviour {
@@ -44,12 +44,12 @@ public class GenerateFogCircle : MonoBehaviour {
 		ParticleSystem twoSys = two.GetComponent<ParticleSystem> ();
 		//ParticleSystem threeSys = three.GetComponent<ParticleSystem> ();
 
-		oneSys.maxParticles =  Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
-		oneSys.emissionRate = Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
-		twoSys.maxParticles =  Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
-		twoSys.emissionRate = Mathf.CeilToInt ((2f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		oneSys.maxParticles =  Mathf.CeilToInt ((4f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		oneSys.emissionRate = Mathf.CeilToInt ((4f/4) * oneSys.emissionRate * Mathf.Sqrt(radius / 40f));
+		twoSys.maxParticles =  Mathf.CeilToInt ((4f/4) * twoSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		twoSys.emissionRate = Mathf.CeilToInt ((4f/4) * twoSys.emissionRate * Mathf.Sqrt(radius / 40f));
 		//threeSys.maxParticles = Mathf.CeilToInt ((3f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
-		//threeSys.emissionRate = Mathf.CeilToInt ((3f/4) * oneSys.maxParticles * Mathf.Sqrt(radius / 40f));
+		//threeSys.emissionRate = Mathf.CeilToInt ((3f/4) * oneSys.emissionRate * Mathf.Sqrt(radius / 40f));
 
 		one.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
 		two.GetComponent<Fog_Amount> ().setSectionAndHope (sectionNumber, unlockHopeAmt);
