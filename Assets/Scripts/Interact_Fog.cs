@@ -10,6 +10,7 @@ public class Interact_Fog : MonoBehaviour {
 	private string promptTextGoodK = "Press space to push back the fog wall";
 	private string promptTextBad = "You need to gather {0} more hope to get past this wall!";
 
+	private areaLightScript light;
 	private soundPlayer sound;
 	private Canvas can;
 	private Text promptDisplay;
@@ -24,6 +25,7 @@ public class Interact_Fog : MonoBehaviour {
 
 		w = FindObjectOfType<World> ();
 		
+		light = FindObjectOfType<areaLightScript> ();
 		sound = FindObjectOfType<soundPlayer> ();
 
 		can = FindObjectOfType<Canvas> ();
@@ -90,9 +92,10 @@ public class Interact_Fog : MonoBehaviour {
 				{
 					promptDisplay.text = "";
 					w.UnlockLevel();
+					light.StartCoroutine(light.lightPush());
+					sound.PlayFogPush();
 					if (unlock) {
 						w.UnlockNextCircle();
-						sound.PlayFogPush();
 						unlock = false;
 					}
 

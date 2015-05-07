@@ -38,21 +38,27 @@ public class areaLightScript : MonoBehaviour {
 
 	public IEnumerator lightBurst()
 	{
-		function_run = true;
-		player.intensity = burstIntensity;
-		changeToIntensity = burstIntensity;
-		yield return new WaitForSeconds (.4f); 
-		increment = .8f;
-		changeToIntensity = regularIntensity;
+		if (function_run == false) {
+			player.intensity = burstIntensity;
+			changeToIntensity = burstIntensity;
+			yield return new WaitForSeconds (.4f); 
+			increment = .8f;
+			changeToIntensity = regularIntensity;
+		}
 	} 
 
 	public IEnumerator lightPush()
 	{
+		function_run = true;
 		player.intensity = pushIntensity;
 		changeToIntensity = pushIntensity;
+		player.range = 626f;
+		yield return new WaitForSeconds (.08f);
+		player.range = 13.5f;
 		yield return new WaitForSeconds (.7f); 
-		increment = .2f;
+		increment = .35f;
 		changeToIntensity = regularIntensity;
+		function_run = false;
 	} 
 
 	public IEnumerable lightHope()
